@@ -1,5 +1,5 @@
 # APP SERVIFORM
-<img src="assets/logos/logo-facturapp-180x100.svg" width="180">
+<img src="Assets/logos/logo-facturapp-180x100.svg" width="180">
 
 **Tabla de contenidos**
 
@@ -43,11 +43,11 @@ TODO: Desarrollar explicación
 
 Modelo Entidad-Relación 
 ------------
-<img src="assets/FacturaApp.png" height="28">
+<img src="Assets/FacturaApp.png" height="28">
 
 
 Teconologías utilizadas
 ------------
-  * <img src="assets/logos/logo-angular.svg" height="28">
-  * <img src="assets/logos/logo-net.svg" height="28" >
-  * <img src="assets/logos/logo-sql.svg" height="28" >
+  * <img src="Assets/logos/logo-angular.svg" height="28">
+  * <img src="Assets/logos/logo-net.svg" height="28" >
+  * <img src="Assets/logos/logo-sql.svg" height="28" >
