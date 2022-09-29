@@ -1,5 +1,5 @@
 # APP SERVIFORM
-<img src="logos/logo-facturapp-180x100.svg" width="180">
+<img src="assets/logos/logo-facturapp-180x100.svg" width="180">
 
 **Tabla de contenidos**
 
