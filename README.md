@@ -7,6 +7,7 @@
   - [Descripción del proyecto](#descripción-del-proyecto)
   - [Estructura](#estructura)
   - [Funcionalidades detalladas](#funcionalidades-detalladas)
+  - [Modelo Entidad-Relación](#modelo-entidad-relación)
   - [Teconologías utilizadas](#teconologías-utilizadas)
 
 
@@ -40,9 +41,13 @@ TODO: Desarrollar explicación
 * Documentación que recoje toda la información de la aplicación mediante las herramientas de gestión documental adecuada para cada framework, tanto backend como frontend.
 * Se ha generado una suit de testing para frontend y backend con pruebas unitarias y pruebas de integración.
 
+Modelo Entidad-Relación 
+------------
+<img src="assets/FacturaApp.png" height="28">
+
 
 Teconologías utilizadas
 ------------
-  * <img src="logos/logo-angular.svg" height="28">
-  * <img src="logos/logo-net.svg" height="28" >
-  * <img src="logos/logo-sql.svg" height="28" >
+  * <img src="assets/logos/logo-angular.svg" height="28">
+  * <img src="assets/logos/logo-net.svg" height="28" >
+  * <img src="assets/logos/logo-sql.svg" height="28" >
