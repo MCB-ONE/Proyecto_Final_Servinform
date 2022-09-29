@@ -43,7 +43,7 @@ TODO: Desarrollar explicación
 
 Modelo Entidad-Relación 
 ------------
-<img src="Assets/FacturaApp.png" height="28">
+<img src="/Assets/FacturaApp.png">
 
 
 Teconologías utilizadas
