@@ -43,8 +43,6 @@ TODO: Desarrollar explicación
 
 Teconologías utilizadas
 ------------
-  <img src="logos/logo-angular.svg" height="28">
-  <br>
-  <img src="logos/logo-net.svg" height="28" >
-  <br>
-  <img src="logos/logo-sql.svg" height="28" >
+  * <img src="logos/logo-angular.svg" height="28">
+  * <img src="logos/logo-net.svg" height="28" >
+  * <img src="logos/logo-sql.svg" height="28" >
