@@ -45,7 +45,6 @@ Modelo Entidad-Relación
 ------------
 <img src="/Assets/FacturaApp.png">
 
-
 Teconologías utilizadas
 ------------
   * <img src="Assets/logos/logo-angular.svg" height="28">
