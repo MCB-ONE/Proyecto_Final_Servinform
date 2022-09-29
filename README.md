@@ -1,6 +1,6 @@
 # APP SERVIFORM
 TODO: Imagen URL
-![](https://pandao.github.io/editor.md/images/logos/logo-facturapp-180x100.svg)
+![](https://github.com/MCB-ONE/Proyecto_Final_Servinform/blob/master/logo-facturapp-180x100.svg)
 
 **Table of Contents**
 
