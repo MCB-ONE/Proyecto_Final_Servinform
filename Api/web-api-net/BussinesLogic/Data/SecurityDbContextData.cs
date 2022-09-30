@@ -15,6 +15,7 @@ namespace BussinesLogic.Data
                     Nombre = "Test",
                     Apellido = "User",
                     UserName = "TestUser",
+                    Email = "test.user@gmail.com",
                     CreatedBy = "Seeder"
                     
                 };

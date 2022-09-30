@@ -19,8 +19,4 @@
     <ProjectReference Include="..\BussinesLogic\BussinesLogic.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
