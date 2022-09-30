@@ -1,4 +1,15 @@
+using BussinesLogic.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// 1. Conectarse a BDD SQL Express
+// 1.1 Obtener conection string de appsettings
+const string CONNECTIONNAME = "DefaultConnection";
+var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME);
+
+// 1.2. Añadir dBcontext y configura la base de datos a utilizar
+builder.Services.AddDbContext<ApiDbContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 
