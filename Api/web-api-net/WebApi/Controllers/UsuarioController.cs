@@ -41,8 +41,32 @@ namespace WebApi.Controllers
                 Apellido = usuario.Apellido,
 
             };
+        }
 
+        [HttpPost("registrar")]
+        public async Task<ActionResult<UsuarioDto>> Registrar(RegistrarDto registrarDto)
+        {
+            var usuario = new Usuario
+            {
+                Email = registrarDto.Email,
+                UserName = registrarDto.UserName,
+                Nombre = registrarDto.Nombre,
+                Apellido = registrarDto.Apellido
+            };
 
+            var resultado = await _userManager.CreateAsync(usuario, registrarDto.Password);
+
+            if (!resultado.Succeeded)
+                return BadRequest(new CodeErrorResponse(400));
+
+            return new UsuarioDto
+            {
+                Email = usuario.Email,
+                UserName = usuario.UserName,
+                Nombre = usuario.Nombre,
+                Apellido = registrarDto.Apellido,
+                Token = "Este es un token de PRUEBA"
+            };
 
         }
 
