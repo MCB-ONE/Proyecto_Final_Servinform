@@ -1,18 +1,20 @@
 ﻿
+using Microsoft.AspNetCore.Identity;
+
 namespace Core.Entities
 {
-    public enum Roles
-    {
-        Administrador,
-        Usuario
-    }
-    public class Usuario: BaseEntity
+   
+    public class Usuario: IdentityUser
     {
         public string Nombre { get; set; } 
-        public string Apellido { get; set; } 
-        public string Email { get; set; }
-        public string Password { get; set; } 
-        public Roles Rol { get; set; } = Roles.Usuario;
+        public string Apellido { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public string UpdatedBy { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public string DeletedBy { get; set; }
+        public DateTime DeletedAt { get; set; }
+        public bool IsDeleted { get; set; } = false;
 
     }
 }

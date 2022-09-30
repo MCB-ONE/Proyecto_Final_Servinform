@@ -1,12 +1,5 @@
-﻿using BussinesLogic.Data.Seeding;
-using Core.Entities;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BussinesLogic.Data
 {
@@ -26,9 +19,6 @@ namespace BussinesLogic.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            UserSeeder.Seed(modelBuilder);
-
         }
-                public DbSet<Usuario> Usuarios { get; set; }
     }
 }
