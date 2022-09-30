@@ -25,9 +25,10 @@ namespace BussinesLogic.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-            UserSeeder.Seed(modelBuilder);
-        }
 
-        public DbSet<Usuario> Usuarios { get; set; }
+            UserSeeder.Seed(modelBuilder);
+
+        }
+                public DbSet<Usuario> Usuarios { get; set; }
     }
 }

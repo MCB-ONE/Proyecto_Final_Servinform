@@ -22,6 +22,9 @@ namespace BussinesLogic.Data.Configuration
             builder.Property(p => p.Email)
                 .IsRequired()
                 .HasMaxLength(250);
+            builder.Property(p => p.Rol)
+                .HasDefaultValue(Roles.Usuario)
+                .HasConversion<string>();
             builder.HasIndex(u => u.Email)
                 .IsUnique();
 
