@@ -1,6 +1,9 @@
 ﻿using Core.Entities;
+using Core.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using WebApi.DTOs.UserDtos;
 using WebApi.Errors;
 
@@ -10,11 +13,13 @@ namespace WebApi.Controllers
     {
         private readonly UserManager<Usuario> _userManager;
         private readonly SignInManager<Usuario> _signInManager;
+        private readonly ITokenService _tokenServcie;
 
-        public UsuarioController(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager)
+        public UsuarioController(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager, ITokenService tokenServcie)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _tokenServcie = tokenServcie;
         }
 
         [HttpPost("login")]
@@ -36,7 +41,7 @@ namespace WebApi.Controllers
             {
                 Email = usuario.Email,
                 UserName = usuario.UserName,
-                Token = "Este es un token de PRUEBA",
+                Token = _tokenServcie.CreateToken(usuario), // Usar token service para generar el token
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
 
@@ -65,9 +70,41 @@ namespace WebApi.Controllers
                 UserName = usuario.UserName,
                 Nombre = usuario.Nombre,
                 Apellido = registrarDto.Apellido,
-                Token = "Este es un token de PRUEBA"
+                Token = _tokenServcie.CreateToken(usuario), // Usar token service para generar el token
             };
 
+        }
+
+        [Authorize]
+        [HttpGet]
+        // Método para recuperar el ususrio actual a partir de un JWT
+        // El token se pasa en los headers de la request, por eso el método no lo recive cómo parámetro
+        public async Task<ActionResult<UsuarioDto>> GetUsuario()
+        {
+            // El usuario ha de mandar el token obligatoriamente y por eso podemos acceder a los claims.
+            var email = HttpContext.User?.Claims?.FirstOrDefault(claim => claim.Type == ClaimTypes.Email)?.Value;
+
+            var usuario = await _userManager.FindByEmailAsync(email);
+
+            return new UsuarioDto
+            {
+                Nombre = usuario.Nombre,
+                Apellido = usuario.Apellido,
+                UserName = usuario.UserName,
+                Email = usuario.Email,
+                Token = _tokenServcie.CreateToken(usuario)
+            };
+        }
+
+        // Método para evaluar la existencia de un email ya registrado en la BDD
+        [HttpGet("emailValido")]
+        public async Task<ActionResult<bool>> EmailValido([FromQuery]string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user is null)
+                return false;
+
+            return true;
         }
 
     }

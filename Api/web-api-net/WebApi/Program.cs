@@ -1,7 +1,12 @@
 using BussinesLogic.Data;
+using BussinesLogic.Logic;
 using Core.Entities;
+using Core.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +19,16 @@ identityBuilder.AddEntityFrameworkStores<SecurityDbContext>();
 identityBuilder.AddSignInManager<SignInManager<Usuario>>();
 
 // 3. Añadimos servicio de autenticación a la app
-builder.Services.AddAuthentication();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:Key"])),
+        ValidIssuer = builder.Configuration["Token:Issuer"],
+        ValidateIssuer = true,
+        ValidateAudience = false
+    };
+});
 
 // 1. Conectarse a BDD SQL Express
 // 1.2. Añadir DBcontext por defecto 
@@ -30,6 +44,9 @@ builder.Services.AddDbContext<SecurityDbContext>(options =>
 });
 
 // Add services to the container.
+
+// 3.1 Inyectar objeto que inicializa token service para utilizarlo en cualquier clase de la app
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -49,6 +66,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// 3.2 Añadir el servicio de autenticación
+app.UseAuthentication();
 
 app.UseAuthorization();
 
