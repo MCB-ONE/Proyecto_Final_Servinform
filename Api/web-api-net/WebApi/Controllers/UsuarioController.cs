@@ -14,12 +14,14 @@ namespace WebApi.Controllers
         private readonly UserManager<Usuario> _userManager;
         private readonly SignInManager<Usuario> _signInManager;
         private readonly ITokenService _tokenServcie;
+        private readonly IPasswordHasher<Usuario> _passwordHasher;
 
-        public UsuarioController(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager, ITokenService tokenServcie)
+        public UsuarioController(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager, ITokenService tokenServcie, IPasswordHasher<Usuario> passwordHasher)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenServcie = tokenServcie;
+            _passwordHasher = passwordHasher;
         }
 
         [HttpPost("login")]
@@ -34,7 +36,7 @@ namespace WebApi.Controllers
              * => CheckPasswordSignInAsync: compara email y pasword contra la BDD */
             var resultado = await _signInManager.CheckPasswordSignInAsync(usuario, loginDto.Password, false);
 
-            if(!resultado.Succeeded)
+            if (!resultado.Succeeded)
                 return Unauthorized(new CodeErrorResponse(401, "Contraseña incorrecta"));
 
             return new UsuarioDto
@@ -75,6 +77,36 @@ namespace WebApi.Controllers
 
         }
 
+        [HttpPut("actualizar/{id}")]
+        public async Task<ActionResult<UsuarioDto>> Actualizar(string id, RegistrarDto registrarDto)
+        {
+            var usuario = await _userManager.FindByIdAsync(id);
+
+            if (usuario is null)
+                return NotFound(new CodeErrorResponse(404, $"El usuario con id {id} no existe"));
+
+            usuario.Nombre = registrarDto.Nombre;
+            usuario.Apellido = registrarDto.Apellido;
+            usuario.PasswordHash = _passwordHasher.HashPassword(usuario, registrarDto.Password);
+
+            var resultado = await _userManager.UpdateAsync(usuario);
+
+            if (!resultado.Succeeded)
+                return BadRequest(new CodeErrorResponse(400, $"No se ha podido actualizar el usuario con id{id}"));
+
+
+            return new UsuarioDto
+            {
+                Nombre = usuario.Nombre,
+                Apellido = usuario.Apellido,
+                Email = usuario.Email,
+                UserName = usuario.UserName,
+                Token = _tokenServcie.CreateToken(usuario),
+                Imagen = usuario.Imagen
+            };
+
+        }
+
         [Authorize]
         [HttpGet]
         // Método para recuperar el ususrio actual a partir de un JWT
@@ -98,7 +130,7 @@ namespace WebApi.Controllers
 
         // Método para evaluar la existencia de un email ya registrado en la BDD
         [HttpGet("emailValido")]
-        public async Task<ActionResult<bool>> EmailValido([FromQuery]string email)
+        public async Task<ActionResult<bool>> EmailValido([FromQuery] string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
             if (user is null)
