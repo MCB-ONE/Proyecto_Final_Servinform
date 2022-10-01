@@ -2,17 +2,22 @@ using BussinesLogic.Data;
 using BussinesLogic.Logic;
 using Core.Entities;
 using Core.Interfaces;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using WebApi.DTOs.Usuario;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // 2. Generar builder para servicio de Identity y configurarlo para poder gestionar la seguridad
 var identityBuilder = builder.Services.AddIdentityCore<Usuario>();
 identityBuilder = new IdentityBuilder(identityBuilder.UserType, identityBuilder.Services);
+// 5. Añadir roles al servicio Identity
+identityBuilder.AddRoles<IdentityRole>();
+
 // 2.1 Seteamos donde se va a almacenar la información de identidad.
 identityBuilder.AddEntityFrameworkStores<SecurityDbContext>();
 /* 2.2 Añadimos la funcionalidad SigninManager => Permite instanciar un objeto UserManager para gestionar las transacciones con las tablas de seguridad */
@@ -43,12 +48,27 @@ builder.Services.AddDbContext<SecurityDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SecurityConnection"));
 });
 
-// Add services to the container.
+// AÑADIR SERVICIOS AL CONTAINER
 
 // 3.1 Inyectar objeto que inicializa token service para utilizarlo en cualquier clase de la app
 builder.Services.AddScoped<ITokenService, TokenService>();
 
+// 5.1 Añadir system clock instance object => Permite agregar hora en la   ue se insertan nuevos registros en la tabla de seguridad
+builder.Services.AddSingleton<ISystemClock, SystemClock>(); 
+
 builder.Services.AddControllers();
+
+// 7. Añadir politica de autorización
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("UserOnlyPolicy", policy => policy.RequireClaim("UserOnly", "User1"));
+});
+
+
+// 6 Servicio automapper
+builder.Services.AddAutoMapper(typeof(UsuarioMappingProfile));
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -88,9 +108,10 @@ async void  RunMigration()
     {
         //var userManager = serviceScope.Services.GetRequiredService<UserManager<Usuario>>();
         var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<Usuario>>();
+        var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
         var securityContext = serviceScope.ServiceProvider.GetRequiredService<SecurityDbContext>();
         await securityContext.Database.MigrateAsync();
-        await SecurityDbContextData.SeedUserAsync(userManager);
+        await SecurityDbContextData.SeedUserAsync(userManager, roleManager);
     }
     catch (Exception ex)
     {

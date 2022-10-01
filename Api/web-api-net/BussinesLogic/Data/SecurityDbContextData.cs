@@ -7,20 +7,30 @@ namespace BussinesLogic.Data
     /*Método para crear un usuario de Test al ejecutar la app en caso que no existan usuarios en la BDD*/
     public class SecurityDbContextData
     {
-        public static async Task SeedUserAsync(UserManager<Usuario> userManager)
+        public static async Task SeedUserAsync(UserManager<Usuario> userManager, RoleManager<IdentityRole> roleManager)
         {
             if (!userManager.Users.Any())
             {
                 var usuario = new Usuario{
                     Nombre = "Test",
-                    Apellido = "User",
-                    UserName = "TestUser",
-                    Email = "test.user@gmail.com",
+                    Apellido = "Admin",
+                    UserName = "TestAdmin",
+                    Email = "test.admin@gmail.com",
                     
                 };
 
-                await userManager.CreateAsync(usuario, "Test1234$");
+                await userManager.CreateAsync(usuario, "Admin1234$");
             }
+
+            if (!roleManager.Roles.Any())
+            {
+                var role = new IdentityRole
+                {
+                    Name = "ADMIN"
+                };
+                await roleManager.CreateAsync(role);
+            }
+
         }
     }
 }
