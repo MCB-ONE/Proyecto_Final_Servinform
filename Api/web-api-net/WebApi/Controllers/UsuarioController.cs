@@ -30,6 +30,10 @@ namespace WebApi.Controllers
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Permite acceder al sistema a un usuario
+        /// </summary>
+        /// <returns></returns>
         [HttpPost("login")]
         public async Task<ActionResult<UsuarioDto>> Login(LoginDto loginDto)
         {
@@ -61,6 +65,10 @@ namespace WebApi.Controllers
             };
         }
 
+        /// <summary>
+        /// Permite registrase en el sistema a un usuario
+        /// </summary>
+        /// <returns></returns>
         [HttpPost("registrar")]
         public async Task<ActionResult<UsuarioDto>> Registrar(RegistrarDto registrarDto)
         {
@@ -90,8 +98,10 @@ namespace WebApi.Controllers
 
         }
 
-
-        // Endpoint que permite editar a un usuario registrado sus propios datos de perfil
+        /// <summary>
+        /// Permite a un usuario registrado editar sus propios datos de perfil de usuario
+        /// </summary>
+        /// <returns></returns>
         [Authorize]
         [HttpPut("actualizar/{id}")]
         public async Task<ActionResult<UsuarioDto>> Actualizar(string id, RegistrarDto registrarDto)
@@ -131,7 +141,10 @@ namespace WebApi.Controllers
         }
 
 
-        // Endpoint que permite a los ADMIN añadir o eliminar un rol a un usuario existente
+        /// <summary>
+        /// Permite a los Administradores del sistema añadir o eliminar un rol a un usuario existente
+        /// </summary>
+        /// <returns></returns>
         [Authorize(Roles = "ADMIN")]
         [HttpPut("role/{id}")]
         public async Task<ActionResult<UsuarioDto>> ActualizarRole(string id, RoleDto roleParam)
@@ -183,9 +196,10 @@ namespace WebApi.Controllers
             return usuarioDto;
         }
 
-
-
-        // Endpoint para obtener la data de un usuario por su id => Para permitir a usuarios ADMIN editar otros usuarios
+        /// <summary>
+        /// Permite a los Administradores del sistema obtener la data de un usuario
+        /// </summary>
+        /// <returns></returns>
         [Authorize(Roles = "ADMIN")]
         [HttpGet("account/{id}")]
         public async Task<ActionResult<UsuarioDto>> GetUsuarioBy(string id)
@@ -212,13 +226,15 @@ namespace WebApi.Controllers
 
 
 
-
+        /// <summary>
+        /// Permite recuperar el ususrio actual a partir de un JWT incluido en los headers de la petición HTTP
+        /// </summary>
+        /// <returns></returns>
         [Authorize]
         [HttpGet]
-        // Método para recuperar el ususrio actual a partir de un JWT
-        // El token se pasa en los headers de la request, por eso el método no lo recive cómo parámetro
         public async Task<ActionResult<UsuarioDto>> GetUsuario()
         {
+            // El token se pasa en los headers de la request, por eso el método no lo recive cómo parámetro
             // El usuario ha de mandar el token obligatoriamente y por eso podemos acceder a los claims.
             var email = HttpContext.User?.Claims?.FirstOrDefault(claim => claim.Type == ClaimTypes.Email)?.Value;
 
@@ -240,8 +256,10 @@ namespace WebApi.Controllers
             };
         }
 
-
-        // Método para evaluar la existencia de un email ya registrado en la BDD
+        /// <summary>
+        /// Permite evaluar la existencia de un email ya registrado en la tabla de Usuarios
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("emailValido")]
         public async Task<ActionResult<bool>> EmailValido([FromQuery] string email)
         {

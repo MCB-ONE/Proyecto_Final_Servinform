@@ -12,10 +12,10 @@ namespace BussinesLogic.Data
             if (!userManager.Users.Any())
             {
                 var usuario = new Usuario{
-                    Nombre = "Test",
-                    Apellido = "Admin",
-                    UserName = "TestAdmin",
-                    Email = "test.admin@gmail.com",
+                    Nombre = "Admin",
+                    Apellido = "Test",
+                    UserName = "AdminTest",
+                    Email = "admin.test@gmail.com",
                     
                 };
 

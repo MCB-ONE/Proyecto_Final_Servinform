@@ -72,3 +72,5 @@ C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Ap
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\WebApi.xml
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\obj\Debug\net6.0\WebApi.xml
