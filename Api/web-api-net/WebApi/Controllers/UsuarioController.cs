@@ -1,16 +1,18 @@
 ﻿using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specification;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using WebApi.DTOs;
 using WebApi.DTOs.Usuario;
 using WebApi.Errors;
 
 namespace WebApi.Controllers
 {
-    #pragma warning disable IDE0075 // Simplificar la expresión condicional
+#pragma warning disable IDE0075 // Simplificar la expresión condicional
     public class UsuarioController : BaseApiController
     {
         private readonly UserManager<Usuario> _userManager;
@@ -19,8 +21,9 @@ namespace WebApi.Controllers
         private readonly IPasswordHasher<Usuario> _passwordHasher;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IMapper _mapper;
+        private readonly IGenericSecurityRepository<Usuario> _securityRepository;
 
-        public UsuarioController(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager, ITokenService tokenServcie, IPasswordHasher<Usuario> passwordHasher, RoleManager<IdentityRole> roleManager, IMapper mapper)
+        public UsuarioController(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager, ITokenService tokenServcie, IPasswordHasher<Usuario> passwordHasher, RoleManager<IdentityRole> roleManager, IMapper mapper, IGenericSecurityRepository<Usuario> securityRepository)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -28,6 +31,7 @@ namespace WebApi.Controllers
             _passwordHasher = passwordHasher;
             _roleManager = roleManager;
             _mapper = mapper;
+            _securityRepository = securityRepository;
         }
 
         /// <summary>
@@ -142,6 +146,36 @@ namespace WebApi.Controllers
 
 
         /// <summary>
+        /// Permite a los Administradores obtener la data de todos los usuarios de forma ordeanda, paginada y filtrada.
+        /// </summary>
+        /// <returns></returns>
+        [Authorize]
+        [HttpGet("pagination")]
+        public async Task<ActionResult<Pagination<UsuarioDto>>> GetUsuarios([FromQuery] UsuarioSpecificationParams usuarioParams)
+        {
+            var spec = new UsuarioSpecification(usuarioParams);
+            var usuarios = await _securityRepository.GetAllIdWithSpecAsync(spec);
+
+            var specCount = new UsuarioForCountingSpecification(usuarioParams);
+            var totalUsuarios = await _securityRepository.CountAsync(specCount);
+
+            var rounded = Math.Ceiling(Convert.ToDecimal(totalUsuarios) / Convert.ToDecimal(usuarioParams.PageSize));
+            var totalPages = Convert.ToInt32(rounded);
+
+            var data = _mapper.Map<IReadOnlyList<Usuario>, IReadOnlyList<UsuarioDto>>(usuarios);
+
+            return Ok(
+                new Pagination<UsuarioDto> {
+                    Count = totalUsuarios,
+                    Data =  data,
+                    PageCount = totalPages,
+                    PageIndex = usuarioParams.PageIndex,
+                    PageSize = usuarioParams.PageSize
+            });
+        }
+
+
+        /// <summary>
         /// Permite a los Administradores del sistema añadir o eliminar un rol a un usuario existente
         /// </summary>
         /// <returns></returns>
@@ -192,7 +226,7 @@ namespace WebApi.Controllers
             {
                 usuarioDto.Token = _tokenServcie.CreateToken(usuario, null);
             }
-                
+
             return usuarioDto;
         }
 

@@ -1,5 +1,8 @@
 ﻿namespace WebApi.DTOs.Usuario
 {
+    /// <summary>
+    /// Clase para generar un objeto de transferencia entre el cliente y el servidor
+    /// </summary>
     public class UsuarioDto
     {
         public string Id { get; set; }

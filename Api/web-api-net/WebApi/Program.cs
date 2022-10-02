@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
+using System.Text.Json.Serialization;
 using WebApi.DTOs.Usuario;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -68,6 +69,13 @@ builder.Services.AddAuthorization(options =>
 
 // 6 Servicio automapper
 builder.Services.AddAutoMapper(typeof(UsuarioMappingProfile));
+
+// Configuramos los controladores para que ignoren los posibles ciclos de entidades anidadas/ relacionadas
+builder.Services.AddControllers().AddJsonOptions(options =>
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+//8. Añadir repositorio de seguridad
+builder.Services.AddScoped(typeof(IGenericSecurityRepository<>), typeof(GenericSecurityRepository<>));
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
