@@ -9,5 +9,3 @@ C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Ap
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\Core\obj\Debug\net6.0\Core.dll
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\Core\obj\Debug\net6.0\ref\Core.dll
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\Core\obj\Debug\net6.0\Core.pdb
-C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\Core\bin\Debug\net6.0\Core.runtimeconfig.json
-C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\Core\obj\Debug\net6.0\Core.genruntimeconfig.cache
