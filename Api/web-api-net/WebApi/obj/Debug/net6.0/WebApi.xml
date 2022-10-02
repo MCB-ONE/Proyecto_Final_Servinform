@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.Controllers.UsuarioController.Login(WebApi.DTOs.Usuario.LoginDto)">
+            <summary>
+            Permite acceder al sistema a un usuario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UsuarioController.Registrar(WebApi.DTOs.Usuario.RegistrarDto)">
+            <summary>
+            Permite registrase en el sistema a un usuario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UsuarioController.Actualizar(System.String,WebApi.DTOs.Usuario.RegistrarDto)">
+            <summary>
+            Permite a un usuario registrado editar sus propios datos de perfil de usuario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UsuarioController.GetUsuarios(Core.Specification.UsuarioSpecificationParams)">
+            <summary>
+            Permite a los Administradores obtener la data de todos los usuarios de forma ordeanda, paginada y filtrada.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UsuarioController.ActualizarRole(System.String,WebApi.DTOs.Usuario.RoleDto)">
+            <summary>
+            Permite a los Administradores del sistema añadir o eliminar un rol a un usuario existente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UsuarioController.GetUsuarioBy(System.String)">
+            <summary>
+            Permite a los Administradores del sistema obtener la data de un usuario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UsuarioController.GetUsuario">
+            <summary>
+            Permite recuperar el ususrio actual a partir de un JWT incluido en los headers de la petición HTTP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UsuarioController.EmailValido(System.String)">
+            <summary>
+            Permite evaluar la existencia de un email ya registrado en la tabla de Usuarios
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.DTOs.Usuario.LoginDto">
+            <summary>
+            Clase para generar un objeto de transferencia entre el cliente y el servidor
+            </summary>
+        </member>
+        <member name="T:WebApi.DTOs.Usuario.RoleDto">
+            <summary>
+            Clase para generar un objeto de transferencia entre el cliente y el servidor
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.Usuario.RoleDto.Nombre">
+            <summary>
+            <param Nombre="Nombre">Nombre que identifica el tipo de rol</param>
+            <param Status="true">Boleano que determinar el estado del rol</param>
+            </summary>
+        </member>
+        <member name="T:WebApi.DTOs.Usuario.UsuarioDto">
+            <summary>
+            Clase para generar un objeto de transferencia entre el cliente y el servidor
+            </summary>
+        </member>
+        <member name="T:WebApi.DTOs.Usuario.UsuarioMappingProfile">
+            <summary>
+            Clase que configur el de mapeo de las entidades relacionadas con los usuarios
+            </summary>
+        </member>
+        <member name="M:WebApi.DTOs.Usuario.UsuarioMappingProfile.#ctor">
+            <summary>
+            Clase que configur el de mapeo de las entidades relacionadas con los usuarios
+            </summary>
+        </member>
+    </members>
+</doc>
