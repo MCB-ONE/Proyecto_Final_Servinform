@@ -1,0 +1,82 @@
+@use '@angular/material' as mat;
+@import 'fonts';
+// Custom material theming
+$heading-font-family: "'Roboto', sans-serif";
+$custom-typography: mat.define-typography-config(
+  $display-4: mat.define-typography-level(112px, $font-family: $base-font-family),
+  $display-3: mat.define-typography-level(56px, $font-family: $base-font-family),
+  $display-2: mat.define-typography-level(45px, $font-family: $base-font-family),
+  $display-1: mat.define-typography-level(34px, $font-family: $base-font-family),
+  $headline: mat.define-typography-level(24px, $font-family: $base-font-family),
+  $title: mat.define-typography-level(20px, $font-family: $base-font-family),
+);
+@include mat.core($custom-typography);
+
+// Incluimos los estilos comunes de Angular Material
+/* @include mat.core(); */
+
+
+$custom-primary-map: (
+  50: #e1f5fd,
+  100: #b3e6fa,
+  200: #82d5f8,
+  300: #52c4f4,
+  400: #2eb7f2,
+  500: #0eabf0,
+  600: #0a9de1,
+  700: #048ace,
+  800: #0479ba,
+  900: #005998,
+  contrast: (
+    50: #f4f5f6,
+    100: #e8e9ea,
+    200: #d9dadb,
+    300: #c3c5c6,
+    400: #9d9f9f,
+    500: #7b7d7d,
+    600: #555657,
+    700: #434445,
+    800: #262728,
+    900: #000203
+    )
+);
+
+$custom-accent-map: (
+  50: #eaedff,
+  100: #cad2ff,
+  200: #a8b5f9,
+  300: #8698ef,
+  400: #6c7fe6,
+  500: #5366de,
+  600: #4d5dd3,
+  700: #4452c6,
+  800: #3d48b9,
+  900: #3134a3,
+    contrast: (
+      50: #f4f5f6,
+      100: #e8e9ea,
+      200: #d9dadb,
+      300: #c3c5c6,
+      400: #9d9f9f,
+      500: #7b7d7d,
+      600: #555657,
+      700: #434445,
+      800: #262728,
+      900: #000203
+    )
+);
+
+
+
+$primary-palette: mat.define-palette($custom-primary-map);
+$accent-palette: mat.define-palette($custom-accent-map);
+
+
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $primary-palette,
+    accent: $accent-palette,
+  )
+));
+
+@include mat.all-component-themes($custom-theme);

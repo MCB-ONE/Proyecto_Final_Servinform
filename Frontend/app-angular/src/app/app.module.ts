@@ -4,15 +4,17 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule} from '@angular/fire/compat/auth';
 import { AngularFireStorageModule} from '@angular/fire/compat/storage';
-
+import {HeaderComponent} from '@src/components/header/header.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import { environment } from 'environments/environment';
     AngularFireModule.initializeApp(environment.firebase.config),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

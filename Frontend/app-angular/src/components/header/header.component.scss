@@ -1,0 +1,36 @@
+@import "styles/colors.scss";
+.header {
+  border-top: 2px solid $primary;
+  height: 70px;
+  padding: 0 10%;
+  display: flex;
+  background-color: $base-dark;
+  justify-content: space-between;
+
+  .header-button {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: middle;
+    img{
+      height: 100%;
+    }
+  }
+
+  &__navigation {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    align-items: center;
+  }
+}
