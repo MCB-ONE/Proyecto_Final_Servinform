@@ -2,3 +2,13 @@
 @import './styles/theme.scss';
 /* Global styles import */
 @import './styles/main.scss';
+
+html{
+  height: 100%;
+}
+
+body{
+  height: 100%;
+  background: $base;
+  color: $on-base;
+}

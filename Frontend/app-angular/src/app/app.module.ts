@@ -4,7 +4,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule} from '@angular/fire/compat/auth';
 import { AngularFireStorageModule} from '@angular/fire/compat/storage';
-import {HeaderComponent} from '@src/components/header/header.component';
+import {HeaderComponent} from '@app/components/header/header.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
