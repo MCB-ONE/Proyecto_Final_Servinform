@@ -1,1 +1,49 @@
-<p>shared works!</p>
+<h1>Componentes compartidos</h1>
+
+<section class="app-page__section">
+  <h3 class="h3">Acciones</h3>
+  <button mat-flat-button color="primary" (click)="onToggleSpinner()">{{spinnerLabel}}</button>
+  <button mat-flat-button color="primary" (click)="onError()">Error</button>
+  <button mat-flat-button color="primary" (click)="onSuccess()">Success</button>
+</section>
+
+<section class="app-page__section  wrapper">
+<app-spinner *ngIf="showSpinner"></app-spinner>
+<h2 class="mat-h2">Formularios de angular</h2>
+<h3 class="h2">Control de formularios</h3>
+<form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+  <button mat-flat-button color="primary" (click)="onPatchValue()">Agregar texto</button>
+  <button mat-flat-button color="primary" (click)="onToggleDisabled()">Deshabilitar</button>
+  <button mat-flat-button color="primary" type="submit">Enviar</button>
+  <br><br>
+  <app-form-field label="Email" [required]="true" [control]="form.controls['email']" [patternError]="regexError.email">
+    <app-input formControlName="email" placeholder="email@gmail.com"></app-input>
+  </app-form-field>
+  <app-form-field label="Password" [required]="true" [control]="form.controls['password']" [patternError]="regexError.password">
+    <app-password formControlName="password"></app-password>
+  </app-form-field>
+
+  <app-form-field label="Autocomplete" [required]="true" [control]="form.controls['autocomplete']">
+    <app-autocomplete formControlName="autocomplete" [items]="items"></app-autocomplete>
+  </app-form-field>
+
+  <app-form-field label="Select" [required]="true" [control]="form.controls['select']">
+    <app-select formControlName="select" [items]="items"></app-select>
+  </app-form-field>
+
+  <app-form-field label="Checkboxes" [required]="true" [control]="form.controls['checkboxes']">
+    <app-checkboxes formControlName="checkboxes" [items]="items"></app-checkboxes>
+  </app-form-field>
+
+  <app-form-field label="Radios" [required]="true" [control]="form.controls['radio']">
+    <app-radios formControlName="radios" [items]="items"></app-radios>
+  </app-form-field>
+
+  <app-form-field label="Date" [required]="true" [control]="form.controls['date']">
+    <app-date formControlName="date" placeholder="Date"></app-date>
+  </app-form-field>
+
+  <app-form-field label="Date Range" [required]="true" [control]="form.controls['dateRange']">
+    <app-date-range formControlName="dateRange"></app-date-range>
+  </app-form-field>
+</form>

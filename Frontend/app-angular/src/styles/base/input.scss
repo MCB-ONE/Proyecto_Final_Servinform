@@ -1,19 +1,17 @@
-@import 'styles/colors.scss';
+@import '../colors.scss';
 
 .app-input{
   width: 100%;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid $secondary;
-  height: 36px;
-  line-height: 18px;
+  border-bottom: 2px solid $primary;
+  border-radius: 8px 8px 0px 0px;
   margin-bottom: 1rem;
-  padding: 0 6px;
+  padding: 12px 6px;
   outline: none;
-
+  background: $base;
   &:focus{
-    color: $on-primary;
     border: none;
-    border-bottom: 3px solid $primary;
+    border-bottom: 3px solid $primary-dark;
   }
 }
