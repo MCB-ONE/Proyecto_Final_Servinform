@@ -1,7 +1,4 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDivider} from '@angular/material/divider';
-import {MatIconModule} from '@angular/material/icon';
 
 
 @Component({
@@ -20,7 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickerd() : void{
+  onClicked() : void{
     this.menuClicked.emit();
   }
 

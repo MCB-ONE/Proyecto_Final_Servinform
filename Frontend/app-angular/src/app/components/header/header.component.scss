@@ -1,7 +1,7 @@
 @import "styles/colors.scss";
 .header {
   border-top: 2px solid $primary;
-  padding: 8px 10%;
+  padding: 8px 5%;
   display: flex;
   justify-content: space-between;
 
@@ -16,8 +16,8 @@
     align-items: center;
     cursor: pointer;
     vertical-align: middle;
-    img{
-      height: 65px;
+    .logo{
+      height: 22px;
     }
   }
 

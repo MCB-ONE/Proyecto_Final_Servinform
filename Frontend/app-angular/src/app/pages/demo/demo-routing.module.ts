@@ -14,9 +14,9 @@ const routes = [
       {
         path: 'shared',
         loadChildren: () => import('./pages/shared/shared.module').then(m=>m.SharedModule)
-      }
+      },
     ]
-  }
+  },
 ]
 
 @NgModule({

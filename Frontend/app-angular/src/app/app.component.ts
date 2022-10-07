@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
@@ -7,7 +7,10 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app-angular';
+
+  @Output() menuClicked = new EventEmitter();
+
+  openMenu = false;
 
 
   constructor(private fs: AngularFirestore){
@@ -15,10 +18,13 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    this.fs.collection('test').snapshotChanges().subscribe(
-      personas => console.log(personas.map(x => x.payload.doc.data()))
-    );
   }
+
+  onClicked() : void{
+    this.menuClicked.emit();
+  }
+
+
 
 
 }
