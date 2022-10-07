@@ -1,6 +1,6 @@
 .app-page{
   max-width: 70%;
-  margin: 1rem auto;
+  margin: 4rem auto 0;
   background-color: $base-light;
   border: 1px solid $base-dark;
   border-radius: 8px;
@@ -9,7 +9,6 @@
 
   &__header{
     margin-bottom: 2rem;
-    text-align: center;
   }
 
   &__content{

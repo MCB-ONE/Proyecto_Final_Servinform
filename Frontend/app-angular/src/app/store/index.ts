@@ -5,7 +5,7 @@ export interface State {
   usuario: fromUsuario.UsuarioState;
 }
 
-export const reducer: ActionReducerMap<State> = {
+export const reducers: ActionReducerMap<State> = {
   usuario: fromUsuario.reducer,
 }
 

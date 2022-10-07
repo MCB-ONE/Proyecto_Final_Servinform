@@ -8,4 +8,8 @@ export interface EmailPasswordCredentials {
   password: string;
 }
 
-export type UsuarioCreateRequest = Omit<Usuario,'id' | 'token' | 'imagen' | 'admin'>;
+export interface UsuarioRequest extends Usuario {
+  password: string;
+}
+
+export type UsuarioCreateRequest = Omit<UsuarioRequest,'id' | 'token' | 'imagen' | 'admin'>;

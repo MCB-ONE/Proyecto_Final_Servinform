@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormFieldModule, InputModule, PasswordModule } from '@app/shared/controls';
 import { MatButtonModule } from '@angular/material/button';
+import { SpinnerModule } from '@app/shared';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
     FormFieldModule,
     InputModule,
     PasswordModule,
+    SpinnerModule,
     MatButtonModule
   ]
 })

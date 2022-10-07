@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IControlItem } from '@app/models/frontend';
 import { NotificationService } from '@app/services';
-import { markFormroupTouched, regex, regexErrors } from '@app/shared/utils';
+import { markFormGroupTouched, regex, regexErrors } from '@app/shared/utils';
 
 @Component({
   selector: 'app-shared',
@@ -121,7 +121,7 @@ export class SharedComponent implements OnInit {
   onSubmit(): void {
     console.log('Botón submit pulsado!');
     if (!this.form.valid) {
-      markFormroupTouched(this.form)
+      markFormGroupTouched(this.form)
     }
   }
 
