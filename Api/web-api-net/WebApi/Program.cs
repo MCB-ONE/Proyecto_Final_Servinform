@@ -66,6 +66,17 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("UserOnlyPolicy", policy => policy.RequireClaim("UserOnly", "User1"));
 });
 
+// 9. Habilitar CORS (Que entornos, que tipo de métodos y cabeceras pueden acceder ala API y enviar peticiones
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "CorsPolicity", builder =>
+    {
+        builder.AllowAnyOrigin();
+        builder.AllowAnyMethod();
+        builder.AllowAnyHeader();
+    });
+});
+
 
 // 6 Servicio automapper
 builder.Services.AddAutoMapper(typeof(UsuarioMappingProfile));
