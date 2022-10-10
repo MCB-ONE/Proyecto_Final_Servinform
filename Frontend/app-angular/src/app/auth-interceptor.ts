@@ -16,7 +16,7 @@ export class AuthInterceptor implements HttpInterceptor{
     /**Clona la petición que intercepta y le agrega al header de la petición el token
      * de seguirdad que está (o no) en localStorage*/
     const request = req.clone({
-      headers: req.headers.set('Authorization', 'Bearer' + securityToken),
+      headers: req.headers.set('Authorization', 'Bearer ' + securityToken),
     });
 
     return next.handle(request);

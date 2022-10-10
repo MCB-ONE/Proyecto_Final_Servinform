@@ -11,6 +11,7 @@ import { environment } from 'environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDateFormats, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatMenuModule} from '@angular/material/menu';
 import { NotificationModule } from './services';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth-interceptor';
@@ -19,6 +20,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers, effects} from './store';
+import { MatIconModule } from '@angular/material/icon';
 
 
 const APP_DATE_FORMATS: MatDateFormats = {
@@ -51,7 +53,8 @@ const APP_DATE_FORMATS: MatDateFormats = {
 
     MatNativeDateModule,
     MatSidenavModule,
-
+    MatMenuModule,
+    MatIconModule,
     NotificationModule.forRoot(),
 
     StoreModule.forRoot(reducers,{

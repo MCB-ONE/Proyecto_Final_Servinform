@@ -1,5 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Router } from '@angular/router';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import * as formRoot from './store';
+import * as fromUsuario from './store/usuario';
 
 @Component({
   selector: 'app-root',
@@ -8,23 +13,28 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class AppComponent {
 
-  @Output() menuClicked = new EventEmitter();
+  usuario$ !: Observable<fromUsuario.UsuarioResponse>;
+  isAuthorized$ !: Observable<boolean>
 
-  openMenu = false;
-
-
-  constructor(private fs: AngularFirestore){
+  constructor(
+    private store: Store<formRoot.State>,
+    private router: Router
+  ){
 
   }
 
-  ngOnInit(){
-  }
+  ngOnInit(): void{
+    this.usuario$ = this.store.pipe(select(fromUsuario.getUsuario)) as Observable<fromUsuario.UsuarioResponse>
+    this.isAuthorized$ = this.store.pipe(select(fromUsuario.getIsAuthorized)) as Observable<boolean>
 
-  onClicked() : void{
-    this.menuClicked.emit();
-  }
+    this.store.dispatch(new fromUsuario.Init());
+    }
 
-
+    onSignOut(): void {
+      localStorage.removeItem('token');
+      this.store.dispatch(new fromUsuario.SignOut());
+      this.router.navigate(['/auth/login']);
+    }
 
 
 }

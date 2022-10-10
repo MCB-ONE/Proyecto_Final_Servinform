@@ -36,7 +36,10 @@ export class UsuarioEffects {
               }
             }),
             map((response: UsuarioResponse) => new fromActions.SignUpEmailSuccess(response.id, response || null)),
-            catchError(err => of(new fromActions.SignUpEmailError(err.message)))
+            catchError(err => {
+              this.notification.error("Error al registrar usuario");
+              return of(new fromActions.SignUpEmailError(err.message))
+            })
           )
       )
     )
@@ -56,7 +59,11 @@ export class UsuarioEffects {
               }
             }),
             map((response: UsuarioResponse) => new fromActions.SignInEmailSuccess(response.id, response || null)),
-            catchError(err => of(new fromActions.SignInEmailError(err.message)))
+            //catchError(err => of(new fromActions.SignInEmailError(err.message)))
+            catchError(err => {
+              this.notification.error("Credenciales incorrectas");
+              return of(new fromActions.SignInEmailError(err.message))
+            })
           )
       )
     )
