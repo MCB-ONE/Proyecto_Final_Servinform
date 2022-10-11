@@ -138,4 +138,8 @@ export class SharedComponent implements OnInit {
   onSuccess(): void {
     this.notification.success("Procedimiento existoso!")
   }
+
+  onFilesChanged(urls: string | string[]): void {
+    console.log("urls", urls);
+  }
 }

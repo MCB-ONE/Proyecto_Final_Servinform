@@ -4,7 +4,7 @@
       <app-date
         formControlName="from"
         (close)="onClosed()"
-        [placeholder]="placeholder.from || 'Desde'"
+        [placeholder]="'Desde'"
         (changed)="onChanged()"
         [max]="max">
       </app-date>
@@ -12,7 +12,7 @@
       <app-date
         formControlName="to"
         (close)="onClosed()"
-        [placeholder]="placeholder.to || 'Hasta'"
+        [placeholder]="'Hasta'"
         (changed)="onChanged()"
         [min]="min"
         >

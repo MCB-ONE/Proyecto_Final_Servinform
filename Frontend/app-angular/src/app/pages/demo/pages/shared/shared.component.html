@@ -1,6 +1,12 @@
 <h1>Componentes compartidos</h1>
 
 <section class="app-page__section">
+  <h3 class="h3">Subida de archivos</h3>
+  <button mat-flat-button color="primary" appFileUpload [multiple]="true" (changed)="onFilesChanged($event)">Subir multiples imagenes</button>
+  <button mat-flat-button color="primary" appFileUpload [crop]="true">Subir una imagen</button>
+</section>
+
+<section class="app-page__section">
   <h3 class="h3">Acciones</h3>
   <button mat-flat-button color="primary" (click)="onToggleSpinner()">{{spinnerLabel}}</button>
   <button mat-flat-button color="primary" (click)="onError()">Error</button>

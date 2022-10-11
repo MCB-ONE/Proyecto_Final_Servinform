@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
 import { SharedComponent } from './shared.component';
 import { MatButtonModule } from '@angular/material/button';
-import { ControlsModule, IndicatorsModule } from '@app/shared';
+import { ControlsModule, IndicatorsModule, PopupsModule } from '@app/shared';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -18,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatButtonModule,
     ControlsModule,
-    IndicatorsModule
+    IndicatorsModule,
+    PopupsModule
   ]
 })
 export class SharedModule { }
