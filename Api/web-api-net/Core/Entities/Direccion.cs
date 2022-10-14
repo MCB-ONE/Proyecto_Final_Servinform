@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.Entities
+﻿namespace Core.Entities
 {
-    public class Direccion
+    public class Direccion: BaseEntity
     {
         public string Calle { get; set; }
         public int Numero { get; set; }
@@ -17,6 +11,15 @@ namespace Core.Entities
         public int Telefono { get; set; }
         public string Email { get; set; }
         public string Web { get; set; }
+
+        public int? EmpresaId { get; set; }
+        public int? ClienteId { get; set; }
+
+
+        // Navigation properties
+        public Empresa Empresa { get; set; }
+        public Cliente Cliente { get; set; }
+
 
 
     }

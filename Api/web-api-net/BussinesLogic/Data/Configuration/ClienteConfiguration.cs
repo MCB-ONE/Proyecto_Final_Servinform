@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BussinesLogic.Data.Configuration
 {
-    internal class EmpresaConfiguration : IEntityTypeConfiguration<Empresa>
+    internal class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
     {
-        public void Configure(EntityTypeBuilder<Empresa> builder)
+        public void Configure(EntityTypeBuilder<Cliente> builder)
         {
             builder.Property(p  => p.Nombre)
                 .IsRequired()
@@ -18,9 +18,8 @@ namespace BussinesLogic.Data.Configuration
                 .IsFixedLength();
 
             builder.HasMany(c => c.Direcciones)
-                .WithOne(a => a.Empresa)
-                .HasForeignKey(a => a.EmpresaId);
-
+                .WithOne(a => a.Cliente)
+                .HasForeignKey(a => a.ClienteId);
 
         }
     }

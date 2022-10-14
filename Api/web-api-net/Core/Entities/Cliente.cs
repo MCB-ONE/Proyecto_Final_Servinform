@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class Cliente
+    public class Cliente: BaseEntity
     {
         public string Nombre { get; set; }
         public string NIF { get; set; }
         public string Logo { get; set; }
-        public Direccion Direccion { get; set; }
+        public HashSet<Direccion> Direcciones { get; set; }
+        public int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
+
     }
 }

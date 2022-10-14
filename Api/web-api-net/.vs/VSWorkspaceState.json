@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Core",
-    "\\Core\\Entities"
+    ""
   ],
-  "SelectedNode": "\\Core\\Entities",
+  "SelectedNode": "\\web-api-net.sln",
   "PreviewInSolutionExplorer": false
 }
