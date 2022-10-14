@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BussinesLogic.Data.Configuration
 {
-    internal class DireccionConfiguration : IEntityTypeConfiguration<Direccion>
+    public class DireccionConfiguration : IEntityTypeConfiguration<Direccion>
     {
         public void Configure(EntityTypeBuilder<Direccion> builder)
         {
