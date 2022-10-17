@@ -20,10 +20,6 @@
     <ProjectReference Include="..\BussinesLogic\BussinesLogic.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
   <PropertyGroup>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>

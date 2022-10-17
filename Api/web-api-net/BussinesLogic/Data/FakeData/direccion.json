@@ -1,0 +1,28 @@
+﻿[
+  {
+    "Calle": "Córcega",
+    "Numero": 12,
+    "CodigoPostal": "08030",
+    "Ciudad": "Barcelona",
+    "Provincia": "Barcelona",
+    "Pais": "España",
+    "Telefono": 937486622,
+    "Email": "empresa.test@gmail.com",
+    "Web": "https://empresatest.es/",
+    "EmpresaId": 1,
+    "IsDeleted": false
+  },
+  {
+    "Calle": "Luis Companys",
+    "Numero": 39,
+    "CodigoPostal": "08014",
+    "Ciudad": "Barcelona",
+    "Provincia": "Barcelona",
+    "Pais": "España",
+    "Telefono": 939091211,
+    "Email": "clienteTest@gmail.com",
+    "Web": "https://clienteTest.es/",
+    "ClienteId": 1,
+    "IsDeleted": false
+  }
+]

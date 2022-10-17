@@ -8,6 +8,9 @@ namespace BussinesLogic.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Empresa> builder)
         {
+            builder.Property(p => p.EmailUsuario)
+                .IsRequired();
+
             builder.Property(p  => p.Nombre)
                 .IsRequired()
                 .HasMaxLength(256);

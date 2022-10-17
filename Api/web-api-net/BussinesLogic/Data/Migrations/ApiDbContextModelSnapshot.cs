@@ -69,7 +69,7 @@ namespace BussinesLogic.Data.Migrations
 
                     b.HasIndex("EmpresaId");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("Cliente");
                 });
 
             modelBuilder.Entity("Core.Entities.Direccion", b =>
@@ -93,9 +93,9 @@ namespace BussinesLogic.Data.Migrations
                     b.Property<int?>("ClienteId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CodigoPostal")
+                    b.Property<string>("CodigoPostal")
                         .HasMaxLength(5)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(5)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("date");
@@ -146,7 +146,7 @@ namespace BussinesLogic.Data.Migrations
 
                     b.HasIndex("EmpresaId");
 
-                    b.ToTable("Direcciones");
+                    b.ToTable("Direccion");
                 });
 
             modelBuilder.Entity("Core.Entities.Empresa", b =>
@@ -167,6 +167,7 @@ namespace BussinesLogic.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EmailUsuario")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -194,7 +195,7 @@ namespace BussinesLogic.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Empresas");
+                    b.ToTable("Empresa");
                 });
 
             modelBuilder.Entity("Core.Entities.Cliente", b =>

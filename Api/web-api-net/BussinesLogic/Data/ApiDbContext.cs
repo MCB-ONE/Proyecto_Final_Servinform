@@ -26,9 +26,9 @@ namespace BussinesLogic.Data
 
         }
 
-        public DbSet<Empresa> Empresas { get; set; }
-        public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Direccion> Direcciones { get; set; }
+        public DbSet<Empresa> Empresa { get; set; }
+        public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Direccion> Direccion { get; set; }
 
     }
 }

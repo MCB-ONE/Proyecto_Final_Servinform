@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BussinesLogic.Logic
 {
-    internal class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
         private readonly ApiDbContext _context;
         private readonly ILogger<GenericRepository<T>> _logger;

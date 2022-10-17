@@ -131,12 +131,20 @@ async void  RunMigration()
 
     try
     {
-        //var userManager = serviceScope.Services.GetRequiredService<UserManager<Usuario>>();
+
+        // Seeding data inicial de usuarios
         var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<Usuario>>();
         var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
         var securityContext = serviceScope.ServiceProvider.GetRequiredService<SecurityDbContext>();
         await securityContext.Database.MigrateAsync();
         await SecurityDbContextData.SeedUserAsync(userManager, roleManager);
+
+        // Seeding data inicial de las tablas de entidades no relacionadas con la seguridad
+        var apiContext = serviceScope.ServiceProvider.GetRequiredService<ApiDbContext>();
+        await apiContext.Database.MigrateAsync();
+        await ApiDbContextData.CargarDataAsync(apiContext, loggerFactory);
+
+
     }
     catch (Exception ex)
     {

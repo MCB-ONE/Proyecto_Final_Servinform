@@ -1,0 +1,9 @@
+﻿[
+  {
+    "EmailUsuario": "usuario.test@gmail.com",
+    "Nombre": "Empresa Test",
+    "NIF": "43007288E",
+    "Logo": null,
+    "IsDeleted": false
+  }
+]

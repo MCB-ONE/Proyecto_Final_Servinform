@@ -10,12 +10,12 @@ namespace BussinesLogic.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Empresas",
+                name: "Empresa",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    EmailUsuario = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EmailUsuario = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Nombre = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
                     NIF = table.Column<string>(type: "nchar(9)", fixedLength: true, maxLength: 9, nullable: false),
                     Logo = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -28,11 +28,11 @@ namespace BussinesLogic.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Empresas", x => x.Id);
+                    table.PrimaryKey("PK_Empresa", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Clientes",
+                name: "Cliente",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -50,24 +50,24 @@ namespace BussinesLogic.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clientes", x => x.Id);
+                    table.PrimaryKey("PK_Cliente", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Clientes_Empresas_EmpresaId",
+                        name: "FK_Cliente_Empresa_EmpresaId",
                         column: x => x.EmpresaId,
-                        principalTable: "Empresas",
+                        principalTable: "Empresa",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Direcciones",
+                name: "Direccion",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Calle = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Numero = table.Column<int>(type: "int", nullable: false),
-                    CodigoPostal = table.Column<int>(type: "int", maxLength: 5, nullable: false),
+                    CodigoPostal = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: true),
                     Ciudad = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Provincia = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Pais = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
@@ -85,45 +85,45 @@ namespace BussinesLogic.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Direcciones", x => x.Id);
+                    table.PrimaryKey("PK_Direccion", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Direcciones_Clientes_ClienteId",
+                        name: "FK_Direccion_Cliente_ClienteId",
                         column: x => x.ClienteId,
-                        principalTable: "Clientes",
+                        principalTable: "Cliente",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Direcciones_Empresas_EmpresaId",
+                        name: "FK_Direccion_Empresa_EmpresaId",
                         column: x => x.EmpresaId,
-                        principalTable: "Empresas",
+                        principalTable: "Empresa",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Clientes_EmpresaId",
-                table: "Clientes",
+                name: "IX_Cliente_EmpresaId",
+                table: "Cliente",
                 column: "EmpresaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Direcciones_ClienteId",
-                table: "Direcciones",
+                name: "IX_Direccion_ClienteId",
+                table: "Direccion",
                 column: "ClienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Direcciones_EmpresaId",
-                table: "Direcciones",
+                name: "IX_Direccion_EmpresaId",
+                table: "Direccion",
                 column: "EmpresaId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Direcciones");
+                name: "Direccion");
 
             migrationBuilder.DropTable(
-                name: "Clientes");
+                name: "Cliente");
 
             migrationBuilder.DropTable(
-                name: "Empresas");
+                name: "Empresa");
         }
     }
 }
