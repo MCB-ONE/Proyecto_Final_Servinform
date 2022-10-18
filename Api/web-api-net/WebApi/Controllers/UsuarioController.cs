@@ -141,7 +141,6 @@ namespace WebApi.Controllers
                 Imagen = usuario.Imagen,
                 Admin = roles.Contains("ADMIN") ? true : false
             };
-
         }
 
 

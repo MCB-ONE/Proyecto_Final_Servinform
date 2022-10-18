@@ -10,9 +10,23 @@ using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
+using WebApi.DTOs.Cliente;
+using WebApi.DTOs.Direccion;
+using WebApi.DTOs.Empresa;
 using WebApi.DTOs.Usuario;
+using Serilog;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+//10. Configurar serilog para loggin
+builder.Host.UseSerilog((hostBuilderCtx, loggerConf)=>
+{
+    loggerConf
+        .WriteTo.Console()
+        .WriteTo.Debug()
+        .ReadFrom.Configuration(hostBuilderCtx.Configuration);
+});
 
 // 2. Generar builder para servicio de Identity y configurarlo para poder gestionar la seguridad
 var identityBuilder = builder.Services.AddIdentityCore<Usuario>();
@@ -80,13 +94,16 @@ builder.Services.AddCors(options =>
 
 // 6 Servicio automapper
 builder.Services.AddAutoMapper(typeof(UsuarioMappingProfile));
-
+builder.Services.AddAutoMapper(typeof(EmpresaMappingProfile));
+builder.Services.AddAutoMapper(typeof(ClienteMappingProfile));
+builder.Services.AddAutoMapper(typeof(DireccionMappingProfile));
 // Configuramos los controladores para que ignoren los posibles ciclos de entidades anidadas/ relacionadas
 builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 //8. Añadir repositorio de seguridad
 builder.Services.AddScoped(typeof(IGenericSecurityRepository<>), typeof(GenericSecurityRepository<>));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -109,6 +126,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//10.1 Habilitar serilog en la app
+
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 

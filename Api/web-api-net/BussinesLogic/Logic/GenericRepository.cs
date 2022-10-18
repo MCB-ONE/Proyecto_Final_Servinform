@@ -28,6 +28,7 @@ namespace BussinesLogic.Logic
             _logger.LogError($"{nameof(GenericRepository<T>)} - {nameof(GetAllAsync)} - Error Level Log");
             _logger.LogCritical($"{nameof(GenericRepository<T>)} - {nameof(GetAllAsync)} - Critical Log Level");
 
+
             return await _context.Set<T>().ToListAsync();
         }
 

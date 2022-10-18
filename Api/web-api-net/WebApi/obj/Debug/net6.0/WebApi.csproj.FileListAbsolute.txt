@@ -74,3 +74,13 @@ C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Ap
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\obj\Debug\net6.0\WebApi.xml
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\obj\Debug\net6.0\WebApi.pdb
 C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Serilog.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\bin\Debug\net6.0\Serilog.Sinks.File.dll

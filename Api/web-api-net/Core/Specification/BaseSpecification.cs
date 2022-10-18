@@ -26,7 +26,18 @@ namespace Core.Specification
 
         public Expression<Func<T, object>> OrderBy { get; private set; }
 
-        public Expression<Func<T, object>> OrderByDesc { get; private set; }
+        public Expression<Func<T, object>> OrderByDescending { get; private set; }
+
+        // Método que permite que el cliente agrege el tipo de ordenaiento que desea
+        protected void AddOrderBy(Expression<Func<T, object>> orderByExpression)
+        {
+            OrderBy = orderByExpression;
+        }
+        protected void AddOrderByDescending(Expression<Func<T, object>> orderByDescendingExpression)
+        {
+            OrderByDescending = orderByDescendingExpression;
+        }
+
 
         public int Take { get; private set; }
 
@@ -42,15 +53,6 @@ namespace Core.Specification
         }
 
 
-        // Método que permite que el cliente agrege el tipo de ordenaiento que desea
-        protected void AddOrderBy(Expression<Func<T, object>> orderByExpression)
-        {
-            OrderBy = orderByExpression;
-        }
-        protected void AddOrderByDesc(Expression<Func<T, object>> orderByDescExpression)
-        {
-            OrderByDesc = orderByDescExpression;
-        }
 
     }
 }

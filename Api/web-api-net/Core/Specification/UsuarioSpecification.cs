@@ -28,13 +28,13 @@ namespace Core.Specification
                         AddOrderBy(usuarios => usuarios.Nombre);
                         break;
                     case "nombreDesc":
-                        AddOrderByDesc(usuarios => usuarios.Nombre);
+                        AddOrderByDescending(usuarios => usuarios.Nombre);
                         break;
                     case "emailAsc":
                         AddOrderBy(usuarios => usuarios.Email);
                         break;
                     case "emailDesc":
-                        AddOrderByDesc(usuarios => usuarios.Email);
+                        AddOrderByDescending(usuarios => usuarios.Email);
                         break;
                     default:
                         AddOrderBy(usuarios => usuarios.Nombre);

@@ -14,8 +14,8 @@ namespace BussinesLogic.Logic
             if (spec.OrderBy != null)
                 inputQuery.OrderBy(spec.OrderBy); 
 
-            if (spec.OrderByDesc != null)
-                inputQuery.OrderBy(spec.OrderByDesc);
+            if (spec.OrderByDescending != null)
+                inputQuery.OrderBy(spec.OrderByDescending);
 
             if (spec.isPagingEnabled)
                 inputQuery = inputQuery.Skip(spec.Skip).Take(spec.Take);
