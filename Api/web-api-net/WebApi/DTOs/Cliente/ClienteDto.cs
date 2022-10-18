@@ -9,6 +9,8 @@ namespace WebApi.DTOs.Cliente
         public string NIF { get; set; }
         public string Logo { get; set; }
 
+        public int EmpresaId { get; set;}
+
         public List<DireccionDto> Direcciones { get; set; }
 
     }

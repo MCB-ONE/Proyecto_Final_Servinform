@@ -7,6 +7,7 @@ namespace WebApi.DTOs.Direccion
         public DireccionMappingProfile()
         {
             CreateMap<Core.Entities.Direccion, DireccionDto>().ReverseMap();
+            CreateMap<Core.Entities.Direccion, CreateDireccionDto>().ReverseMap();
         }
     }
 }

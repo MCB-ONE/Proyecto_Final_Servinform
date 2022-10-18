@@ -353,3 +353,487 @@ Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operati
 2022-10-18 17:19:03.217 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
 2022-10-18 17:19:03.232 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
 2022-10-18 17:19:03.248 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 41.1480 ms
+2022-10-18 17:25:04.423 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:25:04.467 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:25:04.474 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:25:04.477 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:25:04.480 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:25:20.401 +02:00 [WRN] GenericRepository - GetAllAsync - Warning Level Log
+2022-10-18 17:25:20.411 +02:00 [ERR] GenericRepository - GetAllAsync - Error Level Log
+2022-10-18 17:25:20.414 +02:00 [FTL] GenericRepository - GetAllAsync - Critical Log Level
+2022-10-18 17:25:20.743 +02:00 [INF] HTTP GET /api/Direccion responded 200 in 672.1834 ms
+2022-10-18 17:26:25.578 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:26:25.627 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:26:25.633 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:26:25.636 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:26:25.639 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:26:44.495 +02:00 [WRN] GenericRepository - GetAllAsync - Warning Level Log
+2022-10-18 17:26:44.504 +02:00 [ERR] GenericRepository - GetAllAsync - Error Level Log
+2022-10-18 17:26:44.507 +02:00 [FTL] GenericRepository - GetAllAsync - Critical Log Level
+2022-10-18 17:26:44.971 +02:00 [INF] HTTP GET /api/Direccion responded 200 in 883.7349 ms
+2022-10-18 17:27:52.317 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:27:52.358 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:27:52.364 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:27:52.366 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:27:52.369 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:28:00.497 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:28:00.506 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:28:00.509 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:28:01.001 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 17:28:01.441 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 1544.0129 ms
+2022-10-18 17:28:09.708 +02:00 [WRN] GenericRepository - GetAllAsync - Warning Level Log
+2022-10-18 17:28:09.713 +02:00 [ERR] GenericRepository - GetAllAsync - Error Level Log
+2022-10-18 17:28:09.717 +02:00 [FTL] GenericRepository - GetAllAsync - Critical Log Level
+2022-10-18 17:28:09.732 +02:00 [INF] HTTP GET /api/Direccion responded 200 in 37.4555 ms
+2022-10-18 17:55:26.272 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:55:26.312 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:55:26.320 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:55:26.324 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:55:26.328 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:57:32.182 +02:00 [WRN] GenericRepository - GetAllAsync - Warning Level Log
+2022-10-18 17:57:32.189 +02:00 [ERR] GenericRepository - GetAllAsync - Error Level Log
+2022-10-18 17:57:32.192 +02:00 [FTL] GenericRepository - GetAllAsync - Critical Log Level
+2022-10-18 17:57:32.615 +02:00 [INF] HTTP GET /api/Direccion responded 200 in 1207.9711 ms
+2022-10-18 17:57:37.991 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 17:57:37.997 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 17:57:38.000 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 17:57:38.398 +02:00 [INF] HTTP GET /api/Direccion/2 responded 200 in 443.2038 ms
+2022-10-18 18:31:33.252 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 18:31:33.291 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 18:31:33.298 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 18:31:33.301 +02:00 [INF] Hosting environment: Development
+2022-10-18 18:31:33.306 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 18:33:14.817 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 18:33:14.834 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 18:33:14.844 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 18:33:15.786 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 18:33:16.639 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 3314.9686 ms
+2022-10-18 18:34:33.226 +02:00 [ERR] HTTP POST /api/Direccion responded 500 in 372.6500 ms
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateDireccionDto -> Direccion
+WebApi.DTOs.Direccion.CreateDireccionDto -> Core.Entities.Direccion
+   at lambda_method283(Closure , Object , Direccion , ResolutionContext )
+   at WebApi.Controllers.DireccionController.CreateDireccion(CreateDireccionDto dto) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\DireccionController.cs:line 45
+   at lambda_method278(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-10-18 18:34:33.448 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateDireccionDto -> Direccion
+WebApi.DTOs.Direccion.CreateDireccionDto -> Core.Entities.Direccion
+   at lambda_method283(Closure , Object , Direccion , ResolutionContext )
+   at WebApi.Controllers.DireccionController.CreateDireccion(CreateDireccionDto dto) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\DireccionController.cs:line 45
+   at lambda_method278(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-18 18:35:11.103 +02:00 [ERR] HTTP POST /api/Direccion responded 500 in 114.3540 ms
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateDireccionDto -> Direccion
+WebApi.DTOs.Direccion.CreateDireccionDto -> Core.Entities.Direccion
+   at lambda_method283(Closure , Object , Direccion , ResolutionContext )
+   at WebApi.Controllers.DireccionController.CreateDireccion(CreateDireccionDto dto)
+   at lambda_method287(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-10-18 18:35:11.142 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateDireccionDto -> Direccion
+WebApi.DTOs.Direccion.CreateDireccionDto -> Core.Entities.Direccion
+   at lambda_method283(Closure , Object , Direccion , ResolutionContext )
+   at WebApi.Controllers.DireccionController.CreateDireccion(CreateDireccionDto dto)
+   at lambda_method287(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-18 18:35:44.696 +02:00 [ERR] HTTP POST /api/Direccion responded 500 in 223.8149 ms
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateDireccionDto -> Direccion
+WebApi.DTOs.Direccion.CreateDireccionDto -> Core.Entities.Direccion
+   at lambda_method283(Closure , Object , Direccion , ResolutionContext )
+   at WebApi.Controllers.DireccionController.CreateDireccion(CreateDireccionDto dto)
+   at lambda_method295(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-10-18 18:35:44.757 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateDireccionDto -> Direccion
+WebApi.DTOs.Direccion.CreateDireccionDto -> Core.Entities.Direccion
+   at lambda_method283(Closure , Object , Direccion , ResolutionContext )
+   at WebApi.Controllers.DireccionController.CreateDireccion(CreateDireccionDto dto)
+   at lambda_method295(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-18 18:36:58.381 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 18:36:58.423 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 18:36:58.429 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 18:36:58.432 +02:00 [INF] Hosting environment: Development
+2022-10-18 18:36:58.436 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 18:37:15.617 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-18 18:37:15.632 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-18 18:37:15.643 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-18 18:37:17.016 +02:00 [INF] HTTP POST /api/Direccion responded 200 in 2779.5658 ms
+2022-10-18 18:37:30.929 +02:00 [WRN] GenericRepository - GetAllAsync - Warning Level Log
+2022-10-18 18:37:30.934 +02:00 [ERR] GenericRepository - GetAllAsync - Error Level Log
+2022-10-18 18:37:30.938 +02:00 [FTL] GenericRepository - GetAllAsync - Critical Log Level
+2022-10-18 18:37:31.274 +02:00 [INF] HTTP GET /api/Direccion responded 200 in 486.5620 ms
+2022-10-18 18:37:38.374 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 18:37:38.385 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 18:37:38.392 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 18:37:39.053 +02:00 [INF] HTTP GET /api/Direccion/3 responded 200 in 705.7674 ms
+2022-10-18 18:37:51.444 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 18:37:51.453 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 18:37:51.463 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 18:37:51.596 +02:00 [INF] HTTP GET /api/Direccion/4 responded 200 in 152.7664 ms
+2022-10-18 18:38:31.931 +02:00 [WRN] GenericRepository - Update - Warning Level Log
+2022-10-18 18:38:31.934 +02:00 [ERR] GenericRepository - Update - Error Level Log
+2022-10-18 18:38:31.936 +02:00 [FTL] GenericRepository - Update - Critical Log Level
+2022-10-18 18:38:32.239 +02:00 [INF] HTTP PUT /api/Direccion/4 responded 200 in 334.8198 ms
+2022-10-18 18:38:34.680 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 18:38:34.685 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 18:38:34.688 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 18:38:34.700 +02:00 [INF] HTTP GET /api/Direccion/4 responded 200 in 23.0638 ms
+2022-10-18 18:45:44.801 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 18:45:44.840 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 18:45:44.847 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 18:45:44.849 +02:00 [INF] Hosting environment: Development
+2022-10-18 18:45:44.853 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 18:46:50.983 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 18:46:51.004 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 18:46:51.011 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 18:46:52.520 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 2998.0790 ms
+2022-10-18 18:53:58.144 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 18:53:58.185 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 18:53:58.191 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 18:53:58.194 +02:00 [INF] Hosting environment: Development
+2022-10-18 18:53:58.196 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 18:54:00.519 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - WebApi.Controllers.ClienteController.DeleteCliente (WebApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-18 18:54:30.236 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 18:54:30.265 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 18:54:30.270 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 18:54:30.273 +02:00 [INF] Hosting environment: Development
+2022-10-18 18:54:30.275 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 19:12:08.873 +02:00 [WRN] GenericRepository - Update - Warning Level Log
+2022-10-18 19:12:08.881 +02:00 [ERR] GenericRepository - Update - Error Level Log
+2022-10-18 19:12:08.886 +02:00 [FTL] GenericRepository - Update - Critical Log Level
+2022-10-18 19:12:09.662 +02:00 [INF] HTTP PUT /api/Direccion/4 responded 200 in 1609.5350 ms
+2022-10-18 19:12:13.731 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 19:12:13.736 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 19:12:13.739 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 19:12:14.156 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 443.5963 ms
+2022-10-18 19:12:22.070 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 19:12:22.073 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 19:12:22.080 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 19:12:22.200 +02:00 [INF] HTTP GET /api/Direccion/4 responded 200 in 140.8557 ms
+2022-10-18 19:12:29.415 +02:00 [WRN] GenericRepository - Update - Warning Level Log
+2022-10-18 19:12:29.419 +02:00 [ERR] GenericRepository - Update - Error Level Log
+2022-10-18 19:12:29.422 +02:00 [FTL] GenericRepository - Update - Critical Log Level
+2022-10-18 19:12:29.435 +02:00 [INF] HTTP PUT /api/Direccion/4 responded 200 in 24.8297 ms
+2022-10-18 19:12:48.367 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 19:12:48.371 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 19:12:48.376 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 19:12:48.393 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 27.1447 ms
+2022-10-18 19:15:59.326 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 19:15:59.374 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 19:15:59.381 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 19:15:59.383 +02:00 [INF] Hosting environment: Development
+2022-10-18 19:15:59.386 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 19:16:35.965 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 19:16:35.972 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 19:16:35.976 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 19:16:36.484 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 19:16:36.890 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 1879.1519 ms
+2022-10-18 19:17:15.215 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-18 19:17:15.219 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-18 19:17:15.224 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-18 19:17:15.808 +02:00 [INF] HTTP POST /api/Cliente responded 200 in 642.8130 ms
+2022-10-18 19:17:20.502 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 19:17:20.518 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 19:17:20.535 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 19:17:20.667 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 191.3163 ms
+2022-10-18 19:17:36.404 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 19:17:36.407 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 19:17:36.409 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 19:17:36.477 +02:00 [INF] HTTP GET /api/Cliente/2 responded 200 in 82.1585 ms
+2022-10-18 19:19:06.679 +02:00 [WRN] GenericRepository - Update - Warning Level Log
+2022-10-18 19:19:06.684 +02:00 [ERR] GenericRepository - Update - Error Level Log
+2022-10-18 19:19:06.687 +02:00 [FTL] GenericRepository - Update - Critical Log Level
+2022-10-18 19:19:06.804 +02:00 [ERR] Failed executing DbCommand (56ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = Date), @p1='?' (DbType = Date), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 9) (DbType = StringFixedLength), @p7='?' (Size = 256), @p8='?' (DbType = Date), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cliente] SET [CreatedAt] = @p0, [DeletedAt] = @p1, [DeletedBy] = @p2, [EmpresaId] = @p3, [IsDeleted] = @p4, [Logo] = @p5, [NIF] = @p6, [Nombre] = @p7, [UpdatedAt] = @p8, [UpdatedBy] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2022-10-18 19:19:06.977 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'BussinesLogic.Data.ApiDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Instrucción UPDATE en conflicto con la restricción FOREIGN KEY 'FK_Cliente_Empresa_EmpresaId'. El conflicto ha aparecido en la base de datos 'FacturAppDB', tabla 'dbo.Empresa', column 'Id'.
+Se terminó la instrucción.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:5aa01e30-0118-4880-8252-7752bdb53da9
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Instrucción UPDATE en conflicto con la restricción FOREIGN KEY 'FK_Cliente_Empresa_EmpresaId'. El conflicto ha aparecido en la base de datos 'FacturAppDB', tabla 'dbo.Empresa', column 'Id'.
+Se terminó la instrucción.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:5aa01e30-0118-4880-8252-7752bdb53da9
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-10-18 19:19:07.382 +02:00 [ERR] HTTP PUT /api/Cliente/2 responded 500 in 766.1766 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Instrucción UPDATE en conflicto con la restricción FOREIGN KEY 'FK_Cliente_Empresa_EmpresaId'. El conflicto ha aparecido en la base de datos 'FacturAppDB', tabla 'dbo.Empresa', column 'Id'.
+Se terminó la instrucción.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:5aa01e30-0118-4880-8252-7752bdb53da9
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BussinesLogic.Logic.GenericRepository`1.Update(T entity) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\BussinesLogic\Logic\GenericRepository.cs:line 92
+   at WebApi.Controllers.ClienteController.UpdateCliente(Int32 id, Cliente clienteUpdated) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\ClienteController.cs:line 67
+   at lambda_method369(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-10-18 19:19:07.662 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Instrucción UPDATE en conflicto con la restricción FOREIGN KEY 'FK_Cliente_Empresa_EmpresaId'. El conflicto ha aparecido en la base de datos 'FacturAppDB', tabla 'dbo.Empresa', column 'Id'.
+Se terminó la instrucción.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:5aa01e30-0118-4880-8252-7752bdb53da9
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BussinesLogic.Logic.GenericRepository`1.Update(T entity) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\BussinesLogic\Logic\GenericRepository.cs:line 92
+   at WebApi.Controllers.ClienteController.UpdateCliente(Int32 id, Cliente clienteUpdated) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\ClienteController.cs:line 67
+   at lambda_method369(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-18 19:20:24.273 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 19:20:24.288 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 19:20:24.304 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 19:20:24.365 +02:00 [INF] HTTP GET /api/Cliente/2 responded 200 in 109.9227 ms
+2022-10-18 19:23:53.270 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 19:23:53.384 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 19:23:53.405 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 19:23:53.416 +02:00 [INF] Hosting environment: Development
+2022-10-18 19:23:53.426 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 19:24:25.670 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 19:24:25.677 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 19:24:25.680 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 19:24:27.372 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 3086.0695 ms
+2022-10-18 19:24:35.687 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 19:24:35.691 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 19:24:35.694 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 19:24:35.977 +02:00 [INF] HTTP GET /api/Cliente/2 responded 200 in 301.0774 ms
+2022-10-18 19:25:00.676 +02:00 [WRN] GenericRepository - Update - Warning Level Log
+2022-10-18 19:25:00.682 +02:00 [ERR] GenericRepository - Update - Error Level Log
+2022-10-18 19:25:00.687 +02:00 [FTL] GenericRepository - Update - Critical Log Level
+2022-10-18 19:25:01.320 +02:00 [INF] HTTP PUT /api/Cliente/2 responded 200 in 781.5888 ms
+2022-10-18 19:25:49.297 +02:00 [WRN] GenericRepository - Delete - Warning Level Log
+2022-10-18 19:25:49.302 +02:00 [ERR] GenericRepository - Delete - Error Level Log
+2022-10-18 19:25:49.308 +02:00 [FTL] GenericRepository - Delete - Critical Log Level
+2022-10-18 19:25:49.429 +02:00 [INF] HTTP DELETE /api/Cliente/2 responded 200 in 249.5860 ms
+2022-10-18 19:25:54.173 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 19:25:54.188 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 19:25:54.202 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 19:25:54.285 +02:00 [INF] HTTP GET /api/Cliente/2 responded 204 in 116.5074 ms
+2022-10-18 19:26:03.054 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 19:26:03.058 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 19:26:03.062 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 19:26:03.074 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 21.4068 ms
+2022-10-18 19:26:07.010 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-18 19:26:07.014 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-18 19:26:07.017 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-18 19:26:07.208 +02:00 [INF] HTTP POST /api/Cliente responded 200 in 211.6690 ms

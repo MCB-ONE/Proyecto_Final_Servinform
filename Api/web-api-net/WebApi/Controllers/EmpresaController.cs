@@ -66,7 +66,7 @@ namespace WebApi.Controllers
             empresaUpdated.UpdatedAt = DateTime.Now;
             empresaUpdated.IsDeleted = false;
 
-            var result = await _repository.Update(_mapper.Map<Empresa>(empresaUpdated));
+            var result = await _repository.Update(empresaUpdated);
 
             if (result == 0)
             {
