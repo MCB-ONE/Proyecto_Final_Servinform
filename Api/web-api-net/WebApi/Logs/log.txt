@@ -62,3 +62,294 @@
 2022-10-18 15:32:43.477 +02:00 [FTL] GenericRepository - GetAllIdWithSpecAsync - Critical Log Level
 2022-10-18 15:32:43.484 +02:00 [INF] GetAllAsync13:32:43
 2022-10-18 15:32:43.512 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 65.6215 ms
+2022-10-18 16:38:01.328 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 16:38:01.357 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 16:38:01.362 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 16:38:01.365 +02:00 [INF] Hosting environment: Development
+2022-10-18 16:38:01.368 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 16:38:09.622 +02:00 [WRN] GenericRepository - GetAllIdWithSpecAsync - Warning Level Log
+2022-10-18 16:38:09.627 +02:00 [ERR] GenericRepository - GetAllIdWithSpecAsync - Error Level Log
+2022-10-18 16:38:09.629 +02:00 [FTL] GenericRepository - GetAllIdWithSpecAsync - Critical Log Level
+2022-10-18 16:38:09.993 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 16:38:10.506 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 1612.1936 ms
+2022-10-18 16:38:16.547 +02:00 [WRN] GenericRepository - GetAllIdWithSpecAsync - Warning Level Log
+2022-10-18 16:38:16.553 +02:00 [ERR] GenericRepository - GetAllIdWithSpecAsync - Error Level Log
+2022-10-18 16:38:16.556 +02:00 [FTL] GenericRepository - GetAllIdWithSpecAsync - Critical Log Level
+2022-10-18 16:38:16.569 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 33.7296 ms
+2022-10-18 16:42:45.074 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 16:42:45.108 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 16:42:45.113 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 16:42:45.116 +02:00 [INF] Hosting environment: Development
+2022-10-18 16:42:45.119 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 16:42:51.117 +02:00 [WRN] GenericRepository - GetAllIdWithSpecAsync - Warning Level Log
+2022-10-18 16:42:51.123 +02:00 [ERR] GenericRepository - GetAllIdWithSpecAsync - Error Level Log
+2022-10-18 16:42:51.127 +02:00 [FTL] GenericRepository - GetAllIdWithSpecAsync - Critical Log Level
+2022-10-18 16:42:51.597 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 16:42:52.033 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 1552.6960 ms
+2022-10-18 16:43:01.974 +02:00 [WRN] GenericRepository - GetAllIdWithSpecAsync - Warning Level Log
+2022-10-18 16:43:01.978 +02:00 [ERR] GenericRepository - GetAllIdWithSpecAsync - Error Level Log
+2022-10-18 16:43:01.983 +02:00 [FTL] GenericRepository - GetAllIdWithSpecAsync - Critical Log Level
+2022-10-18 16:43:01.995 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 22.3214 ms
+2022-10-18 16:44:56.799 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 16:44:56.831 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 16:44:56.836 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 16:44:56.838 +02:00 [INF] Hosting environment: Development
+2022-10-18 16:44:56.841 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 16:45:09.604 +02:00 [INF] HTTP POST /api/Usuario/login responded 200 in 1541.0366 ms
+2022-10-18 16:45:15.389 +02:00 [WRN] GenericSecurityRepository - GetAllIdWithSpecAsync - Warning Level Log
+2022-10-18 16:45:15.394 +02:00 [ERR] GenericSecurityRepository - GetAllIdWithSpecAsync - Error Level Log
+2022-10-18 16:45:15.397 +02:00 [FTL] GenericSecurityRepository - GetAllIdWithSpecAsync - Critical Log Level
+2022-10-18 16:45:15.415 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 16:45:15.420 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 16:45:15.544 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 229.7596 ms
+2022-10-18 16:45:41.666 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 16:45:41.669 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 16:45:41.671 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 16:45:41.774 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 16:45:41.987 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 330.9012 ms
+2022-10-18 16:47:10.363 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 16:47:10.392 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 16:47:10.399 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 16:47:10.402 +02:00 [INF] Hosting environment: Development
+2022-10-18 16:47:10.405 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 16:47:20.788 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 16:47:20.796 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 16:47:20.801 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 16:47:20.958 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 16:47:20.964 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 16:47:21.553 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 1452.8166 ms
+2022-10-18 16:49:30.804 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 16:49:30.832 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 16:49:30.839 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 16:49:30.841 +02:00 [INF] Hosting environment: Development
+2022-10-18 16:49:30.844 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 16:49:42.208 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 16:49:42.217 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 16:49:42.221 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 16:49:42.612 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 16:49:42.959 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 1373.0884 ms
+2022-10-18 16:56:09.636 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 16:56:09.672 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 16:56:09.679 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 16:56:09.683 +02:00 [INF] Hosting environment: Development
+2022-10-18 16:56:09.685 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 16:56:11.803 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Empresa" for actions - WebApi.Controllers.EmpresaController.GetAllSinSpecEmpresas (WebApi),WebApi.Controllers.EmpresaController.GetAllEmpresas (WebApi). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-18 16:57:12.703 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 16:57:12.738 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 16:57:12.744 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 16:57:12.746 +02:00 [INF] Hosting environment: Development
+2022-10-18 16:57:12.750 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 16:57:20.536 +02:00 [WRN] GenericRepository - GetAllAsync - Warning Level Log
+2022-10-18 16:57:20.542 +02:00 [ERR] GenericRepository - GetAllAsync - Error Level Log
+2022-10-18 16:57:20.547 +02:00 [FTL] GenericRepository - GetAllAsync - Critical Log Level
+2022-10-18 16:57:20.889 +02:00 [INF] HTTP GET /sin responded 200 in 799.0654 ms
+2022-10-18 16:57:52.926 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-18 16:57:52.930 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-18 16:57:52.935 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-18 16:57:53.266 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 16:57:53.550 +02:00 [INF] HTTP GET /api/Empresa/1 responded 200 in 905.0428 ms
+2022-10-18 16:58:25.899 +02:00 [WRN] GenericRepository - Update - Warning Level Log
+2022-10-18 16:58:25.903 +02:00 [ERR] GenericRepository - Update - Error Level Log
+2022-10-18 16:58:25.907 +02:00 [FTL] GenericRepository - Update - Critical Log Level
+2022-10-18 16:58:26.468 +02:00 [ERR] HTTP PUT /api/Empresa/2 responded 500 in 605.1801 ms
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagationAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BussinesLogic.Logic.GenericRepository`1.Update(T entity) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\BussinesLogic\Logic\GenericRepository.cs:line 92
+   at WebApi.Controllers.EmpresaController.UpdateEmpresa(Int32 id, Empresa empresaUpdated) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\EmpresaController.cs:line 80
+   at lambda_method286(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-10-18 16:58:26.659 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagationAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BussinesLogic.Logic.GenericRepository`1.Update(T entity) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\BussinesLogic\Logic\GenericRepository.cs:line 92
+   at WebApi.Controllers.EmpresaController.UpdateEmpresa(Int32 id, Empresa empresaUpdated) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\EmpresaController.cs:line 80
+   at lambda_method286(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-18 16:59:53.022 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 16:59:53.057 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 16:59:53.062 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 16:59:53.064 +02:00 [INF] Hosting environment: Development
+2022-10-18 16:59:53.067 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:00:00.325 +02:00 [WRN] GenericRepository - Update - Warning Level Log
+2022-10-18 17:00:00.331 +02:00 [ERR] GenericRepository - Update - Error Level Log
+2022-10-18 17:00:00.335 +02:00 [FTL] GenericRepository - Update - Critical Log Level
+2022-10-18 17:00:00.891 +02:00 [INF] HTTP PUT /api/Empresa/3 responded 200 in 1122.1207 ms
+2022-10-18 17:00:20.503 +02:00 [INF] HTTP POST /api/Usuario/login responded 200 in 468.1379 ms
+2022-10-18 17:01:26.828 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:01:26.860 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:01:26.866 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:01:26.868 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:01:26.871 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:01:48.913 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:02:06.636 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:02:06.639 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:02:06.741 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:02:06.746 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:02:07.151 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 18794.1091 ms
+2022-10-18 17:02:24.892 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:02:24.927 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:02:24.934 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:02:24.937 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:02:24.939 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:02:31.521 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:02:31.526 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:02:31.529 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:02:31.637 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:02:31.640 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:02:32.068 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 1028.8605 ms
+2022-10-18 17:04:16.677 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:04:16.717 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:04:16.723 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:04:16.725 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:04:16.728 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:04:22.074 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:04:22.083 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:04:22.087 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:04:22.220 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:04:22.224 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:04:22.796 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 1377.1412 ms
+2022-10-18 17:04:38.095 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:04:38.100 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:04:38.103 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:04:38.177 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 90.2379 ms
+2022-10-18 17:04:54.258 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:04:54.263 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:04:54.266 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:04:54.283 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 33.6372 ms
+2022-10-18 17:05:10.562 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:05:10.564 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:05:10.567 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:05:10.584 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 22.0302 ms
+2022-10-18 17:05:32.406 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:05:32.411 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:05:32.413 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:05:32.428 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 23.5875 ms
+2022-10-18 17:12:10.680 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:12:10.721 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:12:10.726 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:12:10.729 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:12:10.732 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:12:16.180 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:12:16.191 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:12:16.195 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:12:16.564 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 17:12:16.951 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 1397.8527 ms
+2022-10-18 17:12:41.531 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:12:41.535 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:12:41.537 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:12:41.548 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 17:12:41.565 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 44.1835 ms
+2022-10-18 17:14:47.798 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:14:47.831 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:14:47.836 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:14:47.838 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:14:47.840 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:14:59.069 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:14:59.076 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:14:59.078 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:14:59.205 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:14:59.209 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:14:59.662 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 1184.9779 ms
+2022-10-18 17:15:13.341 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:15:13.344 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:15:13.346 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:15:13.363 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 33.6938 ms
+2022-10-18 17:15:25.891 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:15:25.894 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:15:25.899 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:15:25.924 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 41.8385 ms
+2022-10-18 17:16:23.068 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:16:23.100 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:16:23.106 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:16:23.108 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:16:23.111 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:16:31.364 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:16:31.375 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:16:31.380 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:16:32.250 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 1668.7098 ms
+2022-10-18 17:16:52.242 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:16:52.245 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:16:52.248 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:16:52.276 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 48.0509 ms
+2022-10-18 17:17:17.545 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:17:17.550 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:17:17.553 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:17:17.568 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:17:17.572 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-18 17:17:17.602 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 66.5977 ms
+2022-10-18 17:17:25.477 +02:00 [WRN] GenericSecurityRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:17:25.480 +02:00 [ERR] GenericSecurityRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:17:25.485 +02:00 [FTL] GenericSecurityRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:17:25.510 +02:00 [INF] HTTP GET /api/Usuario/pagination responded 200 in 33.4901 ms
+2022-10-18 17:18:35.884 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-18 17:18:35.914 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-18 17:18:35.919 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:18:35.922 +02:00 [INF] Hosting environment: Development
+2022-10-18 17:18:35.925 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-18 17:18:51.509 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:18:51.515 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:18:51.518 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:18:51.867 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 17:18:52.188 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 1331.9142 ms
+2022-10-18 17:19:03.209 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-18 17:19:03.214 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-18 17:19:03.217 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-18 17:19:03.232 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-18 17:19:03.248 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 41.1480 ms

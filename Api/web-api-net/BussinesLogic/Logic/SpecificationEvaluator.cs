@@ -9,17 +9,26 @@ namespace BussinesLogic.Logic
         // Método encargado de agregar las relaciones necesarias y los filtros (condiciones lógicas) en cada consulta
         public static IQueryable<T> GetQuery(IQueryable<T> inputQuery, ISpecification<T> spec)
         {
+
             if (spec.Criteria != null)
+            {
                 inputQuery = inputQuery.Where(spec.Criteria);
+            }
 
-            if(spec.OrderBy != null)
-                inputQuery.OrderBy(spec.OrderBy);
+            if (spec.OrderBy != null)
+            {
+                inputQuery = inputQuery.OrderBy(spec.OrderBy);
+            }
 
-            if(spec.OrderByDescending != null)
-                inputQuery.OrderBy(spec.OrderByDescending);
+            if (spec.OrderByDescending != null)
+            {
+                inputQuery = inputQuery.OrderByDescending(spec.OrderByDescending);
+            }
 
-            if(spec.isPagingEnabled)
+            if (spec.IsPagingEnabled)
+            {
                 inputQuery = inputQuery.Skip(spec.Skip).Take(spec.Take);
+            }
 
             inputQuery = spec.Includes.Aggregate(inputQuery, (current, include) => current.Include(include));
 

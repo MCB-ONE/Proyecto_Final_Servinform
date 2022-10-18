@@ -32,11 +32,11 @@ namespace BussinesLogic.Logic
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<IReadOnlyList<T>> GetAllIdWithSpecAsync(ISpecification<T> spec)
+        public async Task<IReadOnlyList<T>> GetAllWithSpecAsync(ISpecification<T> spec)
         {
-            _logger.LogWarning($"{nameof(GenericRepository<T>)} - {nameof(GetAllIdWithSpecAsync)} - Warning Level Log");
-            _logger.LogError($"{nameof(GenericRepository<T>)} - {nameof(GetAllIdWithSpecAsync)} - Error Level Log");
-            _logger.LogCritical($"{nameof(GenericRepository<T>)} - {nameof(GetAllIdWithSpecAsync)} - Critical Log Level");
+            _logger.LogWarning($"{nameof(GenericRepository<T>)} - {nameof(GetAllWithSpecAsync)} - Warning Level Log");
+            _logger.LogError($"{nameof(GenericRepository<T>)} - {nameof(GetAllWithSpecAsync)} - Error Level Log");
+            _logger.LogCritical($"{nameof(GenericRepository<T>)} - {nameof(GetAllWithSpecAsync)} - Critical Log Level");
 
             return await ApplySpecification(spec).ToListAsync();
         }

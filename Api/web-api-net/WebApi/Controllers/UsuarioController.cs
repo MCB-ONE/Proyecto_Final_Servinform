@@ -153,7 +153,7 @@ namespace WebApi.Controllers
         public async Task<ActionResult<Pagination<UsuarioDto>>> GetUsuarios([FromQuery] UsuarioSpecificationParams usuarioParams)
         {
             var spec = new UsuarioSpecification(usuarioParams);
-            var usuarios = await _securityRepository.GetAllIdWithSpecAsync(spec);
+            var usuarios = await _securityRepository.GetAllWithSpecAsync(spec);
 
             var specCount = new UsuarioForCountingSpecification(usuarioParams);
             var totalUsuarios = await _securityRepository.CountAsync(specCount);

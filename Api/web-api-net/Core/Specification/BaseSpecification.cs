@@ -33,23 +33,23 @@ namespace Core.Specification
         {
             OrderBy = orderByExpression;
         }
-        protected void AddOrderByDescending(Expression<Func<T, object>> orderByDescendingExpression)
-        {
-            OrderByDescending = orderByDescendingExpression;
-        }
 
+        protected void AddOrderByDescending(Expression<Func<T, object>> orderByDescExpression)
+        {
+            OrderByDescending = orderByDescExpression;
+        }
 
         public int Take { get; private set; }
 
         public int Skip { get; private set; }
 
-        public bool isPagingEnabled { get; private set; }
+        public bool IsPagingEnabled { get; private set; }
 
         protected void ApplyPaging(int skip, int take)
         {
             Skip = skip;
             Take = take;
-            isPagingEnabled = true;
+            IsPagingEnabled = true;
         }
 
 

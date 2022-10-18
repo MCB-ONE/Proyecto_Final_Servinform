@@ -21,15 +21,15 @@ namespace WebApi.Controllers
             _repository = repository;
         }
 
-        [HttpGet]
 
+        [HttpGet]
         public async Task<ActionResult<List<EmpresaDto>>> GetAllEmpresas(string sort)
         {
 
 
             var spec = new EmpresaWithClienteAndDireccionSpecification(sort);
 
-            var empresas = await _repository.GetAllIdWithSpecAsync(spec);
+            var empresas = await _repository.GetAllWithSpecAsync(spec);
 
             return Ok(_mapper.Map<IReadOnlyList<Empresa>, IReadOnlyList<EmpresaDto>>(empresas));
         }

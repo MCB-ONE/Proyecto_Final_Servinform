@@ -14,7 +14,8 @@ namespace Core.Specification
         {
             AddInclude(empresa => empresa.Clientes);
             AddInclude(empresa => empresa.Direcciones);
-            if (string.IsNullOrEmpty(sort))
+
+            if (!string.IsNullOrEmpty(sort))
             {
                 switch (sort)
                 {
