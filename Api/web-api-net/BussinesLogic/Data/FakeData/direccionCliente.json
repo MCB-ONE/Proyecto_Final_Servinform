@@ -1,0 +1,41 @@
+﻿[
+  {
+    "Calle": "Calle Luis Companys",
+    "Numero": 39,
+    "CodigoPostal": "08014",
+    "Ciudad": "Barcelona",
+    "Provincia": "Barcelona",
+    "Pais": "España",
+    "Telefono": 939091211,
+    "Email": "clienteTest@gmail.com",
+    "Web": "https://clienteTest.es/",
+    "ClienteId": 1,
+    "IsDeleted": false
+  },
+  {
+    "Calle": "Calle del Rocío Companys",
+    "Numero": 78,
+    "CodigoPostal": "08040",
+    "Ciudad": "Barcelona",
+    "Provincia": "Barcelona",
+    "Pais": "España",
+    "Telefono": 930092188,
+    "Email": "clienteTest@gmail2.com",
+    "Web": "https://clienteTest2.es/",
+    "ClienteId": 2,
+    "IsDeleted": false
+  },
+  {
+    "Calle": "Calle Pere Cuart",
+    "Numero": 90,
+    "CodigoPostal": "08089",
+    "Ciudad": "Barcelona",
+    "Provincia": "Barcelona",
+    "Pais": "España",
+    "Telefono": 938726667,
+    "Email": "clienteTest@gmail3.com",
+    "Web": "https://clienteTest3.es/",
+    "ClienteId": 3,
+    "IsDeleted": false
+  }
+]

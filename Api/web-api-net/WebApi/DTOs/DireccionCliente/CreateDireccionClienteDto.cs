@@ -1,8 +1,6 @@
-﻿using WebApi.DTOs.Empresa;
-
-namespace WebApi.DTOs.Direccion
+﻿namespace WebApi.DTOs.Direccion.DireccionCliente
 {
-    public class DireccionDto
+    public class CreateDireccionClienteDto
     {
         public string Calle { get; set; }
         public int Numero { get; set; }
@@ -13,7 +11,6 @@ namespace WebApi.DTOs.Direccion
         public int Telefono { get; set; }
         public string Email { get; set; }
         public string Web { get; set; }
-        public EmpresaDto? Empresa { get; set; }
-        public ClienteEmpresaDto? Cliente { get; set; }
+        public int ClienteId { get; set; }
     }
 }

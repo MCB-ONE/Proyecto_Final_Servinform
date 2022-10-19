@@ -22,7 +22,8 @@ namespace BussinesLogic.Data.Configuration
 
             builder.HasMany(c => c.Direcciones)
                 .WithOne(a => a.Empresa)
-                .HasForeignKey(a => a.EmpresaId);
+                .HasForeignKey(a => a.EmpresaId)
+                .OnDelete(DeleteBehavior.Cascade);
 
 
         }

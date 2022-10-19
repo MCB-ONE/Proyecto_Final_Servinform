@@ -1,7 +1,10 @@
-﻿namespace Core.Entities
+﻿using WebApi.DTOs.Empresa;
+
+namespace WebApi.DTOs.Direccion.DireccionCliente
 {
-    public class Direccion: BaseEntity
+    public class DireccionClienteDto
     {
+        public int Id { get; set; }
         public string Calle { get; set; }
         public int Numero { get; set; }
         public string CodigoPostal { get; set; }
@@ -11,16 +14,5 @@
         public int Telefono { get; set; }
         public string Email { get; set; }
         public string Web { get; set; }
-
-        public int? EmpresaId { get; set; }
-        public int? ClienteId { get; set; }
-
-
-        // Navigation properties
-        public Empresa Empresa { get; set; }
-        public Cliente Cliente { get; set; }
-
-
-
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BussinesLogic.Data.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20221017132149_crear_tablas_empresa_cliente_direccion")]
-    partial class crear_tablas_empresa_cliente_direccion
+    [Migration("20221019162450_crear_tablas_empresa_cliente_direccionEmpresa_direccionCliente")]
+    partial class crear_tablas_empresa_cliente_direccionEmpresa_direccionCliente
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -74,7 +74,70 @@ namespace BussinesLogic.Data.Migrations
                     b.ToTable("Cliente");
                 });
 
-            modelBuilder.Entity("Core.Entities.Direccion", b =>
+            modelBuilder.Entity("Core.Entities.DireccionCliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Calle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ciudad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CodigoPostal")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("date");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("date");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Numero")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Pais")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Provincia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Telefono")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("date");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Web")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
+
+                    b.ToTable("DireccionCliente");
+                });
+
+            modelBuilder.Entity("Core.Entities.DireccionEmpresa", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -92,9 +155,6 @@ namespace BussinesLogic.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("ClienteId")
-                        .HasColumnType("int");
-
                     b.Property<string>("CodigoPostal")
                         .HasMaxLength(5)
                         .HasColumnType("nvarchar(5)");
@@ -111,7 +171,7 @@ namespace BussinesLogic.Data.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("EmpresaId")
+                    b.Property<int>("EmpresaId")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
@@ -144,11 +204,9 @@ namespace BussinesLogic.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClienteId");
-
                     b.HasIndex("EmpresaId");
 
-                    b.ToTable("Direccion");
+                    b.ToTable("DireccionEmpresa");
                 });
 
             modelBuilder.Entity("Core.Entities.Empresa", b =>
@@ -211,17 +269,24 @@ namespace BussinesLogic.Data.Migrations
                     b.Navigation("Empresa");
                 });
 
-            modelBuilder.Entity("Core.Entities.Direccion", b =>
+            modelBuilder.Entity("Core.Entities.DireccionCliente", b =>
                 {
                     b.HasOne("Core.Entities.Cliente", "Cliente")
                         .WithMany("Direcciones")
-                        .HasForeignKey("ClienteId");
-
-                    b.HasOne("Core.Entities.Empresa", "Empresa")
-                        .WithMany("Direcciones")
-                        .HasForeignKey("EmpresaId");
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Cliente");
+                });
+
+            modelBuilder.Entity("Core.Entities.DireccionEmpresa", b =>
+                {
+                    b.HasOne("Core.Entities.Empresa", "Empresa")
+                        .WithMany("Direcciones")
+                        .HasForeignKey("EmpresaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Empresa");
                 });

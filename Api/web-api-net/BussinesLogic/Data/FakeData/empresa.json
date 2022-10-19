@@ -5,5 +5,19 @@
     "NIF": "43007288E",
     "Logo": null,
     "IsDeleted": false
+  },
+  {
+    "EmailUsuario": "usuario.test@gmail.com",
+    "Nombre": "Empresa Test 2",
+    "NIF": "87256011R",
+    "Logo": null,
+    "IsDeleted": false
+  },
+    {
+    "EmailUsuario": "usuario.test@gmail.com",
+    "Nombre": "Empresa Test 3",
+    "NIF": "77896300E",
+    "Logo": null,
+    "IsDeleted": false
   }
 ]

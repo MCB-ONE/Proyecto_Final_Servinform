@@ -1,43 +1,44 @@
 ﻿using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specification;
 using Core.Specification.Direccion;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.DTOs;
-using WebApi.DTOs.Direccion;
+using WebApi.DTOs.Direccion.DireccionCliente;
 
 namespace WebApi.Controllers
 {
-    public class DireccionController : BaseApiController
+    public class DireccionClienteController : BaseApiController
     {
         private readonly IMapper _mapper;
-        private readonly IGenericRepository<Direccion> _repository;
+        private readonly IGenericRepository<DireccionCliente> _repository;
 
-        public DireccionController(IMapper mapper, IGenericRepository<Direccion> repository)
+        public DireccionClienteController(IMapper mapper, IGenericRepository<DireccionCliente> repository)
         {
             _mapper = mapper;
             _repository = repository;
         }
 
         [HttpGet]
-        public async Task<ActionResult<Pagination<DireccionDto>>> GetAllDireccion([FromQuery] DireccionSpecificationParams direccionParams)
+        public async Task<ActionResult<Pagination<DireccionClienteDto>>> GetAllDireccion([FromQuery] DireccionSpecificationParams direccionParams)
         {
 
-            var spec = new DireccionWithEmpresaOrClienteSpecification(direccionParams);
+            var spec = new DireccionClienteWithClienteSpecification(direccionParams);
 
             var direcciones = await _repository.GetAllWithSpecAsync(spec);
 
-            var specCount = new DireccionForCountingSpecification(direccionParams);
+            var specCount = new DireccionClienteForCountingSpecification(direccionParams);
 
             var totalDirecciones = await _repository.CountAsync(specCount);
 
             var rounded = Math.Ceiling(Convert.ToDecimal(totalDirecciones / direccionParams.PageSize));
             var totalPages = Convert.ToInt32(rounded);
 
-            var data = _mapper.Map<IReadOnlyList<Direccion>, IReadOnlyList<DireccionDto>>(direcciones);
+            var data = _mapper.Map<IReadOnlyList<DireccionCliente>, IReadOnlyList<DireccionClienteDto>>(direcciones);
 
-            return Ok(new Pagination<DireccionDto>
+            return Ok(new Pagination<DireccionClienteDto>
             {
                 Count = totalDirecciones,
                 PageCount = totalPages,
@@ -49,23 +50,23 @@ namespace WebApi.Controllers
 
         [HttpGet("{id}")]
 
-        public async Task<ActionResult<DireccionDto>> GetDireccionById(int id)
+        public async Task<ActionResult<DireccionClienteDto>> GetDireccionById(int id)
         {
-            var spec = new DireccionWithEmpresaOrClienteSpecification(id);
+            var spec = new DireccionClienteWithClienteSpecification(id);
 
             var direccion = await _repository.GetByIdWithSpecAsync(spec);
 
-            return Ok(_mapper.Map<DireccionDto>(direccion));
+            return Ok(_mapper.Map<DireccionClienteDto>(direccion));
         }
 
         [HttpPost]
-        public async Task<ActionResult<DireccionDto>> CreateDireccion(CreateDireccionDto dto)
+        public async Task<ActionResult<DireccionClienteDto>> CreateDireccion(CreateDireccionClienteDto dto)
         {
-            var result = await _repository.Add(_mapper.Map<Direccion>(dto));
+            var result = await _repository.Add(_mapper.Map<DireccionCliente>(dto));
 
-            if (dto.EmpresaId is null && dto.ClienteId is null)
+            if (dto.ClienteId == 0)
             {
-                throw new ArgumentException("Falta relacionar dirección con cliente o empresa");
+                throw new ArgumentException("Falta relacionar dirección con cliente");
             }
 
 
@@ -79,18 +80,18 @@ namespace WebApi.Controllers
 
         [HttpPut("{id}")]
 
-        public async Task<ActionResult<List<DireccionDto>>> UpdateDireccion(int id, Direccion direccionUpdated)
+        public async Task<ActionResult<List<DireccionClienteDto>>> UpdateDireccion(int id, DireccionCliente direccionUpdated)
         {
             direccionUpdated.Id = id;
             direccionUpdated.UpdatedAt = DateTime.Now;
             direccionUpdated.IsDeleted = false;
 
-            if (direccionUpdated.EmpresaId is null && direccionUpdated.ClienteId is null)
+            if (direccionUpdated.ClienteId == 0)
             {
-                throw new ArgumentException("Falta relacionar dirección con cliente o empresa");
+                throw new ArgumentException("Falta relacionar dirección con cliente");
             }
 
-            var result = await _repository.Update(_mapper.Map<Direccion>(direccionUpdated));
+            var result = await _repository.Update(_mapper.Map<DireccionCliente>(direccionUpdated));
 
             if (result == 0)
             {
@@ -114,9 +115,6 @@ namespace WebApi.Controllers
             return Ok();
 
         }
-
-
-
 
     }
 }

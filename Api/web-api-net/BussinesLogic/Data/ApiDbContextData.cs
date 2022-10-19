@@ -38,18 +38,29 @@ namespace BussinesLogic.Data
                     await context.SaveChangesAsync();
                 }
 
-                if (!context.Direccion.Any())
+                if (!context.DireccionEmpresa.Any())
                 {
-                    var direccioData = File.ReadAllText("../BussinesLogic/Data/FakeData/direccion.json");
-                    var direcciones = JsonSerializer.Deserialize<List<Direccion>>(direccioData);
+                    var direccioData = File.ReadAllText("../BussinesLogic/Data/FakeData/direccionEmpresa.json");
+                    var direcciones = JsonSerializer.Deserialize<List<DireccionEmpresa>>(direccioData);
                     foreach (var direccion in direcciones)
                     {
-                        context.Direccion.Add(direccion);
+                        context.DireccionEmpresa.Add(direccion);
                     }
 
                     await context.SaveChangesAsync();
                 }
 
+                if (!context.DireccionCliente.Any())
+                {
+                    var direccioData = File.ReadAllText("../BussinesLogic/Data/FakeData/direccionCliente.json");
+                    var direcciones = JsonSerializer.Deserialize<List<DireccionCliente>>(direccioData);
+                    foreach (var direccion in direcciones)
+                    {
+                        context.DireccionCliente.Add(direccion);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
 
 
             }

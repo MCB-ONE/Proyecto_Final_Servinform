@@ -5,5 +5,19 @@
     "Logo": null,
     "EmpresaId": 1,
     "IsDeleted": false
+  },
+  {
+    "Nombre": "Cliente Test 2",
+    "NIF": "89037657Y",
+    "Logo": null,
+    "EmpresaId": 1,
+    "IsDeleted": false
+  },
+  {
+    "Nombre": "Cliente Test 3",
+    "NIF": "00564289U",
+    "Logo": null,
+    "EmpresaId": 1,
+    "IsDeleted": false
   }
 ]

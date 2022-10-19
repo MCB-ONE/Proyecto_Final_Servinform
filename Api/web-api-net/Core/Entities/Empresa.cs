@@ -9,6 +9,6 @@ namespace Core.Entities
         public string Logo { get; set; }
 
         public HashSet<Cliente> Clientes { get; set; }
-        public HashSet<Direccion> Direcciones { get; set; } 
+        public HashSet<DireccionEmpresa> Direcciones { get; set; } 
     }
 }

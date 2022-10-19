@@ -11,7 +11,7 @@ namespace Core.Entities
         public string Nombre { get; set; }
         public string NIF { get; set; }
         public string Logo { get; set; }
-        public HashSet<Direccion> Direcciones { get; set; }
+        public HashSet<DireccionCliente> Direcciones { get; set; }
         public int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
 

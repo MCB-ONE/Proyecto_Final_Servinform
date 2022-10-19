@@ -23,10 +23,6 @@
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.23.1" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Data\Migrations\" />
-	</ItemGroup>
-
 	<ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

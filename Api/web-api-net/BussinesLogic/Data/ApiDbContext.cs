@@ -22,13 +22,14 @@ namespace BussinesLogic.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new EmpresaConfiguration());
             modelBuilder.ApplyConfiguration(new ClienteConfiguration());
-            modelBuilder.ApplyConfiguration(new DireccionConfiguration());
+            modelBuilder.ApplyConfiguration(new DireccionEmpresaConfiguration());
 
         }
 
         public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
-        public DbSet<Direccion> Direccion { get; set; }
+        public DbSet<DireccionEmpresa> DireccionEmpresa { get; set; }
+        public DbSet<DireccionCliente> DireccionCliente { get; set; }
 
     }
 }

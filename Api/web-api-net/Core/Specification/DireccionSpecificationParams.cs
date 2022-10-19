@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Specification.Direccion
+namespace Core.Specification
 {
     public class DireccionSpecificationParams
     {

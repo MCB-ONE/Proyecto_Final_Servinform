@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace BussinesLogic.Data.Configuration
 {
-    public class DireccionConfiguration : IEntityTypeConfiguration<Direccion>
+    public class DireccionEmpresaConfiguration : IEntityTypeConfiguration<DireccionEmpresa>
     {
-        public void Configure(EntityTypeBuilder<Direccion> builder)
+        public void Configure(EntityTypeBuilder<DireccionEmpresa> builder)
         {
             builder.Property(p => p.Calle)
                 .HasMaxLength(50)

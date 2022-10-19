@@ -1,5 +1,6 @@
 ﻿using WebApi.DTOs.Cliente;
 using WebApi.DTOs.Direccion;
+using WebApi.DTOs.Direccion.DireccionEmpresa;
 
 namespace WebApi.DTOs.Empresa
 {
@@ -11,8 +12,8 @@ namespace WebApi.DTOs.Empresa
         public string NIF { get; set; }
         public string Logo { get; set; }
 
-        public List<ClienteEmpresaDto> Clientes { get; set; }
+        public List<EmpresaCliente> Clientes { get; set; }
 
-        public List<DireccionDto> Direcciones { get; set; }
+        public List<DireccionEmpresaDto> Direcciones { get; set; }
     }
 }

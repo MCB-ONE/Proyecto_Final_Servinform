@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Specification.Direccion
+namespace Core.Specification.DireccionEmpresa
 {
-    public class DireccionWithEmpresaOrClienteSpecification : BaseSpecification<Core.Entities.Direccion>
+    public class DireccionEmpresaWithEmpresaSpecification : BaseSpecification<Core.Entities.DireccionEmpresa>
     {
-        public DireccionWithEmpresaOrClienteSpecification(DireccionSpecificationParams direccionParams)
+        public DireccionEmpresaWithEmpresaSpecification(DireccionSpecificationParams direccionParams)
             : base(x =>
                 (
                     string.IsNullOrEmpty(direccionParams.Search)
@@ -19,7 +19,6 @@ namespace Core.Specification.Direccion
                     || x.CodigoPostal.Contains(direccionParams.Search)
                 ))
         {
-            AddInclude(dir => dir.Cliente);
             AddInclude(dir => dir.Empresa);
             AddOrderBy(dir => dir.Ciudad);
 
@@ -59,9 +58,8 @@ namespace Core.Specification.Direccion
             }
         }
 
-        public DireccionWithEmpresaOrClienteSpecification(int id) : base(x => x.Id == id)
+        public DireccionEmpresaWithEmpresaSpecification(int id) : base(x => x.Id == id)
         {
-            AddInclude(dir => dir.Cliente);
             AddInclude(dir => dir.Empresa);
         }
     }

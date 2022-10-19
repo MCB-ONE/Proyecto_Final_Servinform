@@ -15,7 +15,8 @@ using WebApi.DTOs.Direccion;
 using WebApi.DTOs.Empresa;
 using WebApi.DTOs.Usuario;
 using Serilog;
-
+using WebApi.DTOs.Direccion.DireccionEmpresa;
+using WebApi.DTOs.Direccion.DireccionCliente;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -96,7 +97,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddAutoMapper(typeof(UsuarioMappingProfile));
 builder.Services.AddAutoMapper(typeof(EmpresaMappingProfile));
 builder.Services.AddAutoMapper(typeof(ClienteMappingProfile));
-builder.Services.AddAutoMapper(typeof(DireccionMappingProfile));
+builder.Services.AddAutoMapper(typeof(DireccionEmpresaMappingProfile));
+builder.Services.AddAutoMapper(typeof(DireccionClienteMappingProfile));
 // Configuramos los controladores para que ignoren los posibles ciclos de entidades anidadas/ relacionadas
 builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
