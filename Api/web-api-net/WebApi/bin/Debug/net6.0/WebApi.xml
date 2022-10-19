@@ -22,7 +22,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:WebApi.Controllers.UsuarioController.GetUsuarios(Core.Specification.UsuarioSpecificationParams)">
+        <member name="M:WebApi.Controllers.UsuarioController.GetUsuarios(Core.Specification.Usuario.UsuarioSpecificationParams)">
             <summary>
             Permite a los Administradores obtener la data de todos los usuarios de forma ordeanda, paginada y filtrada.
             </summary>

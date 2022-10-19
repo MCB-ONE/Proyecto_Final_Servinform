@@ -1,4 +1,6 @@
-﻿namespace WebApi.DTOs.Empresa
+﻿using WebApi.DTOs.Direccion;
+
+namespace WebApi.DTOs.Empresa
 {
     public class ClienteEmpresaDto
     {

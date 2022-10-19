@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Specification
+namespace Core.Specification.Usuario
 {
     /*Clase que que a partir de los parametros que llegan desde el cliente permite:
      * -> Organizar el listado de usuarios

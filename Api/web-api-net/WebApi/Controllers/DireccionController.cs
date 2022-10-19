@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
-using Core.Specification;
+using Core.Specification.Direccion;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.DTOs;
 using WebApi.DTOs.Direccion;
 
 namespace WebApi.Controllers
@@ -20,17 +21,35 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Direccion>>> GetAllDireccion()
+        public async Task<ActionResult<Pagination<DireccionDto>>> GetAllDireccion([FromQuery] DireccionSpecificationParams direccionParams)
         {
 
-            var direcciones = await _repository.GetAllAsync();
+            var spec = new DireccionWithEmpresaOrClienteSpecification(direccionParams);
 
-            return Ok(_mapper.Map<IReadOnlyList<Direccion>, IReadOnlyList<DireccionDto>>(direcciones));
+            var direcciones = await _repository.GetAllWithSpecAsync(spec);
+
+            var specCount = new DireccionForCountingSpecification(direccionParams);
+
+            var totalDirecciones = await _repository.CountAsync(specCount);
+
+            var rounded = Math.Ceiling(Convert.ToDecimal(totalDirecciones / direccionParams.PageSize));
+            var totalPages = Convert.ToInt32(rounded);
+
+            var data = _mapper.Map<IReadOnlyList<Direccion>, IReadOnlyList<DireccionDto>>(direcciones);
+
+            return Ok(new Pagination<DireccionDto>
+            {
+                Count = totalDirecciones,
+                PageCount = totalPages,
+                Data = data,
+                PageIndex = direccionParams.PageIndex,
+                PageSize = direccionParams.PageSize
+            });
         }
 
         [HttpGet("{id}")]
 
-        public async Task<ActionResult<List<DireccionDto>>> GetDireccionById(int id)
+        public async Task<ActionResult<DireccionDto>> GetDireccionById(int id)
         {
             var spec = new DireccionWithEmpresaOrClienteSpecification(id);
 

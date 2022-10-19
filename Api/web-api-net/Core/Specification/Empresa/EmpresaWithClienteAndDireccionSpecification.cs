@@ -6,18 +6,27 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Specification
+namespace Core.Specification.Empresa
 {
-    public class EmpresaWithClienteAndDireccionSpecification : BaseSpecification<Empresa>
+    public class EmpresaWithClienteAndDireccionSpecification : BaseSpecification<Core.Entities.Empresa>
     {
-        public EmpresaWithClienteAndDireccionSpecification(string sort)
+        public EmpresaWithClienteAndDireccionSpecification(EmpresaSpecificationParams empresaParams)
+            : base(x =>
+                (
+                    string.IsNullOrEmpty(empresaParams.Search)
+                    || x.Nombre.Contains(empresaParams.Search)
+                    || x.NIF.Contains(empresaParams.Search)
+                ))
         {
             AddInclude(empresa => empresa.Clientes);
             AddInclude(empresa => empresa.Direcciones);
 
-            if (!string.IsNullOrEmpty(sort))
+            ApplyPaging(empresaParams.PageSize * (empresaParams.PageIndex - 1), empresaParams.PageSize);
+
+
+            if (!string.IsNullOrEmpty(empresaParams.Sort))
             {
-                switch (sort)
+                switch (empresaParams.Sort)
                 {
                     case "nombreAsc":
                         AddOrderBy(empresa => empresa.Nombre);

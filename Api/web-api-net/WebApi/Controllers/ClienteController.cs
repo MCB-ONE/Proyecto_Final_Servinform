@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
-using Core.Specification;
+using Core.Specification.Cliente;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.DTOs;
 using WebApi.DTOs.Cliente;
 
 namespace WebApi.Controllers
@@ -22,14 +23,29 @@ namespace WebApi.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<List<ClienteDto>>> GetAllClientes(string sort)
+        public async Task<ActionResult<Pagination<ClienteDto>>> GetAllClientes([FromQuery] ClienteSpecificationParams clienteParams)
         {
 
-            var spec = new ClienteWithDireccionSpecification(sort);
+            var spec = new ClienteWithDireccionSpecification(clienteParams);
 
             var clientes = await _repository.GetAllWithSpecAsync(spec);
 
-            return Ok(_mapper.Map<IReadOnlyList<Cliente>, IReadOnlyList<ClienteDto>>(clientes));
+            var specCount = new ClienteForCountingSpecification(clienteParams);
+
+            var totalClientes = await _repository.CountAsync(specCount);
+
+            var rounded = Math.Ceiling(Convert.ToDecimal(totalClientes / clienteParams.PageSize));
+            var totalPages = Convert.ToInt32(rounded);
+            var data = _mapper.Map<IReadOnlyList<Cliente>, IReadOnlyList<ClienteDto>>(clientes);
+
+            return Ok(new Pagination<ClienteDto>
+            {
+                Count = totalClientes,
+                PageCount = totalPages,
+                Data = data,
+                PageIndex = clienteParams.PageIndex,
+                PageSize = clienteParams.PageSize
+            });
         }
 
         [HttpGet("{id}")]

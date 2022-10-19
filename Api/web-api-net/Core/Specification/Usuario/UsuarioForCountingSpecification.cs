@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Specification
+namespace Core.Specification.Usuario
 {
-    public class UsuarioForCountingSpecification : BaseSpecification<Usuario>
+    public class UsuarioForCountingSpecification : BaseSpecification<Core.Entities.Usuario>
     {
         public UsuarioForCountingSpecification(UsuarioSpecificationParams usuarioParams) : base(x =>
              (string.IsNullOrEmpty(usuarioParams.Search) || x.Nombre.Contains(usuarioParams.Search)) &&

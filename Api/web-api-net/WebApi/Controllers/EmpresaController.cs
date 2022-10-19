@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
-using BussinesLogic.Logic;
 using Core.Entities;
 using Core.Interfaces;
-using Core.Specification;
-using Microsoft.AspNetCore.Http;
+using Core.Specification.Empresa;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.DTOs;
 using WebApi.DTOs.Empresa;
@@ -23,15 +21,30 @@ namespace WebApi.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<List<EmpresaDto>>> GetAllEmpresas(string sort)
+        public async Task<ActionResult<Pagination<EmpresaDto>>> GetAllEmpresas([FromQuery]EmpresaSpecificationParams empresaParams)
         {
 
-
-            var spec = new EmpresaWithClienteAndDireccionSpecification(sort);
+            var spec = new EmpresaWithClienteAndDireccionSpecification(empresaParams);
 
             var empresas = await _repository.GetAllWithSpecAsync(spec);
 
-            return Ok(_mapper.Map<IReadOnlyList<Empresa>, IReadOnlyList<EmpresaDto>>(empresas));
+            var specCount = new EmpresaForCountingSpecification(empresaParams);
+
+            var totalEmpresas = await _repository.CountAsync(specCount);
+
+            var rounded = Math.Ceiling(Convert.ToDecimal(totalEmpresas / empresaParams.PageSize));
+            var totalPages = Convert.ToInt32(rounded);
+
+            var data = _mapper.Map<IReadOnlyList<Empresa>, IReadOnlyList<EmpresaDto>>(empresas);
+
+            return Ok(new Pagination<EmpresaDto>
+            {
+                Count = totalEmpresas,
+                PageCount = totalPages,
+                Data = data,
+                PageIndex = empresaParams.PageIndex,
+                PageSize = empresaParams.PageSize
+            });
         }
 
         [HttpGet("{id}")]

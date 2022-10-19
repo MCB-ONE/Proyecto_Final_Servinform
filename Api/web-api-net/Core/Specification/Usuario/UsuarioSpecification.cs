@@ -6,9 +6,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Specification
+namespace Core.Specification.Usuario
 {
-    public class UsuarioSpecification : BaseSpecification<Usuario>
+    public class UsuarioSpecification : BaseSpecification<Core.Entities.Usuario>
     {
         public UsuarioSpecification(UsuarioSpecificationParams usuarioParams)
         : base(x => 
