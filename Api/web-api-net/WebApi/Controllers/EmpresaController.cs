@@ -27,10 +27,11 @@ namespace WebApi.Controllers
         [Authorize]
         public async Task<ActionResult<Pagination<EmpresaDto>>> GetAllEmpresas([FromQuery]EmpresaSpecificationParams empresaParams)
         {
+            var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 
-            var spec = new EmpresaWithClienteAndDireccionSpecification(empresaParams);
+            var spec = new EmpresaUsuarioWithClienteAndDireccionSpecification(emailUsuario ,empresaParams);
 
-            var empresas = await _repository.GetAllWithSpecAsync(spec);
+            var empresas = await _empresaService.GetAllUsuarioEmpresasWithSpecAsync(spec);
 
             var specCount = new EmpresaForCountingSpecification(empresaParams);
 
@@ -55,9 +56,14 @@ namespace WebApi.Controllers
         [Authorize]
         public async Task<ActionResult<List<EmpresaDto>>> GetEmpresaById(int id)
         {
-            var spec = new EmpresaWithClienteAndDireccionSpecification(id);
+            var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+            //var spec = new EmpresaWithClienteAndDireccionSpecification(id);
 
-            var empresa = await _repository.GetByIdWithSpecAsync(spec);
+            //var empresa = await _repository.GetByIdWithSpecAsync(spec);
+
+            var spec =new EmpresaUsuarioWithClienteAndDireccionSpecification(id, emailUsuario);
+
+            var empresa = await _empresaService.GetUsuarioEmpresaByIdWithSpecAsync(spec);
 
             return Ok(_mapper.Map<EmpresaDto>(empresa));
         }
@@ -80,15 +86,33 @@ namespace WebApi.Controllers
 
 
 
-        [HttpPut("{id}")]
+        [HttpPut("actualizar/{id}")]
         [Authorize]
         public async Task<ActionResult<List<EmpresaDto>>> UpdateEmpresa(int id, Empresa empresaUpdated)
         {
-            empresaUpdated.Id = id; 
-            empresaUpdated.UpdatedAt = DateTime.Now;
-            empresaUpdated.IsDeleted = false;
 
-            var result = await _repository.Update(empresaUpdated);
+            var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+
+            var empresa = await _repository.GetByIdAsync(id);
+
+            if (empresa.Id != id)
+            {
+                return BadRequest("No se ha podido actualizar la empresa.");
+            }
+
+            if (empresa.EmailUsuario != emailUsuario)
+            {
+                return BadRequest("No se ha podido actualizar la empresa.");
+            }
+
+            empresa.Id = id;
+            empresa.Nombre = empresaUpdated.Nombre;
+            empresa.NIF = empresaUpdated.NIF;
+            empresa.UpdatedAt = DateTime.Now;
+            empresa.IsDeleted = false;
+
+            var result = await _empresaService.UpdateUsuarioEmpresa(empresa, emailUsuario);
+
 
             if (result == 0)
             {
@@ -103,11 +127,13 @@ namespace WebApi.Controllers
         [Authorize]
         public async Task<IActionResult> DeleteEmpresa(int id)
         {
-            var result = await _repository.Delete(id);
+            var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+
+            var result = await _empresaService.DeleteEmpresaUsuario(id, emailUsuario);
 
             if (result == 0)
             {
-                throw new Exception("No se ha podido borrar la empresa");
+                return BadRequest("No se ha podido borrar la empresa.");
             }
 
             return Ok();

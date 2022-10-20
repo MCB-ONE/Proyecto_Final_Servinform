@@ -9,7 +9,7 @@ namespace Core.Specification.Empresa
     public class EmpresaSpecificationParams
     {
         public string Sort { get; set; }
-
+        
         public int PageIndex { get; set; } = 1;
 
         private const int MaxPageSize = 50;
