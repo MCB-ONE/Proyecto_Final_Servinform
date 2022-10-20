@@ -2,7 +2,9 @@
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specification.Empresa;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using WebApi.DTOs;
 using WebApi.DTOs.Empresa;
 
@@ -11,16 +13,18 @@ namespace WebApi.Controllers
     public class EmpresaController : BaseApiController
     {
         private readonly IMapper _mapper;
+        private readonly IEmpresaService _empresaService;
         private readonly IGenericRepository<Empresa> _repository;
 
-        public EmpresaController(IMapper mapper, IGenericRepository<Empresa> repository)
+        public EmpresaController(IMapper mapper, IEmpresaService empresaService, IGenericRepository<Empresa> repository)
         {
             _mapper = mapper;
+            _empresaService = empresaService;
             _repository = repository;
         }
 
-
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<Pagination<EmpresaDto>>> GetAllEmpresas([FromQuery]EmpresaSpecificationParams empresaParams)
         {
 
@@ -48,7 +52,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-
+        [Authorize]
         public async Task<ActionResult<List<EmpresaDto>>> GetEmpresaById(int id)
         {
             var spec = new EmpresaWithClienteAndDireccionSpecification(id);
@@ -59,9 +63,12 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<EmpresaDto>> CreateEmpresa(CreateEmpresaDto dto)
         {
-            var result = await _repository.Add(_mapper.Map<Empresa>(dto));
+            var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+
+            var result = await _empresaService.AddUsuarioEmpresa(_mapper.Map<Empresa>(dto), emailUsuario);
 
             if (result == 0)
             {
@@ -71,8 +78,10 @@ namespace WebApi.Controllers
             return Ok(dto);
         }
 
-        [HttpPut("{id}")]
 
+
+        [HttpPut("{id}")]
+        [Authorize]
         public async Task<ActionResult<List<EmpresaDto>>> UpdateEmpresa(int id, Empresa empresaUpdated)
         {
             empresaUpdated.Id = id; 
@@ -91,6 +100,7 @@ namespace WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteEmpresa(int id)
         {
             var result = await _repository.Delete(id);

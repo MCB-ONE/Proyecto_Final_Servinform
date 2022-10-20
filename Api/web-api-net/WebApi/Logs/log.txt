@@ -1381,3 +1381,229 @@ Error Number:208,State:1,Class:16
 2022-10-19 18:44:08.307 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
 2022-10-19 18:44:08.310 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
 2022-10-19 18:44:08.326 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 21.6160 ms
+2022-10-19 18:45:40.799 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-19 18:45:40.834 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-19 18:45:40.841 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-19 18:45:40.845 +02:00 [INF] Hosting environment: Development
+2022-10-19 18:45:40.848 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-19 18:45:52.741 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:45:52.756 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:45:52.765 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:45:53.137 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-19 18:45:53.148 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-19 18:45:54.489 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 3178.8925 ms
+2022-10-19 18:46:08.766 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:46:08.771 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:46:08.775 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:46:08.796 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 31.5711 ms
+2022-10-19 18:46:22.324 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-19 18:46:22.334 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-19 18:46:22.343 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-19 18:46:23.187 +02:00 [INF] HTTP POST /api/Cliente responded 200 in 936.5452 ms
+2022-10-19 18:46:26.959 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:46:26.964 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:46:26.968 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:46:26.991 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 32.4939 ms
+2022-10-19 18:47:59.668 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:47:59.676 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:47:59.685 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:47:59.711 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 45.9036 ms
+2022-10-19 18:48:09.903 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:48:09.913 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:48:09.921 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:48:09.943 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 41.0303 ms
+2022-10-19 18:48:43.079 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:48:43.096 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:48:43.118 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:48:43.157 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-19 18:48:43.172 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-19 18:48:43.316 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 245.0203 ms
+2022-10-19 18:49:09.405 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-19 18:49:09.415 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-19 18:49:09.423 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-19 18:49:09.484 +02:00 [INF] HTTP POST /api/DireccionCliente responded 200 in 102.0694 ms
+2022-10-19 18:49:22.633 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-19 18:49:22.636 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-19 18:49:22.639 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-19 18:49:22.678 +02:00 [INF] HTTP POST /api/DireccionCliente responded 200 in 45.3584 ms
+2022-10-19 18:49:32.352 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-19 18:49:32.356 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-19 18:49:32.361 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-19 18:49:32.381 +02:00 [INF] HTTP POST /api/DireccionCliente responded 200 in 30.7109 ms
+2022-10-19 18:49:38.666 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-19 18:49:38.669 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-19 18:49:38.674 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-19 18:49:38.758 +02:00 [INF] HTTP GET /api/Cliente/4 responded 200 in 100.6432 ms
+2022-10-19 18:49:48.138 +02:00 [WRN] GenericRepository - Delete - Warning Level Log
+2022-10-19 18:49:48.145 +02:00 [ERR] GenericRepository - Delete - Error Level Log
+2022-10-19 18:49:48.149 +02:00 [FTL] GenericRepository - Delete - Critical Log Level
+2022-10-19 18:49:48.364 +02:00 [INF] HTTP DELETE /api/Cliente/4 responded 200 in 233.8982 ms
+2022-10-19 18:49:52.066 +02:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-10-19 18:49:52.070 +02:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-10-19 18:49:52.075 +02:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-10-19 18:49:52.084 +02:00 [INF] HTTP GET /api/Cliente/4 responded 204 in 18.5144 ms
+2022-10-19 18:50:03.663 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:50:03.667 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:50:03.670 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:50:03.781 +02:00 [INF] HTTP GET /api/DireccionCliente responded 200 in 129.5689 ms
+2022-10-19 18:50:11.125 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:50:11.135 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:50:11.142 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:50:11.173 +02:00 [INF] HTTP GET /api/DireccionCliente responded 200 in 48.3397 ms
+2022-10-19 18:50:24.228 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-19 18:50:24.233 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-19 18:50:24.238 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-19 18:50:24.302 +02:00 [INF] HTTP POST /api/Cliente responded 200 in 74.2870 ms
+2022-10-19 18:50:40.085 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:50:40.092 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:50:40.099 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:50:40.173 +02:00 [INF] HTTP GET /api/Cliente responded 200 in 88.7924 ms
+2022-10-19 18:50:50.526 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-19 18:50:50.534 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-19 18:50:50.542 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-19 18:50:50.611 +02:00 [INF] HTTP POST /api/DireccionCliente responded 200 in 86.8856 ms
+2022-10-19 18:51:00.043 +02:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-10-19 18:51:00.046 +02:00 [ERR] GenericRepository - Add - Error Level Log
+2022-10-19 18:51:00.051 +02:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-10-19 18:51:00.064 +02:00 [INF] HTTP POST /api/DireccionCliente responded 200 in 22.5602 ms
+2022-10-19 18:51:03.582 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:51:03.586 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:51:03.589 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:51:03.602 +02:00 [INF] HTTP GET /api/DireccionCliente responded 200 in 20.0030 ms
+2022-10-19 18:51:12.591 +02:00 [WRN] GenericRepository - Delete - Warning Level Log
+2022-10-19 18:51:12.601 +02:00 [ERR] GenericRepository - Delete - Error Level Log
+2022-10-19 18:51:12.611 +02:00 [FTL] GenericRepository - Delete - Critical Log Level
+2022-10-19 18:51:12.684 +02:00 [INF] HTTP DELETE /api/Cliente/5 responded 200 in 93.8257 ms
+2022-10-19 18:51:16.245 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 18:51:16.249 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 18:51:16.252 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 18:51:16.265 +02:00 [INF] HTTP GET /api/DireccionCliente responded 200 in 20.9349 ms
+2022-10-19 20:51:53.039 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-19 20:51:53.076 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-19 20:51:53.083 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-19 20:51:53.088 +02:00 [INF] Hosting environment: Development
+2022-10-19 20:51:53.092 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-19 20:52:56.970 +02:00 [INF] HTTP POST /api/Usuario/login responded 401 in 2564.0997 ms
+2022-10-19 20:53:49.095 +02:00 [INF] HTTP POST /api/Usuario/login responded 200 in 1471.5416 ms
+2022-10-19 20:55:08.309 +02:00 [ERR] HTTP POST /api/Empresa responded 500 in 105.6172 ms
+System.InvalidOperationException: Unable to resolve service for type 'Core.Interfaces.IEmpresaRepository' while attempting to activate 'WebApi.Controllers.EmpresaController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method188(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-10-19 20:55:08.498 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Core.Interfaces.IEmpresaRepository' while attempting to activate 'WebApi.Controllers.EmpresaController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method188(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-19 20:57:41.196 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-19 20:57:41.226 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-19 20:57:41.231 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-19 20:57:41.234 +02:00 [INF] Hosting environment: Development
+2022-10-19 20:57:41.237 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-19 20:57:49.738 +02:00 [ERR] HTTP POST /api/Empresa responded 500 in 1837.5799 ms
+System.ArgumentNullException: Value cannot be null. (Parameter 'logger')
+   at Microsoft.Extensions.Logging.LoggerExtensions.Log(ILogger logger, LogLevel logLevel, EventId eventId, Exception exception, String message, Object[] args)
+   at Microsoft.Extensions.Logging.LoggerExtensions.LogWarning(ILogger logger, String message, Object[] args)
+   at BussinesLogic.Logic.EmpresaRepository.AddUsuarioEmpresa(Empresa empresa, String emailUsuario) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\BussinesLogic\Logic\EmpresaRepository.cs:line 24
+   at WebApi.Controllers.EmpresaController.CreateEmpresa(CreateEmpresaDto dto) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\EmpresaController.cs:line 69
+   at lambda_method28(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-10-19 20:57:49.920 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'logger')
+   at Microsoft.Extensions.Logging.LoggerExtensions.Log(ILogger logger, LogLevel logLevel, EventId eventId, Exception exception, String message, Object[] args)
+   at Microsoft.Extensions.Logging.LoggerExtensions.LogWarning(ILogger logger, String message, Object[] args)
+   at BussinesLogic.Logic.EmpresaRepository.AddUsuarioEmpresa(Empresa empresa, String emailUsuario) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\BussinesLogic\Logic\EmpresaRepository.cs:line 24
+   at WebApi.Controllers.EmpresaController.CreateEmpresa(CreateEmpresaDto dto) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\EmpresaController.cs:line 69
+   at lambda_method28(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-19 21:06:03.093 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-19 21:06:03.128 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-19 21:06:03.134 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-19 21:06:03.138 +02:00 [INF] Hosting environment: Development
+2022-10-19 21:06:03.141 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-19 21:06:10.982 +02:00 [WRN] GenericRepository - AddUsuarioEmpresa - Warning Level Log
+2022-10-19 21:06:10.987 +02:00 [ERR] GenericRepository - AddUsuarioEmpresa - Error Level Log
+2022-10-19 21:06:10.993 +02:00 [FTL] GenericRepository - AddUsuarioEmpresa - Critical Log Level
+2022-10-19 21:06:12.264 +02:00 [INF] HTTP POST /api/Empresa responded 200 in 2385.0134 ms
+2022-10-19 21:06:23.225 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 21:06:23.231 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 21:06:23.234 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 21:06:23.448 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-19 21:06:23.457 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-19 21:06:23.937 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-19 21:06:24.435 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 1279.2036 ms
+2022-10-19 21:06:40.682 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 21:06:40.690 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 21:06:40.696 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 21:06:40.730 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 58.0566 ms
+2022-10-19 21:06:49.106 +02:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-10-19 21:06:49.109 +02:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-10-19 21:06:49.113 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-10-19 21:06:49.121 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-19 21:06:49.126 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-19 21:06:49.143 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-10-19 21:06:49.246 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 140.1830 ms
+2022-10-20 10:24:50.251 +02:00 [INF] Now listening on: https://localhost:7261
+2022-10-20 10:24:50.427 +02:00 [INF] Now listening on: http://localhost:5261
+2022-10-20 10:24:50.449 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-20 10:24:50.458 +02:00 [INF] Hosting environment: Development
+2022-10-20 10:24:50.465 +02:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-10-20 10:26:30.255 +02:00 [INF] HTTP POST /api/Empresa responded 401 in 256.7203 ms

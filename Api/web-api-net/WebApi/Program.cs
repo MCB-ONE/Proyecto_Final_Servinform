@@ -105,8 +105,8 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 
 //8. Añadir repositorio de seguridad
 builder.Services.AddScoped(typeof(IGenericSecurityRepository<>), typeof(GenericSecurityRepository<>));
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>)); 
+builder.Services.AddScoped(typeof(IEmpresaService), typeof(EmpresaService));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
