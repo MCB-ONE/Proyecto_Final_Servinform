@@ -13,27 +13,25 @@ namespace WebApi.Controllers
     public class EmpresaController : BaseApiController
     {
         private readonly IMapper _mapper;
-        private readonly IEmpresaService _empresaService;
-        private readonly IGenericRepository<Empresa> _repository;
+        private readonly IEmpresaRepository _repository;
 
-        public EmpresaController(IMapper mapper, IEmpresaService empresaService, IGenericRepository<Empresa> repository)
+        public EmpresaController(IMapper mapper, IEmpresaRepository repository)
         {
             _mapper = mapper;
-            _empresaService = empresaService;
             _repository = repository;
         }
 
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<Pagination<EmpresaDto>>> GetAllEmpresas([FromQuery]EmpresaSpecificationParams empresaParams)
+        public async Task<ActionResult<Pagination<EmpresaDto>>> GetAllEmpresasByUsuarioEmail([FromQuery]EmpresaSpecificationParams empresaParams)
         {
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 
-            var spec = new EmpresaUsuarioWithClienteAndDireccionSpecification(emailUsuario ,empresaParams);
+            var spec = new EmpresaWithClienteAndDireccionSpecification(empresaParams, emailUsuario);
 
-            var empresas = await _empresaService.GetAllUsuarioEmpresasWithSpecAsync(spec);
+            var empresas = await _repository.GetAllWithSpecAsync(spec);
 
-            var specCount = new EmpresaForCountingSpecification(empresaParams);
+            var specCount = new EmpresaForCountingSpecification(empresaParams, emailUsuario);
 
             var totalEmpresas = await _repository.CountAsync(specCount);
 
@@ -54,16 +52,13 @@ namespace WebApi.Controllers
 
         [HttpGet("{id}")]
         [Authorize]
-        public async Task<ActionResult<List<EmpresaDto>>> GetEmpresaById(int id)
+        public async Task<ActionResult<List<EmpresaDto>>> GetEmpresaByIdAndUsuarioEmail(int id)
         {
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
-            //var spec = new EmpresaWithClienteAndDireccionSpecification(id);
 
-            //var empresa = await _repository.GetByIdWithSpecAsync(spec);
+            var spec =new EmpresaWithClienteAndDireccionSpecification(id, emailUsuario);
 
-            var spec =new EmpresaUsuarioWithClienteAndDireccionSpecification(id, emailUsuario);
-
-            var empresa = await _empresaService.GetUsuarioEmpresaByIdWithSpecAsync(spec);
+            var empresa = await _repository.GetByIdWithSpecAsync(spec);
 
             return Ok(_mapper.Map<EmpresaDto>(empresa));
         }
@@ -74,7 +69,7 @@ namespace WebApi.Controllers
         {
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 
-            var result = await _empresaService.AddUsuarioEmpresa(_mapper.Map<Empresa>(dto), emailUsuario);
+            var result = await _repository.AddUsuarioEmpresa(_mapper.Map<Empresa>(dto), emailUsuario);
 
             if (result == 0)
             {
@@ -111,7 +106,7 @@ namespace WebApi.Controllers
             empresa.UpdatedAt = DateTime.Now;
             empresa.IsDeleted = false;
 
-            var result = await _empresaService.UpdateUsuarioEmpresa(empresa, emailUsuario);
+            var result = await _repository.UpdateUsuarioEmpresa(empresa, emailUsuario);
 
 
             if (result == 0)
@@ -129,7 +124,7 @@ namespace WebApi.Controllers
         {
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 
-            var result = await _empresaService.DeleteEmpresaUsuario(id, emailUsuario);
+            var result = await _repository.DeleteEmpresaUsuario(id, emailUsuario);
 
             if (result == 0)
             {

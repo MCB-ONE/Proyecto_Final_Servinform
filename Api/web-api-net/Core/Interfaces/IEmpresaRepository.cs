@@ -8,14 +8,10 @@ using System.Threading.Tasks;
 
 namespace Core.Interfaces
 {
-    public interface IEmpresaService
+    public interface IEmpresaRepository : IGenericRepository<Empresa>
     {
         Task<int> AddUsuarioEmpresa(Empresa empresa, string emailUsuario);
-        Task<IReadOnlyList<Empresa>> GetAllUsuarioEmpresasWithSpecAsync( EmpresaUsuarioWithClienteAndDireccionSpecification spec);
-
-        Task<Empresa> GetUsuarioEmpresaByIdWithSpecAsync(EmpresaUsuarioWithClienteAndDireccionSpecification spec);
         Task<int> UpdateUsuarioEmpresa(Empresa empresa, string usuarioEmail);
-
         Task<int> DeleteEmpresaUsuario(int id, string usuarioEmail);
 
     }

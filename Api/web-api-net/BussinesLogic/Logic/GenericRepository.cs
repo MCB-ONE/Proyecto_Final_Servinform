@@ -115,5 +115,6 @@ namespace BussinesLogic.Logic
         {
             return await ApplySpecification(spec).CountAsync();
         }
+
     }
 }

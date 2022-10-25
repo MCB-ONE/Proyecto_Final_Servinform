@@ -18,5 +18,17 @@ namespace Core.Specification.Empresa
         {
 
         }
+
+        public EmpresaForCountingSpecification(EmpresaSpecificationParams empresaParams, string emailUsuario)
+    : base(x =>
+           x.EmailUsuario == emailUsuario &&
+        (
+            string.IsNullOrEmpty(empresaParams.Search)
+            || x.Nombre.Contains(empresaParams.Search)
+            || x.NIF.Contains(empresaParams.Search)
+        ))
+        {
+
+        }
     }
 }

@@ -52,7 +52,56 @@ namespace Core.Specification.Empresa
 
         }
 
+        public EmpresaWithClienteAndDireccionSpecification(EmpresaSpecificationParams empresaParams, string emailUsuario)
+    : base(x =>
+           x.EmailUsuario == emailUsuario &&
+        (
+            string.IsNullOrEmpty(empresaParams.Search)
+            || x.Nombre.Contains(empresaParams.Search)
+            || x.NIF.Contains(empresaParams.Search)
+        ))
+        {
+            AddInclude(empresa => empresa.Clientes);
+            AddInclude(empresa => empresa.Direcciones);
+
+            ApplyPaging(empresaParams.PageSize * (empresaParams.PageIndex - 1), empresaParams.PageSize);
+
+
+            if (!string.IsNullOrEmpty(empresaParams.Sort))
+            {
+                switch (empresaParams.Sort)
+                {
+                    case "nombreAsc":
+                        AddOrderBy(empresa => empresa.Nombre);
+                        break;
+
+                    case "nombreDesc":
+                        AddOrderByDescending(empresa => empresa.Nombre);
+                        break;
+
+                    case "nifAsc":
+                        AddOrderBy(empresa => empresa.NIF);
+                        break;
+
+                    case "nifDesc":
+                        AddOrderByDescending(empresa => empresa.NIF);
+                        break;
+
+                    default:
+                        AddOrderBy(empresa => empresa.Nombre);
+                        break;
+                }
+            }
+
+        }
+
         public EmpresaWithClienteAndDireccionSpecification(int id) : base(x => x.Id == id)
+        {
+            AddInclude(empresa => empresa.Clientes);
+            AddInclude(empresa => empresa.Direcciones);
+        }
+
+        public EmpresaWithClienteAndDireccionSpecification(int id, string usuarioEmail) : base(x => x.Id == id && x.EmailUsuario == usuarioEmail)
         {
             AddInclude(empresa => empresa.Clientes);
             AddInclude(empresa => empresa.Direcciones);

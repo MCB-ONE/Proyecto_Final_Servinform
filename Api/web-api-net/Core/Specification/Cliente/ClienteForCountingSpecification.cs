@@ -15,7 +15,15 @@ namespace Core.Specification.Cliente
                    || x.Nombre.Contains(clienteParams.Search)
                    || x.NIF.Contains(clienteParams.Search)
                ))
-        {
-        }
+        {}
+        public ClienteForCountingSpecification( ClienteSpecificationParams clienteParams, int empresaId)
+            : base(x =>
+                x.EmpresaId == empresaId &&
+               (
+                   string.IsNullOrEmpty(clienteParams.Search)
+                   || x.Nombre.Contains(clienteParams.Search)
+                   || x.NIF.Contains(clienteParams.Search)
+               ))
+        { }
     }
 }
