@@ -2,18 +2,18 @@
   <div class="header__title">
     <img class="logo" src="/assets/logos/logo-facturapp-180x100.svg" alt="">
   </div>
-  <div class="header__navigation">
+  <!-- <div class="header__navigation">
     <a class="app-a" routerLink="demo" routerLinkActive="app-a_active">Demo</a>
     <a class="app-a" routerLink="auth/login" routerLinkActive="app-a_active">Login</a>
     <a class="app-a" routerLink="auth/registration" routerLinkActive="app-a_active">Registrarse</a>
-  </div>
+  </div> -->
   <div *ngIf="!isAuthorized" class="header__navigation">
     <a class="app-a" routerLink="demo" routerLinkActive="app-a_active">Demo</a>
     <a class="app-a" routerLink="auth/login" routerLinkActive="app-a_active">Login</a>
     <a class="app-a" routerLink="auth/registration" routerLinkActive="app-a_active">Registrarse</a>
   </div>
   <div *ngIf="isAuthorized" class="header__profile">
-    <span>{{usuario ? usuario.nombre : null}}</span>
+    <span>{{usuario ? usuario.nombre + " " + usuario.apellido : null}}</span>
     <div class="header__profile_image">
       <img src="../../../assets/perfil-usuario-default.svg" alt="">
     </div>
