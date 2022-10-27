@@ -21,7 +21,11 @@
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
     <mat-menu #profileMenu="matMenu">
-      <button mat-menu-item (click)="onSignOut()">
+      <button mat-menu-item routerLink="facturacion/empresas" routerLinkActive="app-a_active">
+        <mat-icon>account_balance</mat-icon>
+        <span>Mis empresas</span>
+      </button>
+      <button mat-menu-item routerLink="facturacion/profile" routerLinkActive="app-a_active">
         <mat-icon>manage_accounts</mat-icon>
         <span>Perfil de usuario</span>
       </button>

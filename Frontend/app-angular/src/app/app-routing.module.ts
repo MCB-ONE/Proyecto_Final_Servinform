@@ -18,6 +18,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/static/static.module').then(m => m.StaticModule)
       },
       {
+        path: 'facturacion',
+        loadChildren: () => import('./pages/facturacion/facturacion.module').then(m => m.FacturacionModule)
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'auth'
