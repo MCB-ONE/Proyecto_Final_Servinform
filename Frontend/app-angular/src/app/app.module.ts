@@ -21,6 +21,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers, effects} from './store';
 import { MatIconModule } from '@angular/material/icon';
+import { ContainerComponent } from './pages/container/container.component';
 
 
 const APP_DATE_FORMATS: MatDateFormats = {
@@ -38,7 +39,8 @@ const APP_DATE_FORMATS: MatDateFormats = {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,

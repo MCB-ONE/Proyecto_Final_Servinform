@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContainerComponent } from './pages/container/container.component';
 
 const routes: Routes = [
+
   {
-    path: "",
+    path: '',
+    component: ContainerComponent,
     children: [
       {
         path: "auth",
@@ -18,15 +21,15 @@ const routes: Routes = [
         loadChildren: () => import('./pages/static/static.module').then(m => m.StaticModule)
       },
       {
-        path: 'facturacion',
-        loadChildren: () => import('./pages/facturacion/facturacion.module').then(m => m.FacturacionModule)
-      },
-      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'auth'
       }
-    ],
+    ]
+  },
+  {
+    path: 'facturacion',
+    loadChildren: () => import('./pages/facturacion/facturacion.module').then(m => m.FacturacionModule)
   },
   {
     path: '**',

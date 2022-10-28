@@ -1,20 +1,27 @@
 <div class="app-dashboard">
   <div class="app-dashboard__main">
     <div class="app-dashboard__header">
-      <h2>Mis empresas</h2>
+      <h1>Empresas</h1>
     </div>
     <mat-card class="app-card">
-      <mat-card-header class="app-card__header">
-        <div mat-card-avatar class="mat-card-avatar_default"><span>MS</span></div>
+      <span class="mat-card-subtitle">Última empresa creada</span>
+      <mat-card-header class="app-card-header">
+        <div mat-card-avatar class="mat-card-avatar_default">
+          <span>MS</span>
+        </div>
         <!-- <div mat-card-avatar class="example-header-image">MS</div> -->
         <mat-card-title>Mantenimiento Sanchez</mat-card-title>
         <mat-card-subtitle>89907677E</mat-card-subtitle>
+        <div class="actions">
+          <button mat-flat-button color="accent">Editar</button>
+          <button mat-button mat-flat-button color="warn">Borrar</button>
+        </div>
       </mat-card-header>
       <mat-card-content class="app-card__content">
         <mat-accordion>
           <div class="mat-accordion__actions">
             <h3>Direcciones guardadas</h3>
-            <span>Añadir nueva</span>
+            <a class="app-a"><mat-icon>add_circle</mat-icon>Añadir dirección</a>
           </div>
           <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
@@ -65,7 +72,8 @@
                 <mat-icon>language</mat-icon>https://empresatest.es/
               </li>
             </ul>
-          </mat-expansion-panel>        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <img mat-card-sm-image src="../../../../../assets/location-on-map.svg">
@@ -97,14 +105,85 @@
 
   <div class="app-dashboard__sidebar">
     <div class="section">
-      <h3>Clientes</h3>
-      <p>Listado de clientes recientes</p>
-      <div >
-        <div class="cleintes">
-          <h4>Papeleria Nou Barris</h4>
-          <span>92283200P</span>
+      <h2 class="title">Mis empresas</h2>
+      <p>Últimas empresas gestionadas</p>
+      <div class="clientes">
+        <div class="clientes-item">
+          <div class="header">
+            <h4 class="title">Papeleria Nou Barris</h4>
+            <span>92283200P</span>
+          </div>
+          <div class="action">
+            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" [matMenuTriggerFor]="clienteMenu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #clienteMenu="matMenu">
+              <button mat-menu-item routerLink="facturacion/empresas" routerLinkActive="app-a_active">
+                <mat-icon>cached</mat-icon>
+                <span>Seleccionar</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>edit</mat-icon>
+                <span>Editar</span>
+              </button>
+              <button mat-menu-item routerLink="facturacion/profile" routerLinkActive="app-a_active">
+                <mat-icon>delete</mat-icon>
+                <span>Eliminar</span>
+              </button>
+            </mat-menu>
+          </div>
         </div>
-        <span>Detalles</span>
+        <div class="clientes-item">
+          <div class="header">
+            <h4 class="title">Papeleria Nou Barris</h4>
+            <span>92283200P</span>
+          </div>
+          <div class="action">
+            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" [matMenuTriggerFor]="clienteMenu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #clienteMenu="matMenu">
+              <button mat-menu-item routerLink="facturacion/empresas" routerLinkActive="app-a_active">
+                <mat-icon>cached</mat-icon>
+                <span>Seleccionar</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>edit</mat-icon>
+                <span>Editar</span>
+              </button>
+              <button mat-menu-item routerLink="facturacion/profile" routerLinkActive="app-a_active">
+                <mat-icon>delete</mat-icon>
+                <span>Eliminar</span>
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+        <div class="clientes-item">
+          <div class="header">
+            <h4 class="title">Papeleria Nou Barris</h4>
+            <span>92283200P</span>
+          </div>
+          <div class="action">
+            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" [matMenuTriggerFor]="clienteMenu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #clienteMenu="matMenu">
+              <button mat-menu-item routerLink="facturacion/empresas" routerLinkActive="app-a_active">
+                <mat-icon>cached</mat-icon>
+                <span>Seleccionar</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>edit</mat-icon>
+                <span>Editar</span>
+              </button>
+              <button mat-menu-item routerLink="facturacion/profile" routerLinkActive="app-a_active">
+                <mat-icon>delete</mat-icon>
+                <span>Eliminar</span>
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+        <a class="app-a" href="">Ver todas</a>
       </div>
     </div>
   </div>
