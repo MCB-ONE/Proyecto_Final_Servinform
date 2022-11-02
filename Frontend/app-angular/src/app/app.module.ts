@@ -59,14 +59,14 @@ const APP_DATE_FORMATS: MatDateFormats = {
     MatIconModule,
     NotificationModule.forRoot(),
 
+    StoreDevtoolsModule.instrument({ maxAge: 30, logOnly: environment.production }),
     StoreModule.forRoot(reducers,{
       runtimeChecks: {
         strictActionImmutability: true,
         strictStateImmutability: true
       }
     }),
-    EffectsModule.forRoot(effects),
-    StoreDevtoolsModule.instrument({ maxAge: 30, logOnly: environment.production }),
+    EffectsModule.forRoot(effects)
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

@@ -80,7 +80,7 @@ export class UsuarioEffects {
             .pipe(
               tap({
                 next: (user: UsuarioResponse) => {
-                  // console.log("Data usuario en sesión que llega desde el servidor => ", user);
+                  console.log("Data usuario en sesión que llega desde el servidor => ", user);
                   this.router.navigate(['/facturacion']);
                 }
               }),

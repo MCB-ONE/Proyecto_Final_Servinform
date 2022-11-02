@@ -2,6 +2,7 @@ import { ActionReducerMap } from "@ngrx/store";
 import * as fromUsuario from './usuario/index';
 
 export interface State {
+  //dictionaries: any;
   usuario: fromUsuario.UsuarioState;
 }
 

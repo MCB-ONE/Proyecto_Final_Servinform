@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-empresas',
-  templateUrl: './empresas.component.html',
-  styleUrls: ['./empresas.component.scss']
+  templateUrl: './empresa.component.html',
+  styleUrls: ['./empresa.component.scss']
 })
-export class EmpresasComponent implements OnInit {
+export class EmpresaComponent implements OnInit {
   panelOpenState = false;
   constructor() { }
 

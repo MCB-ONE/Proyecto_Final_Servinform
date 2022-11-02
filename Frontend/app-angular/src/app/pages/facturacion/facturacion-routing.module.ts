@@ -12,8 +12,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule)
       },
       {
-        path: 'empresas',
-        loadChildren: () => import('./pages/empresas/empresas.module').then(m => m.EmpresasModule)
+        path: 'empresa',
+        loadChildren: () => import('./pages/empresa/empresa.module').then(m => m.EmpresaModule)
       },
       {
         path: 'profile',
@@ -22,7 +22,7 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'empresas'
+        redirectTo: 'empresa'
       },
       {
         path: '**',
