@@ -6,12 +6,12 @@ export interface EmpresasState{
   list: fromList.ListState
 }
 
-export const reducers: ActionReducerMap<EmpresasState> = {
-  list: fromList.reducer
-}
+// export const reducers: ActionReducerMap<EmpresasState> = {
+//   list: fromList.reducer
+// }
 
-export const effects: any[] = [
-  ListEffects
-]
+// export const effects: any[] = [
+//   ListEffects
+// ]
 
 export const getEmpresasState = createFeatureSelector<EmpresasState>('empresas')

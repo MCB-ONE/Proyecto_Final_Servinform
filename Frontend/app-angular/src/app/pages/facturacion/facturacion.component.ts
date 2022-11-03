@@ -2,8 +2,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import * as formRoot from '../../store';
+import * as fromRoot from '../../store';
 import * as fromUsuario from '../../store/usuario';
+import * as fromEmpresa from '../../store/empresa/list';
+import { Pagination } from '@app/store/empresa/list';
+import { HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-facturacion',
@@ -13,9 +16,12 @@ import * as fromUsuario from '../../store/usuario';
 export class FacturacionComponent implements OnInit {
   usuario$ !: Observable<fromUsuario.UsuarioResponse>;
   isAuthorized$ !: Observable<boolean>
+  empresasLoading$ !: Observable<boolean | null>;
+  empresasPagination$ !: Observable<Pagination>
+  params = new HttpParams();
 
   constructor(
-    private store: Store<formRoot.State>,
+    private store: Store<fromRoot.State>,
     private router: Router
   ){
 
@@ -26,6 +32,12 @@ export class FacturacionComponent implements OnInit {
     this.isAuthorized$ = this.store.pipe(select(fromUsuario.getIsAuthorized)) as Observable<boolean>
     this.store.dispatch(new fromUsuario.Init());
 
+    this.empresasLoading$ = this.store.pipe(select(fromEmpresa.getLoading));
+    this.empresasPagination$ = this.store.pipe(select(fromEmpresa.getEmpresas)) as Observable<Pagination>
+    this.params = this.params.set('pageIndex', 1);
+    this.params = this.params.set('pageSize', 5);
+
+    this.store.dispatch(new fromEmpresa.Read(this.params, this.params.toString()));
     }
 
     onSignOut(): void {

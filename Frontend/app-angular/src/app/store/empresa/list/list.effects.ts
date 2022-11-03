@@ -20,7 +20,7 @@ export class ListEffects {
       ofType(fromActions.Types.READ),
       map((action: fromActions.Read) => action.paramsUrl),
       switchMap((request: string) =>
-        this.httpClient.get<Pagination>(`${environment.url}/Empresa?${request}`)
+        this.httpClient.get<Pagination>(`${environment.url}/api/Empresa?${request}`)
           .pipe(
             delay(1000),
             map((pagination: any) => new fromActions.ReadSuccess(pagination)),
