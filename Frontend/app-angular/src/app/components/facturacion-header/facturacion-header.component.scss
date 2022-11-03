@@ -1,0 +1,54 @@
+@import "styles/colors.scss";
+.header {
+  color: $base-light;
+  padding: 16px 5% 16px 1%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary;
+
+  .header-button {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: middle;
+    .logo{
+      height: 40px;
+    }
+  }
+
+  &__navigation {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__profile{
+    display: flex;
+    align-items: center;
+    span{
+      font-size: 1rem;
+      margin-right: 1rem;
+    }
+    .mat-icon{
+      color: $base-light;
+    }
+    &_image{
+      width: 36px;
+      margin-right: 1rem;
+      img{
+        border-radius: 50%;
+      }
+    }
+  }
+}

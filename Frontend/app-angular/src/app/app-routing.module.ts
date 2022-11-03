@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContainerComponent } from './pages/container/container.component';
 
 const routes: Routes = [
+
   {
-    path: "",
+    path: '',
+    component: ContainerComponent,
     children: [
       {
         path: "auth",
@@ -22,7 +25,11 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'auth'
       }
-    ],
+    ]
+  },
+  {
+    path: 'facturacion',
+    loadChildren: () => import('./pages/facturacion/facturacion.module').then(m => m.FacturacionModule)
   },
   {
     path: '**',

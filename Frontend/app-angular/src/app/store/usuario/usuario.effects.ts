@@ -32,7 +32,7 @@ export class UsuarioEffects {
             tap({
               next: (response: UsuarioResponse) => {
                 localStorage.setItem('token', response.token);
-                this.router.navigate(['/']);
+                this.router.navigate(['/facturacion']);
               }
             }),
             map((response: UsuarioResponse) => new fromActions.SignUpEmailSuccess(response.id, response || null)),
@@ -55,7 +55,7 @@ export class UsuarioEffects {
             tap({
               next: (response: UsuarioResponse) => {
                 localStorage.setItem('token', response.token);
-                this.router.navigate(['/']);
+                this.router.navigate(['/facturacion']);
               }
             }),
             map((response: UsuarioResponse) => new fromActions.SignInEmailSuccess(response.id, response || null)),
@@ -80,7 +80,8 @@ export class UsuarioEffects {
             .pipe(
               tap({
                 next: (user: UsuarioResponse) => {
-                  console.log("Data usuario en sesión que llega desde el servidor => ", user)
+                  console.log("Data usuario en sesión que llega desde el servidor => ", user);
+                  this.router.navigate(['/facturacion']);
                 }
               }),
               map((user: UsuarioResponse) => new fromActions.InitAuthorized(user.id, user || null)),
