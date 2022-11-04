@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import * as formRoot from '../../store';
+import * as formRoot from '../../store/app.state';
 import * as fromUsuario from '../../store/usuario';
 
 @Component({
@@ -17,7 +17,7 @@ export class ContainerComponent implements OnInit {
   isAuthorized$ !: Observable<boolean>
 
   constructor(
-    private store: Store<formRoot.State>,
+    private store: Store<formRoot.AppState>,
     private router: Router
   ){
 

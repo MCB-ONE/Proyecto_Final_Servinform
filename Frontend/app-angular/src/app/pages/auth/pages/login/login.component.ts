@@ -3,7 +3,7 @@ import { FormBuilder, FormControlOptions, FormGroup, Validators } from '@angular
 import { markFormGroupTouched, regex, regexErrors } from '@app/shared/utils';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import * as fromRoot from '@app/store';
+import * as fromRoot from '@app/store/app.state';
 import * as fromUsuario from '@app/store/usuario';
 
 
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private store: Store<fromRoot.State>
+    private store: Store<fromRoot.AppState>
   ) { }
 
   ngOnInit(): void {

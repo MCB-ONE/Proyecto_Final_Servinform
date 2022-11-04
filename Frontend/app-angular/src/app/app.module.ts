@@ -19,7 +19,7 @@ import { AuthInterceptor } from './auth-interceptor';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { reducers, effects} from './store';
+import { effects, ROOT_REDUCERS} from './store/app.state';
 import { MatIconModule } from '@angular/material/icon';
 import { ContainerComponent } from './pages/container/container.component';
 
@@ -59,7 +59,7 @@ const APP_DATE_FORMATS: MatDateFormats = {
     MatIconModule,
     NotificationModule.forRoot(),
 
-    StoreModule.forRoot(reducers,{
+    StoreModule.forRoot(ROOT_REDUCERS,{
       runtimeChecks: {
         strictActionImmutability: true,
         strictStateImmutability: true
