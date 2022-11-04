@@ -1,19 +1,19 @@
-import { Pagination } from "./list.models";
+import { Pagination } from "./empresa.models";
 import { Injectable } from "@angular/core";
 import { Actions, ofType, createEffect } from "@ngrx/effects";
-import { Observable, of } from "rxjs";
-import { map, switchMap, catchError, delay, exhaustMap } from "rxjs/operators";
-import { Router } from "@angular/router";
+import { of } from "rxjs";
+import { map, catchError, exhaustMap, delay } from "rxjs/operators";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { environment } from "environments/environment";
-import { ReadEmpresas, ReadEmpresasError, ReadEmpresasSuccess } from "./list.actions";
+import { ReadEmpresas, ReadEmpresasError, ReadEmpresasSuccess } from "./empresa.actions";
 
 @Injectable()
-export class ListEffects {
+export class EmpresaEffects {
 
   read$ = createEffect(() =>
     this.actions$.pipe(
       ofType(ReadEmpresas),
+      // delay(3000),
       exhaustMap(action =>
         this.httpClient.get<Pagination>(`${environment.url}/api/Empresa?${action.paramsUrl}`)
         .pipe(

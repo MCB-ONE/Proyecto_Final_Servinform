@@ -1,0 +1,28 @@
+
+.clientes{
+  margin-top: 1rem;
+  &-item{
+    display: flex;
+    margin-bottom: 1px;
+    padding: 8px 10px 8px 10px;
+    border-bottom: 1px solid lightgrey;
+    justify-content: space-between;
+    .header{
+      .title{
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0 0 8px 0;
+      }
+    }
+    .action{
+      button{
+        margin-top: -10px;
+      }
+    }
+  }
+}
+.app-a{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}

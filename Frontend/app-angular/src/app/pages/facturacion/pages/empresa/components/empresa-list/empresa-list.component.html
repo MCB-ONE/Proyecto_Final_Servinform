@@ -1,0 +1,33 @@
+<div class="section" >
+  <h2 class="title">Mis empresas</h2>
+  <p>Últimas empresas gestionadas</p>
+  <div class="clientes" *ngFor="let empresa of empresas">
+    <div class="clientes-item">
+      <div class="header">
+        <h4 class="title">{{empresa.nombre}}</h4>
+        <span>{{empresa.direcciones[0].telefono}}</span>
+      </div>
+      <div class="action">
+        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon"
+          [matMenuTriggerFor]="clienteMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #clienteMenu="matMenu">
+          <button mat-menu-item routerLink="facturacion/empresas" routerLinkActive="app-a_active">
+            <mat-icon>cached</mat-icon>
+            <span>Seleccionar</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>edit</mat-icon>
+            <span>Editar</span>
+          </button>
+          <button mat-menu-item routerLink="facturacion/profile" routerLinkActive="app-a_active">
+            <mat-icon>delete</mat-icon>
+            <span>Eliminar</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+  <a class="app-a" href="">Ver todas</a>
+</div>

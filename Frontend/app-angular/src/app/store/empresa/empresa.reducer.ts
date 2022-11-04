@@ -1,23 +1,26 @@
-import { Pagination } from "./list.models";
+import { createReducer, on } from '@ngrx/store';
 import { HttpParams } from "@angular/common/http";
-import { createReducer, on } from "@ngrx/store";
-import { ReadEmpresas, ReadEmpresasError, ReadEmpresasSuccess } from "./list.actions";
+import { Pagination } from './empresa.models';
+import { ReadEmpresas, ReadEmpresasError, ReadEmpresasSuccess } from './empresa.actions';
 
-export interface ListState {
+
+export interface EmpresaState{
   pagination: Pagination | null;
   requestPagination: HttpParams | null;
+  activeEmpresaId: number | null;
   loading: boolean | null;
   error: string | null;
 }
 
-export const initialState: ListState = {
+const initialState: EmpresaState = {
   pagination: null,
   requestPagination: null,
+  activeEmpresaId: null,
   loading: null,
   error: null
-}
+};
 
-export const listReducer = createReducer(
+export const empresaReducer = createReducer(
   initialState,
   on(ReadEmpresas, (state, {requestPagination}) => {
     console.log(requestPagination);
@@ -44,5 +47,4 @@ export const listReducer = createReducer(
       error: error
      }
   })
-
-);
+)

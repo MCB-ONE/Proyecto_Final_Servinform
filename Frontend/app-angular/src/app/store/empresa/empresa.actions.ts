@@ -1,6 +1,6 @@
 import { HttpParams } from "@angular/common/http";
 import { createAction, props } from "@ngrx/store";
-import { Pagination } from "./list.models";
+import { Pagination } from "./empresa.models";
 
 export const ReadEmpresas = createAction(
   '[Empresa] Read: Start',

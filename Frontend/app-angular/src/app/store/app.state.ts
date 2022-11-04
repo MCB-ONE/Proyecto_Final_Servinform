@@ -1,24 +1,20 @@
 import { ActionReducerMap } from "@ngrx/store";
 import * as fromUsuario from './usuario/index';
-import { ListEffects, listReducer, ListState } from "../pages/facturacion/pages/empresa/store/list";
+import { empresaReducer, EmpresaState } from "@app/store/empresa/empresa.reducer";
+import { EmpresaEffects } from "@app/store/empresa/empresa.effects";
 
 export interface AppState {
   //dictionaries: any;
   usuario: fromUsuario.UsuarioState;
-  empresa: ListState;
+  empresa: EmpresaState;
 }
 
 export const ROOT_REDUCERS: ActionReducerMap<AppState> = {
   usuario: fromUsuario.reducer,
-  empresa: listReducer,
+  empresa: empresaReducer
 }
-
-// export const reducers: ActionReducerMap<State> = {
-//   usuario: fromUsuario.reducer,
-//   empresa: listReducer,
-// }
 
 export const effects = [
   fromUsuario.UsuarioEffects,
-  ListEffects
+  EmpresaEffects
 ];

@@ -9,10 +9,14 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
+import { EmpresaListComponent } from './components/empresa-list/empresa-list.component';
+import { EmpresaDetailComponent } from './components/empresa-detail/empresa-detail.component';
 
 @NgModule({
   declarations: [
-    EmpresaComponent
+    EmpresaComponent,
+    EmpresaListComponent,
+    EmpresaDetailComponent
   ],
   imports: [
     CommonModule,
