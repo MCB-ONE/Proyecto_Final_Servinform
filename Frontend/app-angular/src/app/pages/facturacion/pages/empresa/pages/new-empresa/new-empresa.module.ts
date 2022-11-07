@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { NewEmpresaRoutingModule } from './new-empresa-routing.module';
 import { NewEmpresaComponent } from './new-empresa.component';
+import { ControlsModule, FormFieldModule, IndicatorsModule, InputModule, PopupsModule, SpinnerModule } from '@app/shared';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -11,7 +14,15 @@ import { NewEmpresaComponent } from './new-empresa.component';
   ],
   imports: [
     CommonModule,
-    NewEmpresaRoutingModule
+    NewEmpresaRoutingModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    ControlsModule,
+    IndicatorsModule,
+    PopupsModule,
+    FormFieldModule,
+    InputModule,
+    SpinnerModule
   ]
 })
 export class NewEmpresaModule { }

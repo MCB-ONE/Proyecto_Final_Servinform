@@ -1,1 +1,23 @@
-<p>new-empresa works!</p>
+<div class="app-dashboard">
+  <!-- <div class="spinner" *ngIf="isLoading$ | async">
+    <app-spinner></app-spinner>
+  </div> -->
+  <ng-container  >
+    <div class="app-dashboard__main">
+      <div class="app-dashboard__header">
+        <h1>Crear nueva empresa</h1>
+      </div>
+    </div>
+    <div>
+      <form [formGroup]="form" autocomplete="off" (submit)="onSubmit()">
+        <app-form-field label="Nombre" [required]="true" [control]="form.controls['nombre']">
+        <app-input formControlName="nombre"> </app-input>
+        </app-form-field>
+        <app-form-field label="Nif" [required]="true" [control]="form.controls['nif']">
+          <app-input formControlName="nif"></app-input>
+        </app-form-field>
+      </form>
+    </div>
+  </ng-container>
+
+</div>

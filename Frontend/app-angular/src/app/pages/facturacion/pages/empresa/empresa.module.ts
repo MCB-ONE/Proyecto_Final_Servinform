@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { EmpresaListComponent } from './components/empresa-list/empresa-list.component';
 import { EmpresaDetailComponent } from './components/empresa-detail/empresa-detail.component';
+import { SpinnerModule } from '@app/shared';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EmpresaDetailComponent } from './components/empresa-detail/empresa-deta
     MatExpansionModule,
     MatListModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    SpinnerModule
   ]
 })
 export class EmpresaModule { }

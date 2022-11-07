@@ -1,11 +1,11 @@
 import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Pagination } from '@app/store/empresa/empresa.models';
-import { select, Store } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as fromRoot from '@app/store/app.state';
-import { getEmpresas, getLoading } from '@app/store/empresa/empresa.selectors';
-import { ReadEmpresas } from '@app/store/empresa/empresa.actions';
+import { getActiveEmpresa, getLoading, getPagination } from '@app/store/empresa/empresa.selectors';
+import { EmpresaActions } from '@app/store/empresa/empresa.actions';
 
 @Component({
   selector: 'app-empresas',
@@ -13,11 +13,10 @@ import { ReadEmpresas } from '@app/store/empresa/empresa.actions';
   styleUrls: ['./empresa.component.scss']
 })
 export class EmpresaComponent implements OnInit {
-
   params = new HttpParams();
-
-  empresasLoading$ !: Observable<boolean | null>;
-  empresasPagination$ !: Observable<Pagination>
+  isLoading$ !: Observable<boolean | null>;
+  pagination$ !: Observable<Pagination>
+  empresa$ !: Observable<void>
 
 
 
@@ -26,15 +25,20 @@ export class EmpresaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.store.dispatch(ReadEmpresas({
+    this.store.dispatch(EmpresaActions.readAllStart({
       requestPagination: this.params,
       paramsUrl: this.params.toString()
     }))
-
-    this.empresasLoading$ = this.store.select(getLoading);
-    this.empresasPagination$ = this.store.select(getEmpresas) as Observable<Pagination>
     this.params = this.params.set('pageIndex', 1);
     this.params = this.params.set('pageSize', 5);
+    this.isLoading$ = this.store.select(getLoading);
+    this.pagination$ = this.store.select(getPagination) as Observable<Pagination>
+    this.empresa$ = this.store.select(getActiveEmpresa) as Observable<void>
+  }
+
+  onEmpresaSelect(empresaId: string) {
+    this.store.dispatch(EmpresaActions.readActiveEmpresa({empresaId}))
+    this.empresa$.subscribe(data => console.log(data))
   }
 
 }

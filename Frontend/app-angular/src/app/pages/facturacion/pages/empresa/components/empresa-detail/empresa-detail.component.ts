@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Empresa } from '@app/models/backend';
 
 @Component({
@@ -10,10 +10,16 @@ export class EmpresaDetailComponent implements OnInit {
   panelOpenState = false;
 
   @Input() empresa !: Empresa;
-
-  constructor() { }
+  @Output() selectEmpresa: EventEmitter<string>
+  constructor() {
+    this.selectEmpresa = new EventEmitter();
+   }
 
   ngOnInit(): void {
+  }
+
+  onSelected(empresaId: string ){
+    this.selectEmpresa.emit(empresaId);
   }
 
 }

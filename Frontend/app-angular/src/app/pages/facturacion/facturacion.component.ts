@@ -4,7 +4,6 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as fromRoot from '../../store/app.state';
 import * as fromUsuario from '../../store/usuario';
-import { ReadEmpresas } from '@app/store/empresa/empresa.actions';
 
 @Component({
   selector: 'app-facturacion',

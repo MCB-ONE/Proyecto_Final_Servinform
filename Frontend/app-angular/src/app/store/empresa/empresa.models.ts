@@ -1,6 +1,6 @@
 import { Empresa as DbEmpresa } from '@app/models/backend/empresa';
 
-export interface Empresa extends DbEmpresa{}
+export interface EmpresaResponse extends DbEmpresa{}
 
 export interface PaginationRequest{
   pageIndex: number | null;
@@ -14,6 +14,11 @@ export interface Pagination{
   pageSize: number;
   count: number;
   pageCount: number;
-  data: any[];
+  data: EmpresaResponse[];
 }
 
+
+export type EmpresaCreateRequest = Omit<DbEmpresa, 'id' |'emailUsuario' | 'clientes' | 'direcciones'>;
+
+
+export type EmpresaUpdateRequest = Omit<DbEmpresa, 'clientes' | 'direcciones'>;

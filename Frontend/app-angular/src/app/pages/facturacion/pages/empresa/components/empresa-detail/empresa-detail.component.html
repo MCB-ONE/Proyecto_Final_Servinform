@@ -8,6 +8,7 @@
     <mat-card-title>{{empresa.nombre}}</mat-card-title>
     <mat-card-subtitle>{{empresa.nif}}</mat-card-subtitle>
     <div class="actions">
+      <button mat-flat-button color="primary" (click)="onSelected(empresa.id)">Seleccionar</button>
       <button mat-flat-button color="accent" routerLink="actualizar" routerLinkActive="app-a_active">Editar</button>
       <button mat-button mat-flat-button color="warn">Borrar</button>
     </div>
