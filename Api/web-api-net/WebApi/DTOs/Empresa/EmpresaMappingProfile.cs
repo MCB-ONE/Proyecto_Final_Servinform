@@ -10,7 +10,12 @@ namespace WebApi.DTOs.Empresa
 
             CreateMap<CreateEmpresaDto, Core.Entities.Empresa>();
 
+
+            CreateMap<UpdateEmpresaDto, Core.Entities.Empresa>();
+
+
             CreateMap<Core.Entities.Cliente, EmpresaCliente>();
+
         }
     }
 }

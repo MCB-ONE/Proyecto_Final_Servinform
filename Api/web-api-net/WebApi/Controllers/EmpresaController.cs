@@ -83,30 +83,18 @@ namespace WebApi.Controllers
 
         [HttpPut("actualizar/{id}")]
         [Authorize]
-        public async Task<ActionResult<List<EmpresaDto>>> UpdateEmpresa(int id, Empresa empresaUpdated)
+        public async Task<ActionResult<List<EmpresaDto>>> UpdateEmpresa(int id, UpdateEmpresaDto empresaUpdated)
         {
 
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 
-            var empresa = await _repository.GetByIdAsync(id);
 
-            if (empresa.Id != id)
+            if (empresaUpdated.Id != id)
             {
-                return BadRequest("No se ha podido actualizar la empresa.");
+                return BadRequest("No se ha podido actualizar la empresa. Los Ids de la petición no coinciden");
             }
 
-            if (empresa.EmailUsuario != emailUsuario)
-            {
-                return BadRequest("No se ha podido actualizar la empresa.");
-            }
-
-            empresa.Id = id;
-            empresa.Nombre = empresaUpdated.Nombre;
-            empresa.NIF = empresaUpdated.NIF;
-            empresa.UpdatedAt = DateTime.Now;
-            empresa.IsDeleted = false;
-
-            var result = await _repository.UpdateUsuarioEmpresa(empresa, emailUsuario);
+            var result = await _repository.UpdateUsuarioEmpresa(_mapper.Map<Empresa>(empresaUpdated), emailUsuario);
 
 
             if (result == 0)

@@ -38,23 +38,37 @@ namespace BussinesLogic.Logic
         }
 
 
-        public async Task<int> UpdateUsuarioEmpresa (Empresa empresa, string usuarioEmail)
+        public async Task<int> UpdateUsuarioEmpresa (Empresa empresaUpdated, string usuarioEmail)
         {
             _logger.LogWarning($"{nameof(EmpresaRepository)} - {nameof(UpdateUsuarioEmpresa)} - Warning Level Log");
             _logger.LogError($"{nameof(EmpresaRepository)} - {nameof(UpdateUsuarioEmpresa)} - Error Level Log");
             _logger.LogCritical($"{nameof(EmpresaRepository)} - {nameof(UpdateUsuarioEmpresa)} - Critical Log Level");
 
-            if (empresa == null)
+
+            if (empresaUpdated == null)
             {
                 throw new ArgumentNullException("entity");
             }
 
-            if(usuarioEmail != empresa.EmailUsuario) {
+
+            var empresa = await _context.Set<Empresa>().FindAsync(empresaUpdated.Id);
+
+
+            if (empresaUpdated.EmailUsuario is null || empresa.EmailUsuario != empresaUpdated.EmailUsuario)
+            {
                 throw new ArgumentNullException("No se ha podido actualizar la empresa. Email de usuario logeado y email empresa a actualizarno coinciden");
             }
 
-            _context.Set<Empresa>().Attach(empresa);
-            _context.Entry(empresa).State = EntityState.Modified;
+
+            empresa.Id = empresaUpdated.Id;
+            empresa.Nombre = empresaUpdated.Nombre;
+            empresa.NIF = empresaUpdated.NIF;
+            empresa.UpdatedAt = DateTime.Now;
+            empresa.IsDeleted = false;
+
+
+            //_context.Set<Empresa>().Attach(empresa);
+            //_context.Entry(empresa).State = EntityState.Modified;
 
             return await _context.SaveChangesAsync();
         }

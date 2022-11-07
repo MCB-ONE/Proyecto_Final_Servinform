@@ -4553,3 +4553,72 @@ System.Exception: No se ha podido borrar el cliente
 2022-10-25 12:50:22.160 +02:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
 2022-10-25 12:50:22.185 +02:00 [INF] HTTP GET /api/Empresa responded 200 in 36.7402 ms
 2022-10-25 12:50:40.739 +02:00 [INF] HTTP POST /api/Usuario/login responded 200 in 298.9269 ms
+2022-11-07 13:16:31.039 +01:00 [INF] Now listening on: https://localhost:7261
+2022-11-07 13:16:31.102 +01:00 [INF] Now listening on: http://localhost:5261
+2022-11-07 13:16:31.110 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-07 13:16:31.114 +01:00 [INF] Hosting environment: Development
+2022-11-07 13:16:31.117 +01:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\
+2022-11-07 13:17:49.127 +01:00 [WRN] EmpresaRepository - UpdateUsuarioEmpresa - Warning Level Log
+2022-11-07 13:17:49.140 +01:00 [ERR] EmpresaRepository - UpdateUsuarioEmpresa - Error Level Log
+2022-11-07 13:17:49.148 +01:00 [FTL] EmpresaRepository - UpdateUsuarioEmpresa - Critical Log Level
+2022-11-07 13:18:25.137 +01:00 [ERR] HTTP PUT /api/Empresa/actualizar/11 responded 500 in 37263.3359 ms
+System.ArgumentNullException: Value cannot be null. (Parameter 'No se ha podido actualizar la empresa. Email de usuario logeado y email empresa a actualizarno coinciden')
+   at BussinesLogic.Logic.EmpresaRepository.UpdateUsuarioEmpresa(Empresa empresaUpdated, String usuarioEmail) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\BussinesLogic\Logic\EmpresaRepository.cs:line 59
+   at WebApi.Controllers.EmpresaController.UpdateEmpresa(Int32 id, UpdateEmpresaDto empresaUpdated) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\EmpresaController.cs:line 97
+   at lambda_method28(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-11-07 13:18:25.333 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'No se ha podido actualizar la empresa. Email de usuario logeado y email empresa a actualizarno coinciden')
+   at BussinesLogic.Logic.EmpresaRepository.UpdateUsuarioEmpresa(Empresa empresaUpdated, String usuarioEmail) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\BussinesLogic\Logic\EmpresaRepository.cs:line 59
+   at WebApi.Controllers.EmpresaController.UpdateEmpresa(Int32 id, UpdateEmpresaDto empresaUpdated) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform\Api\web-api-net\WebApi\Controllers\EmpresaController.cs:line 97
+   at lambda_method28(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-07 13:18:45.370 +01:00 [WRN] EmpresaRepository - UpdateUsuarioEmpresa - Warning Level Log
+2022-11-07 13:18:45.374 +01:00 [ERR] EmpresaRepository - UpdateUsuarioEmpresa - Error Level Log
+2022-11-07 13:18:45.379 +01:00 [FTL] EmpresaRepository - UpdateUsuarioEmpresa - Critical Log Level
+2022-11-07 13:19:15.129 +01:00 [INF] HTTP PUT /api/Empresa/actualizar/11 responded 200 in 29761.6356 ms
+2022-11-07 13:19:20.149 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-07 13:19:20.152 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-07 13:19:20.154 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-07 13:19:20.285 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-07 13:19:20.300 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-07 13:19:20.643 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-07 13:19:21.153 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1103.7608 ms
+2022-11-07 13:20:00.091 +01:00 [INF] HTTP PUT /api/Empresa/actualizar/8 responded 400 in 12.8669 ms
+2022-11-07 13:20:06.903 +01:00 [WRN] EmpresaRepository - UpdateUsuarioEmpresa - Warning Level Log
+2022-11-07 13:20:06.910 +01:00 [ERR] EmpresaRepository - UpdateUsuarioEmpresa - Error Level Log
+2022-11-07 13:20:06.919 +01:00 [FTL] EmpresaRepository - UpdateUsuarioEmpresa - Critical Log Level
+2022-11-07 13:20:32.025 +01:00 [INF] HTTP PUT /api/Empresa/actualizar/8 responded 200 in 25127.6432 ms
+2022-11-07 13:20:41.011 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-07 13:20:41.015 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-07 13:20:41.018 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-07 13:20:41.039 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 29.4089 ms
