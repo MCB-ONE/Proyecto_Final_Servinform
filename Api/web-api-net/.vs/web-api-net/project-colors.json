@@ -1,5 +1,21 @@
 {
   "Version": 1,
-  "ProjectMap": {},
-  "NextColorIndex": 0
+  "ProjectMap": {
+    "65d672a3-6b1d-4ee2-b4d8-5674f2b2630c": {
+      "ProjectGuid": "65d672a3-6b1d-4ee2-b4d8-5674f2b2630c",
+      "DisplayName": "BussinesLogic",
+      "ColorIndex": 0
+    },
+    "40ca4dd5-3f6c-4ac6-8bdc-188b791b91fd": {
+      "ProjectGuid": "40ca4dd5-3f6c-4ac6-8bdc-188b791b91fd",
+      "DisplayName": "Core",
+      "ColorIndex": 1
+    },
+    "d45cc262-aeaf-4963-be03-afc9bd6e474d": {
+      "ProjectGuid": "d45cc262-aeaf-4963-be03-afc9bd6e474d",
+      "DisplayName": "WebApi",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
 }

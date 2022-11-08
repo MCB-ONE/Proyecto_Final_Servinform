@@ -44,8 +44,16 @@ namespace Core.Specification.Empresa
                         AddOrderByDescending(empresa => empresa.NIF);
                         break;
 
+                    case "idAsc":
+                        AddOrderBy(empresa => empresa.Id);
+                        break;
+
+                    case "idDesc":
+                        AddOrderByDescending(empresa => empresa.Id);
+                        break;
+
                     default:
-                        AddOrderBy(empresa => empresa.Nombre);
+                        AddOrderByDescending(empresa => empresa.Id);
                         break;
                 }
             }
@@ -87,8 +95,16 @@ namespace Core.Specification.Empresa
                         AddOrderByDescending(empresa => empresa.NIF);
                         break;
 
+                    case "idAsc":
+                        AddOrderBy(empresa => empresa.Id);
+                        break;
+
+                    case "idDesc":
+                        AddOrderByDescending(empresa => empresa.Id);
+                        break;
+
                     default:
-                        AddOrderBy(empresa => empresa.Nombre);
+                        AddOrderByDescending(empresa => empresa.Id);
                         break;
                 }
             }

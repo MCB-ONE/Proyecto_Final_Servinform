@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z3G42Ekfeo7zIRW55CramQizmrxlDBfFzfpl6m4YDkNIWhjr4N8VK3QUFKDOi8s0I2hKn7Tiu2ZUXo0OexmsOw==",
+  "dgSpecHash": "G7g4sffSmpqkhaJOHEjnvhXC9UJDIGlFHvyfqZNZq3f+SLnvtYM7kB+axl7MxaqYNj2jVy7/EV+rOjsvv5CxRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform\\Api\\web-api-net\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform_API\\Api\\web-api-net\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tonis\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.9\\microsoft.aspnetcore.cryptography.internal.6.0.9.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.9\\microsoft.aspnetcore.cryptography.keyderivation.6.0.9.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pT7wZzwtyJUiB/ZvCsM+Yg01dmqy1/EouYvYf/jqLYZpWul/Z9KhNPxp/ffQiRuQn4bsAsB2K+iGLaBozD3E8w==",
+  "dgSpecHash": "Et4coeXv0vYHNCmmtZJD2cNWNcq+xcmtT5mu6XurQsGHwlidRXqijpIJTNxUalxPGu8mvp+0uVdhQNQX5EGkdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform\\Api\\web-api-net\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform_API\\Api\\web-api-net\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tonis\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

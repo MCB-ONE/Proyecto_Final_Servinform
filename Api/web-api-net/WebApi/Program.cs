@@ -130,6 +130,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//9.1 Habilitar cors
+app.UseCors("CorsPolicity");
+
 //10.1 Habilitar serilog en la app
 
 app.UseSerilogRequestLogging();

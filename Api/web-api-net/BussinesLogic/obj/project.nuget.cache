@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZEWv0YwlRt1szHKSe+GOY384cxxl9X6m3ow2jFITh+lCXb88aKLQsvOXingj+PvY8ncWiAwqAuz7yqVWFL6R8g==",
+  "dgSpecHash": "LluNME0TOQreWy5wLI4f0AhiJqZLHxJ6NVnNL86Ihm+QLH400DXU2JFzDYRVBe8xAGZ+vRIY8z1fAFiDr2AxNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform\\Api\\web-api-net\\BussinesLogic\\BussinesLogic.csproj",
+  "projectFilePath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform_API\\Api\\web-api-net\\BussinesLogic\\BussinesLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tonis\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\tonis\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

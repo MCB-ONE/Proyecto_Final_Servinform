@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform\\Api\\web-api-net\\Core\\Core.csproj": {}
+    "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform_API\\Api\\web-api-net\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform\\Api\\web-api-net\\Core\\Core.csproj": {
+    "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform_API\\Api\\web-api-net\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform\\Api\\web-api-net\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform_API\\Api\\web-api-net\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform\\Api\\web-api-net\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform_API\\Api\\web-api-net\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\tonis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform\\Api\\web-api-net\\Core\\obj\\",
+        "outputPath": "C:\\Users\\tonis\\Desktop\\WEB\\OpenBootcamp\\NET_Angular\\Proyecto_Final_Servinform_API\\Api\\web-api-net\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tonis\\AppData\\Roaming\\NuGet\\NuGet.Config",
