@@ -14,7 +14,7 @@ export const ROOT_REDUCERS: ActionReducerMap<AppState> = {
   empresa: empresaReducer
 }
 
-export const effects = [
+export const ROOT_EFFECTS = [
   fromUsuario.UsuarioEffects,
   EmpresaEffects
 ];

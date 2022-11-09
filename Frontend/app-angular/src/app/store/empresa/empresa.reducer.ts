@@ -1,15 +1,26 @@
 import { createReducer, on } from '@ngrx/store';
 import { HttpParams } from "@angular/common/http";
-import { Pagination } from './empresa.models';
+import { EmpresaForm, Pagination } from './empresa.models';
 import { EmpresaActions } from './empresa.actions';
 import { Empresa } from '@app/models/backend';
 
+
+export type FormState = EmpresaForm;
+
+const initialFormSatate: FormState = {
+  nombre: null,
+  nif: null,
+  logo: null,
+  id: null,
+  emailUsuario: null
+};
 
 export interface EmpresaState {
   pagination: Pagination | null;
   requestPagination: HttpParams | null;
   activeEmpresaId: string | null;
   empresa: Empresa | null;
+  form: FormState;
   loading: boolean | null;
   error: string | null;
 }
@@ -19,6 +30,7 @@ const initialState: EmpresaState = {
   requestPagination: null,
   activeEmpresaId: null,
   empresa: null,
+  form: initialFormSatate,
   loading: null,
   error: null
 };
@@ -124,6 +136,24 @@ export const empresaReducer = createReducer(
       loading: false,
       error: error,
       empresa: null
+    }
+  }),
+  // Formulario
+  on(EmpresaActions.formSet, (state,  { form }) => {
+    return {
+      ...state,
+      form: form
+    }
+  }),
+  on(EmpresaActions.formUpdate, (state, { changes }) => {
+    return {
+      ...state,
+      ...changes
+    }
+  }),
+  on(EmpresaActions.formClear, (state) => {
+    return {
+      ...state
     }
   }),
 )

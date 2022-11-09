@@ -19,7 +19,7 @@ import { AuthInterceptor } from './auth-interceptor';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { effects, ROOT_REDUCERS} from './store/app.state';
+import { ROOT_EFFECTS, ROOT_REDUCERS} from './store/app.state';
 import { MatIconModule } from '@angular/material/icon';
 import { ContainerComponent } from './pages/container/container.component';
 
@@ -65,7 +65,7 @@ const APP_DATE_FORMATS: MatDateFormats = {
         strictStateImmutability: true
       }
     }),
-    EffectsModule.forRoot(effects),
+    EffectsModule.forRoot(ROOT_EFFECTS),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [

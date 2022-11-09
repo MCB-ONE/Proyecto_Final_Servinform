@@ -3,10 +3,10 @@ import { createSelector } from "@ngrx/store";
 import { Pagination } from "./empresa.models";
 import { EmpresaState } from "./empresa.reducer";
 
-export const selectListFeature = (state: AppState) => state.empresa;
+export const selectEmpresaFeature = (state: AppState) => state.empresa;
 
 export const getPagination = createSelector(
-  selectListFeature,
+  selectEmpresaFeature,
   (state: EmpresaState) => state.pagination
 );
 
@@ -16,27 +16,27 @@ export const getEmpresas = createSelector(
 );
 
 export const getPaginatioRequest = createSelector(
-  selectListFeature,
+  selectEmpresaFeature,
   (state: EmpresaState) => state.requestPagination
 );
 
 export const getLoading = createSelector(
-  selectListFeature,
+  selectEmpresaFeature,
   (state: EmpresaState) => state.loading
 )
 
 export const getError = createSelector(
-  selectListFeature,
+  selectEmpresaFeature,
   (state: EmpresaState) => state.error
 )
 
 export const getActiveEmpresaId = createSelector(
-  selectListFeature,
+  selectEmpresaFeature,
   (state: EmpresaState) => state.activeEmpresaId
 )
 
 export const getEmpresa = createSelector(
-  selectListFeature,
+  selectEmpresaFeature,
   (state: EmpresaState) => state.empresa
 )
 
@@ -45,5 +45,10 @@ export const getActiveEmpresa = createSelector(
   getEmpresas,
   getActiveEmpresaId,
   (empresas, selectedId) => empresas?.find(e => e.id == selectedId)
+)
+
+export const getFormState = createSelector(
+  selectEmpresaFeature,
+  (state: EmpresaState) => state.form
 )
 

@@ -12,19 +12,19 @@ import { Router } from "@angular/router";
 export class EmpresaEffects {
 
   readAll$ = createEffect(() =>
-  this.actions$.pipe(
-    ofType(EmpresaActions.readAllStart),
-    map(( action) => action.paramsUrl),
-    switchMap((request: string) =>
-      this.httpClient.get<Pagination>(`${environment.url}/api/Empresa?${request}`)
-        .pipe(
-          map((pagination: any) => EmpresaActions.readAllSuccess({ pagination }),
-          ),
-          catchError(error => of(EmpresaActions.readAllError({ error })))
-        )
+    this.actions$.pipe(
+      ofType(EmpresaActions.readAllStart),
+      map((action) => action.paramsUrl),
+      switchMap((request: string) =>
+        this.httpClient.get<Pagination>(`${environment.url}/api/Empresa?${request}`)
+          .pipe(
+            map((pagination: any) => EmpresaActions.readAllSuccess({ pagination }),
+            ),
+            catchError(error => of(EmpresaActions.readAllError({ error })))
+          )
+      )
     )
-  )
-);
+  );
 
   create$ = createEffect(() =>
     this.actions$.pipe(
@@ -61,11 +61,11 @@ export class EmpresaEffects {
   read$ = createEffect(() =>
     this.actions$.pipe(
       ofType(EmpresaActions.readStart),
-      delay(3000),
-      exhaustMap(action =>
-        this.httpClient.get<EmpresaResponse>(`${environment.url}/api/Empresa/actualizar/${action.empresaId}`)
+      map((action) => action.empresaId),
+      switchMap((id: string) =>
+        this.httpClient.get<EmpresaResponse>(`${environment.url}/api/Empresa/${id}`)
           .pipe(
-            map((empresa: EmpresaResponse) => EmpresaActions.readSuccess({ empresa }),
+            map((empresa: EmpresaResponse) => EmpresaActions.readSuccess({ empresa })
             ),
             catchError(error => of(EmpresaActions.readError({ error })))
           )

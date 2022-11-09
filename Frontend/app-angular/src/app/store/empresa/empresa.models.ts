@@ -17,6 +17,8 @@ export interface Pagination{
   data: EmpresaResponse[];
 }
 
+export { EmpresaForm } from '@app/pages/facturacion/pages/empresa/pages/update-empresa/update-empresa.component';
+
 
 export type EmpresaCreateRequest = Omit<DbEmpresa, 'id' |'emailUsuario' | 'clientes' | 'direcciones'>;
 
