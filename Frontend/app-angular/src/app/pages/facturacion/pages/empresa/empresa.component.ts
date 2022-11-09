@@ -25,13 +25,14 @@ export class EmpresaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.params = this.params.set('pageIndex', 1);
+    this.params = this.params.set('pageSize', 3);
+    this.params = this.params.set('sort', 'idDesc');
+    this.isLoading$ = this.store.select(getLoading);
     this.store.dispatch(EmpresaActions.readAllStart({
       requestPagination: this.params,
       paramsUrl: this.params.toString()
     }))
-    this.params = this.params.set('pageIndex', 1);
-    this.params = this.params.set('pageSize', 5);
-    this.isLoading$ = this.store.select(getLoading);
     this.pagination$ = this.store.select(getPagination) as Observable<Pagination>
     this.empresa$ = this.store.select(getActiveEmpresa) as Observable<void>
   }

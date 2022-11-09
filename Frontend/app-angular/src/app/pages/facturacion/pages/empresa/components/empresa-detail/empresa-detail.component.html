@@ -19,32 +19,37 @@
         <h3>Direcciones guardadas</h3>
         <a class="app-a"><mat-icon>add_circle</mat-icon>Añadir dirección</a>
       </div>
-      <div *ngFor="let dir of empresa.direcciones">
-        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              <img mat-card-sm-image src="../../../../../assets/location-on-map.svg">
-              <div>
-                <h3>{{dir.calle}}</h3>
-                <span>{{dir.ciudad}} ({{dir.codigoPostal}})</span>
-              </div>
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <ul class="list-group">
-            <li>
-              <mat-icon> location_on</mat-icon>{{dir.provincia}}  - {{dir.pais}}
-            </li>
-            <li>
-              <mat-icon> phone</mat-icon>{{dir.telefono}}
-            </li>
-            <li>
-              <mat-icon> email</mat-icon>{{dir.email}}
-            </li>
-            <li>
-              <mat-icon>language</mat-icon>https://empresatest.es/
-            </li>
-          </ul>
-        </mat-expansion-panel>
+      <ng-container *ngIf="empresa.direcciones.length != 0">
+        <div *ngFor="let dir of empresa.direcciones">
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <img mat-card-sm-image src="../../../../../assets/location-on-map.svg">
+                <div>
+                  <h3>{{dir.calle}}</h3>
+                  <span>{{dir.ciudad}} ({{dir.codigoPostal}})</span>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-group">
+              <li>
+                <mat-icon> location_on</mat-icon>{{dir.provincia}}  - {{dir.pais}}
+              </li>
+              <li>
+                <mat-icon> phone</mat-icon>{{dir.telefono}}
+              </li>
+              <li>
+                <mat-icon> email</mat-icon>{{dir.email}}
+              </li>
+              <li>
+                <mat-icon>language</mat-icon>https://empresatest.es/
+              </li>
+            </ul>
+          </mat-expansion-panel>
+        </div>
+      </ng-container>
+      <div class="not-content" *ngIf="empresa.direcciones.length == 0">
+        <h2>Esta enmpresa no tiene direcciones asociadas</h2>
       </div>
     </mat-accordion>
   </mat-card-content>

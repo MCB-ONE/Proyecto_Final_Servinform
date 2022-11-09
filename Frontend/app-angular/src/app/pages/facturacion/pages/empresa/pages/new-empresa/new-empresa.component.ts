@@ -60,4 +60,10 @@ export class NewEmpresaComponent implements OnInit {
     }
   }
 
+  onFilesChanged(url: any): void {
+    if(url){
+      this.form.controls['logo'].setValue(url);
+    }
+  }
+
 }

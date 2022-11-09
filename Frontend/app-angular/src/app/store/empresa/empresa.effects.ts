@@ -2,7 +2,7 @@ import { EmpresaResponse, Pagination } from "./empresa.models";
 import { Injectable } from "@angular/core";
 import { Actions, ofType, createEffect } from "@ngrx/effects";
 import { of } from "rxjs";
-import { map, catchError, exhaustMap, delay, tap } from "rxjs/operators";
+import { map, catchError, exhaustMap, delay, tap, switchMap } from "rxjs/operators";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { environment } from "environments/environment";
 import { EmpresaActions } from "./empresa.actions";
@@ -12,24 +12,23 @@ import { Router } from "@angular/router";
 export class EmpresaEffects {
 
   readAll$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(EmpresaActions.readAllStart),
-      // delay(3000),
-      exhaustMap(action =>
-        this.httpClient.get<Pagination>(`${environment.url}/api/Empresa?${action.paramsUrl}`)
-          .pipe(
-            map((pagination: any) => EmpresaActions.readAllSuccess({ pagination }),
-            ),
-            catchError(error => of(EmpresaActions.readAllError({ error })))
-          )
-      )
+  this.actions$.pipe(
+    ofType(EmpresaActions.readAllStart),
+    map(( action) => action.paramsUrl),
+    switchMap((request: string) =>
+      this.httpClient.get<Pagination>(`${environment.url}/api/Empresa?${request}`)
+        .pipe(
+          map((pagination: any) => EmpresaActions.readAllSuccess({ pagination }),
+          ),
+          catchError(error => of(EmpresaActions.readAllError({ error })))
+        )
     )
-  );
+  )
+);
 
   create$ = createEffect(() =>
     this.actions$.pipe(
       ofType(EmpresaActions.createStart),
-      delay(3000),
       exhaustMap(action =>
         this.httpClient.post<EmpresaResponse>(`${environment.url}/api/Empresa`, action.empresa)
           .pipe(

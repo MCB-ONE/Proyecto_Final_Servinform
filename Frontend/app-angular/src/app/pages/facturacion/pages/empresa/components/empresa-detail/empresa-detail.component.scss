@@ -22,6 +22,14 @@
 
   &__content {
     margin: 1rem 0px;
+    .not-content{
+      color: $primary-light;
+      display: flex;
+      justify-content: center;
+      border: 1px solid $primary-light;
+      border-style: dashed;
+      padding: 1rem 0px;
+    }
   }
 
   .mat-card-avatar_default {
@@ -53,16 +61,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .app-card_small{
-    .mat-card-title{
-      font-size: 1rem;
-    }
-
-    .mat-card-actions{
-      align-self: end;
-    }
   }
 
   .mat-expansion-panel {

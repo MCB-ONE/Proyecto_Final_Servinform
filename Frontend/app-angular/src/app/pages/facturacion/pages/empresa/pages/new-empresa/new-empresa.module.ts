@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NewEmpresaRoutingModule } from './new-empresa-routing.module';
 import { NewEmpresaComponent } from './new-empresa.component';
-import { ControlsModule, FormFieldModule, IndicatorsModule, InputModule, PopupsModule, SpinnerModule } from '@app/shared';
+import { ControlsModule, FormFieldModule, IndicatorsModule, InputModule, PopupsModule, SpinnerModule, UserPhotoModule } from '@app/shared';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -22,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     PopupsModule,
     FormFieldModule,
     InputModule,
+    UserPhotoModule,
     SpinnerModule
   ]
 })
