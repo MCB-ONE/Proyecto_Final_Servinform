@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/new-empresa/new-empresa.module').then(m=> m.NewEmpresaModule)
   },
   {
-    path: 'actualizar',
+    path: ':id',
     loadChildren: () => import('./pages/update-empresa/update-empresa.module').then(m=> m.UpdateEmpresaModule)
   },
   {
