@@ -3,6 +3,7 @@ using Core.Entities;
 using Core.Interfaces;
 using Core.Specification;
 using Core.Specification.DireccionEmpresa;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.DTOs;
 using WebApi.DTOs.Direccion.DireccionEmpresa;
@@ -21,6 +22,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<Pagination<DireccionEmpresaDto>>> GetAllDireccion([FromQuery] DireccionSpecificationParams direccionParams)
         {
 
@@ -48,7 +50,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-
+        [Authorize]
         public async Task<ActionResult<DireccionEmpresaDto>> GetDireccionById(int id)
         {
             var spec = new DireccionEmpresaWithEmpresaSpecification(id);
@@ -59,6 +61,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<DireccionEmpresaDto>> CreateDireccion(CreateDireccionEmpresaDto dto)
         {
             var result = await _repository.Add(_mapper.Map<DireccionEmpresa>(dto));
@@ -77,7 +80,8 @@ namespace WebApi.Controllers
             return Ok(dto);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("actualizar/{id}")]
+        [Authorize]
 
         public async Task<ActionResult<List<DireccionEmpresaDto>>> UpdateDireccion(int id, DireccionEmpresa direccionUpdated)
         {
@@ -102,6 +106,7 @@ namespace WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteDirección(int id)
         {
             var result = await _repository.Delete(id);

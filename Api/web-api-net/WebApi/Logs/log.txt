@@ -6236,3 +6236,1723 @@ System.FormatException: Input string was not in a correct format.
 2022-11-08 18:50:13.924 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
 2022-11-08 18:50:13.943 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
 2022-11-08 18:50:13.970 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 9209.2385 ms
+2022-11-08 18:52:30.687 +01:00 [INF] Now listening on: https://localhost:7261
+2022-11-08 18:52:30.723 +01:00 [INF] Now listening on: http://localhost:5261
+2022-11-08 18:52:30.729 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-08 18:52:30.733 +01:00 [INF] Hosting environment: Development
+2022-11-08 18:52:30.736 +01:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\
+2022-11-08 18:52:36.964 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-08 18:52:36.969 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-08 18:52:36.971 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-08 18:52:37.077 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-08 18:52:37.082 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-08 18:52:37.265 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-08 18:52:37.562 +01:00 [ERR] HTTP GET /api/Usuario responded 500 in 1363.6838 ms
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.GetUsuario() in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 284
+   at lambda_method30(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-11-08 18:52:37.662 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.GetUsuario() in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 284
+   at lambda_method30(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-08 18:52:37.673 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1478.7489 ms
+2022-11-08 18:52:51.167 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-08 18:52:51.171 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-08 18:52:51.177 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-08 18:52:51.202 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 39.3175 ms
+2022-11-08 18:53:37.930 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-08 18:53:38.004 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-08 18:53:38.006 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-08 18:53:38.268 +01:00 [ERR] HTTP GET /api/Usuario responded 500 in 400.1636 ms
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.GetUsuario() in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 284
+   at lambda_method30(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-11-08 18:53:38.294 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.GetUsuario() in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 284
+   at lambda_method30(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-08 18:53:38.324 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-08 18:53:38.359 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 491.2128 ms
+2022-11-09 12:09:23.901 +01:00 [INF] Now listening on: https://localhost:7261
+2022-11-09 12:09:34.847 +01:00 [INF] Now listening on: http://localhost:5261
+2022-11-09 12:09:41.814 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-09 12:09:41.981 +01:00 [INF] Hosting environment: Development
+2022-11-09 12:09:44.191 +01:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\
+2022-11-09 12:09:45.031 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:09:45.298 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:09:45.365 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:09:46.318 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-09 12:09:50.398 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 23463.5251 ms
+2022-11-09 12:10:56.281 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:10:56.288 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:10:56.292 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:10:56.352 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-09 12:10:56.459 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 198.9188 ms
+2022-11-09 12:15:42.272 +01:00 [ERR] HTTP GET /api/Usuario responded 500 in 1208.1956 ms
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.GetUsuario() in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 284
+   at lambda_method302(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-11-09 12:15:42.557 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.GetUsuario() in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 284
+   at lambda_method302(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-09 12:15:55.976 +01:00 [ERR] HTTP GET /api/Usuario responded 500 in 139.4260 ms
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.GetUsuario() in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 284
+   at lambda_method302(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-11-09 12:15:56.012 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.GetUsuario() in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 284
+   at lambda_method302(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-09 12:16:33.708 +01:00 [ERR] HTTP POST /api/Usuario/login responded 500 in 296.3132 ms
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.Login(LoginDto loginDto) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 59
+   at lambda_method458(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-11-09 12:16:33.763 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at WebApi.Controllers.UsuarioController.Login(LoginDto loginDto) in C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\Controllers\UsuarioController.cs:line 59
+   at lambda_method458(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-09 12:21:53.071 +01:00 [INF] Now listening on: https://localhost:7261
+2022-11-09 12:21:53.191 +01:00 [INF] Now listening on: http://localhost:5261
+2022-11-09 12:21:53.199 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-09 12:21:53.202 +01:00 [INF] Hosting environment: Development
+2022-11-09 12:21:53.207 +01:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\
+2022-11-09 12:24:40.444 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 2901.1718 ms
+2022-11-09 12:24:41.704 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 89.3225 ms
+2022-11-09 12:24:41.753 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:24:41.783 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:24:41.795 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:24:42.103 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-09 12:24:43.241 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1684.4147 ms
+2022-11-09 12:34:40.962 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:34:40.967 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:34:40.970 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:34:42.194 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1234.1675 ms
+2022-11-09 12:38:10.184 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:38:10.187 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:38:10.190 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:38:10.225 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 94.2914 ms
+2022-11-09 12:38:10.277 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 103.5521 ms
+2022-11-09 12:39:18.869 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:39:18.873 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:39:18.877 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:39:18.922 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 54.5824 ms
+2022-11-09 12:39:18.951 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 82.7204 ms
+2022-11-09 12:39:58.187 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 25.6149 ms
+2022-11-09 12:39:58.320 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:39:58.325 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:39:58.330 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:39:58.349 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 30.8076 ms
+2022-11-09 12:41:12.443 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.1924 ms
+2022-11-09 12:41:12.495 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:41:12.498 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:41:12.501 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:41:12.535 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 51.6410 ms
+2022-11-09 12:41:26.666 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 28.4981 ms
+2022-11-09 12:41:26.720 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:41:26.726 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:41:26.730 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:41:26.743 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 24.2451 ms
+2022-11-09 12:42:00.615 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 20.5758 ms
+2022-11-09 12:42:00.712 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:42:00.715 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:42:00.718 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:42:00.737 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 25.0923 ms
+2022-11-09 12:42:00.782 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.5814 ms
+2022-11-09 12:42:04.724 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.5218 ms
+2022-11-09 12:42:04.822 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:42:04.831 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:42:04.836 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:42:04.868 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 47.5096 ms
+2022-11-09 12:42:10.171 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:42:10.178 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:42:10.185 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:42:10.210 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 39.9693 ms
+2022-11-09 12:42:15.419 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.6064 ms
+2022-11-09 12:42:15.551 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:42:15.557 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:42:15.564 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:42:15.599 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 49.1415 ms
+2022-11-09 12:43:45.071 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:43:45.079 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:43:45.091 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:43:45.133 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 62.7812 ms
+2022-11-09 12:44:00.380 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:44:00.389 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:44:00.400 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:44:00.432 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 52.7513 ms
+2022-11-09 12:44:45.408 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:44:45.439 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:44:45.511 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:44:45.522 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 111.3675 ms
+2022-11-09 12:44:45.657 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 260.0524 ms
+2022-11-09 12:44:50.892 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:44:50.897 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:44:50.904 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:44:50.933 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 42.4014 ms
+2022-11-09 12:45:33.763 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:45:33.771 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:45:33.778 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:45:33.809 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 47.2451 ms
+2022-11-09 12:45:51.813 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:45:51.844 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:45:51.876 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:45:51.905 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 77.6042 ms
+2022-11-09 12:45:51.913 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 109.9490 ms
+2022-11-09 12:45:55.265 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:45:55.272 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:45:55.280 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:45:55.315 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 51.7441 ms
+2022-11-09 12:47:08.100 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 12:47:08.105 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 12:47:08.144 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 12:47:08.159 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 52.1536 ms
+2022-11-09 12:47:08.178 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 85.8500 ms
+2022-11-09 13:10:25.868 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:10:25.957 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:10:25.972 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:10:26.444 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 686.4890 ms
+2022-11-09 13:10:26.752 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 994.5485 ms
+2022-11-09 13:30:51.656 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:30:51.673 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:30:51.679 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:30:51.768 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 141.8303 ms
+2022-11-09 13:30:52.634 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1006.2692 ms
+2022-11-09 13:31:11.003 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:31:11.043 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:31:11.051 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 54.0359 ms
+2022-11-09 13:31:11.051 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:31:11.074 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 73.4182 ms
+2022-11-09 13:31:13.590 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:31:13.593 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:31:13.597 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:31:13.612 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 25.0065 ms
+2022-11-09 13:31:20.160 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.9801 ms
+2022-11-09 13:31:20.213 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:31:20.217 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:31:20.219 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:31:20.235 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 22.8976 ms
+2022-11-09 13:31:20.266 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 17.6505 ms
+2022-11-09 13:32:40.364 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:32:40.384 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:32:40.389 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:32:40.394 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 24.1612 ms
+2022-11-09 13:32:40.410 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 48.3264 ms
+2022-11-09 13:32:45.608 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.1376 ms
+2022-11-09 13:32:45.674 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:32:45.688 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:32:45.693 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:32:45.715 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 43.0575 ms
+2022-11-09 13:32:52.477 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.1705 ms
+2022-11-09 13:32:52.557 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:32:52.563 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:32:52.566 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:32:52.590 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 57.8822 ms
+2022-11-09 13:33:44.215 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:33:44.220 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:33:44.223 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:33:44.248 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 32.8858 ms
+2022-11-09 13:33:44.267 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 55.0765 ms
+2022-11-09 13:33:48.784 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:33:48.788 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:33:48.791 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:33:48.801 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 25.6747 ms
+2022-11-09 13:33:50.749 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:33:50.752 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:33:50.756 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:33:50.766 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 17.6608 ms
+2022-11-09 13:35:19.776 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:35:19.788 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:35:19.795 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:35:19.800 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 22.9036 ms
+2022-11-09 13:35:19.819 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 44.2852 ms
+2022-11-09 13:35:21.791 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:35:21.794 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:35:21.798 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:35:21.810 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 21.2916 ms
+2022-11-09 13:35:25.074 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:35:25.078 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:35:25.081 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:35:25.100 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 26.5322 ms
+2022-11-09 13:45:51.573 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:45:51.639 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:45:51.644 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:45:51.839 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 336.2390 ms
+2022-11-09 13:45:53.047 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1625.2770 ms
+2022-11-09 13:59:44.852 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 13:59:44.869 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 13:59:44.875 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 13:59:45.038 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 266.3949 ms
+2022-11-09 13:59:45.323 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 552.3221 ms
+2022-11-09 14:00:11.788 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:00:11.792 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:00:11.799 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:00:11.835 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 36.1318 ms
+2022-11-09 14:00:11.860 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 72.7222 ms
+2022-11-09 14:05:00.560 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:05:00.566 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:05:00.576 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:05:00.697 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 171.7144 ms
+2022-11-09 14:05:01.515 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 989.0830 ms
+2022-11-09 14:05:15.958 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 13.3447 ms
+2022-11-09 14:05:16.004 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:05:16.009 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:05:16.013 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:05:16.029 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 28.0659 ms
+2022-11-09 14:06:39.407 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 37.8326 ms
+2022-11-09 14:06:39.442 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:39.447 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:39.454 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:39.504 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 24.7550 ms
+2022-11-09 14:06:39.504 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 62.8256 ms
+2022-11-09 14:06:41.668 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.7672 ms
+2022-11-09 14:06:41.695 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:41.699 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:41.704 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:41.716 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 13.9157 ms
+2022-11-09 14:06:41.731 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 37.3702 ms
+2022-11-09 14:06:42.246 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.7590 ms
+2022-11-09 14:06:42.269 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:42.273 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:42.281 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:42.302 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 21.1533 ms
+2022-11-09 14:06:42.302 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 34.5339 ms
+2022-11-09 14:06:43.236 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 12.1243 ms
+2022-11-09 14:06:43.267 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:43.271 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:43.279 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:43.303 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 23.2026 ms
+2022-11-09 14:06:43.309 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 43.4076 ms
+2022-11-09 14:06:43.665 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.7760 ms
+2022-11-09 14:06:43.686 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:43.689 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:43.694 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:43.703 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.1368 ms
+2022-11-09 14:06:43.718 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 33.1307 ms
+2022-11-09 14:06:43.869 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 12.4084 ms
+2022-11-09 14:06:43.896 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:43.899 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:43.914 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:43.933 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 19.0961 ms
+2022-11-09 14:06:43.939 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 44.5118 ms
+2022-11-09 14:06:44.061 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.2249 ms
+2022-11-09 14:06:44.080 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:44.085 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:44.092 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:44.118 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.2960 ms
+2022-11-09 14:06:44.132 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 52.4921 ms
+2022-11-09 14:06:44.218 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 13.4881 ms
+2022-11-09 14:06:44.246 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:44.250 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:44.254 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:44.272 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.5572 ms
+2022-11-09 14:06:44.280 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 34.7649 ms
+2022-11-09 14:06:44.372 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.8741 ms
+2022-11-09 14:06:44.390 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:44.394 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:44.399 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:44.406 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 6.6205 ms
+2022-11-09 14:06:44.417 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 27.0835 ms
+2022-11-09 14:06:44.531 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 6.3444 ms
+2022-11-09 14:06:44.571 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:44.579 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:44.583 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:44.584 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.0619 ms
+2022-11-09 14:06:44.605 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 35.1849 ms
+2022-11-09 14:06:44.697 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.7432 ms
+2022-11-09 14:06:44.718 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:44.722 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:44.730 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:44.771 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 47.9799 ms
+2022-11-09 14:06:44.783 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 65.7953 ms
+2022-11-09 14:06:44.866 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.1435 ms
+2022-11-09 14:06:44.892 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:44.900 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:44.926 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:44.937 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 35.5403 ms
+2022-11-09 14:06:44.948 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 57.0127 ms
+2022-11-09 14:06:45.016 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.9143 ms
+2022-11-09 14:06:45.043 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:45.048 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:45.062 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:45.068 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 19.2792 ms
+2022-11-09 14:06:45.087 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 44.3874 ms
+2022-11-09 14:06:45.172 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.9326 ms
+2022-11-09 14:06:45.201 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:45.204 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:45.216 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:45.231 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 22.8829 ms
+2022-11-09 14:06:45.244 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 44.4930 ms
+2022-11-09 14:06:45.340 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.9640 ms
+2022-11-09 14:06:45.360 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:45.367 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:45.372 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:45.382 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.3253 ms
+2022-11-09 14:06:45.391 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 31.0522 ms
+2022-11-09 14:06:45.512 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.7598 ms
+2022-11-09 14:06:45.537 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:45.544 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:45.551 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:45.563 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.0746 ms
+2022-11-09 14:06:45.574 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 37.2018 ms
+2022-11-09 14:06:45.670 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.9181 ms
+2022-11-09 14:06:45.693 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:45.697 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:45.701 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:45.711 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.0176 ms
+2022-11-09 14:06:45.719 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 27.2749 ms
+2022-11-09 14:06:45.857 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 12.3300 ms
+2022-11-09 14:06:45.885 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:45.891 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:45.896 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:45.905 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 13.7094 ms
+2022-11-09 14:06:45.917 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 33.4716 ms
+2022-11-09 14:06:46.006 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.5920 ms
+2022-11-09 14:06:46.030 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:46.034 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:46.039 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:46.046 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.9380 ms
+2022-11-09 14:06:46.054 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 25.3073 ms
+2022-11-09 14:06:46.176 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.5668 ms
+2022-11-09 14:06:46.198 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:46.204 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:46.214 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:46.218 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.6902 ms
+2022-11-09 14:06:46.229 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 31.9680 ms
+2022-11-09 14:06:46.347 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.5887 ms
+2022-11-09 14:06:46.368 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:46.375 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:46.392 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:46.397 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 25.7972 ms
+2022-11-09 14:06:46.406 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 39.6924 ms
+2022-11-09 14:06:46.503 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.8098 ms
+2022-11-09 14:06:46.529 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:46.535 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:46.539 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:46.558 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 23.9266 ms
+2022-11-09 14:06:46.571 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 43.5326 ms
+2022-11-09 14:06:46.650 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.0655 ms
+2022-11-09 14:06:46.670 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:46.680 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:46.691 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:46.699 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.3696 ms
+2022-11-09 14:06:46.709 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 39.7147 ms
+2022-11-09 14:06:46.807 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.6755 ms
+2022-11-09 14:06:46.833 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:46.840 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:46.850 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:46.860 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.1361 ms
+2022-11-09 14:06:46.879 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 46.1193 ms
+2022-11-09 14:06:46.963 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.4102 ms
+2022-11-09 14:06:46.983 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:46.990 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:46.993 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:47.000 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.3616 ms
+2022-11-09 14:06:47.011 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 29.2718 ms
+2022-11-09 14:06:47.115 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.4693 ms
+2022-11-09 14:06:47.135 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:47.142 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:47.146 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:47.153 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.7632 ms
+2022-11-09 14:06:47.164 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 29.6080 ms
+2022-11-09 14:06:47.306 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.9991 ms
+2022-11-09 14:06:47.331 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:47.338 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:47.345 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:47.353 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 19.0583 ms
+2022-11-09 14:06:47.362 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 32.3105 ms
+2022-11-09 14:06:47.432 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.3152 ms
+2022-11-09 14:06:47.453 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:47.463 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:47.466 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:47.477 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.2646 ms
+2022-11-09 14:06:47.484 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 31.3211 ms
+2022-11-09 14:06:47.608 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.6843 ms
+2022-11-09 14:06:47.627 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:47.632 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:47.637 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:47.648 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 15.8427 ms
+2022-11-09 14:06:47.656 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 29.3249 ms
+2022-11-09 14:06:47.770 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.8670 ms
+2022-11-09 14:06:47.795 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:47.804 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:47.809 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:47.821 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.9797 ms
+2022-11-09 14:06:47.832 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 37.8970 ms
+2022-11-09 14:06:47.916 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.1899 ms
+2022-11-09 14:06:47.937 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:47.946 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:47.951 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:47.965 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 17.8887 ms
+2022-11-09 14:06:47.971 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 34.8904 ms
+2022-11-09 14:06:48.084 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.3286 ms
+2022-11-09 14:06:48.125 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:48.135 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:48.143 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:48.144 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.8169 ms
+2022-11-09 14:06:48.169 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 45.2765 ms
+2022-11-09 14:06:48.216 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.6100 ms
+2022-11-09 14:06:48.232 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:06:48.236 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:06:48.242 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:06:48.247 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.7121 ms
+2022-11-09 14:06:48.258 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 26.2072 ms
+2022-11-09 14:07:06.680 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 6.9755 ms
+2022-11-09 14:07:06.712 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:06.721 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:06.730 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:06.730 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.2080 ms
+2022-11-09 14:07:06.763 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 53.9638 ms
+2022-11-09 14:07:08.108 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.6386 ms
+2022-11-09 14:07:08.129 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:08.134 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:08.140 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:08.144 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.7789 ms
+2022-11-09 14:07:08.158 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 29.2721 ms
+2022-11-09 14:07:08.737 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.7885 ms
+2022-11-09 14:07:08.765 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:08.774 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:08.778 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:08.793 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 24.5221 ms
+2022-11-09 14:07:08.803 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 39.5817 ms
+2022-11-09 14:07:09.315 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.2316 ms
+2022-11-09 14:07:09.346 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:09.351 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:09.362 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:09.374 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 20.4792 ms
+2022-11-09 14:07:09.384 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 38.6613 ms
+2022-11-09 14:07:10.425 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.8777 ms
+2022-11-09 14:07:10.448 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:10.451 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:10.456 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:10.462 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.5259 ms
+2022-11-09 14:07:10.474 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 27.5609 ms
+2022-11-09 14:07:11.102 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.2518 ms
+2022-11-09 14:07:11.123 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:11.127 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:11.131 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:11.139 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.2346 ms
+2022-11-09 14:07:11.147 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 24.9904 ms
+2022-11-09 14:07:12.244 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 6.5756 ms
+2022-11-09 14:07:12.269 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:12.274 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:12.278 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:12.280 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.2188 ms
+2022-11-09 14:07:12.295 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 27.0107 ms
+2022-11-09 14:07:12.688 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.0434 ms
+2022-11-09 14:07:12.708 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:12.711 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:12.716 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:12.727 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.8321 ms
+2022-11-09 14:07:12.742 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 35.1287 ms
+2022-11-09 14:07:13.343 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.4695 ms
+2022-11-09 14:07:13.369 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:13.373 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:13.377 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:13.391 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 17.3259 ms
+2022-11-09 14:07:13.400 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 32.3700 ms
+2022-11-09 14:07:37.236 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:37.239 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:37.241 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:37.244 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.4928 ms
+2022-11-09 14:07:37.275 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 40.0817 ms
+2022-11-09 14:07:44.039 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:44.062 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:44.070 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:44.071 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 32.9628 ms
+2022-11-09 14:07:44.109 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 71.5211 ms
+2022-11-09 14:07:48.439 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 12.8923 ms
+2022-11-09 14:07:48.472 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:48.476 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:48.480 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:48.497 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.9036 ms
+2022-11-09 14:07:48.506 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 34.1894 ms
+2022-11-09 14:07:50.635 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.2010 ms
+2022-11-09 14:07:50.666 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:50.670 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:50.674 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:50.687 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 15.8304 ms
+2022-11-09 14:07:50.701 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 35.7583 ms
+2022-11-09 14:07:51.252 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.6521 ms
+2022-11-09 14:07:51.274 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:51.277 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:51.282 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:51.293 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.0310 ms
+2022-11-09 14:07:51.304 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 29.9904 ms
+2022-11-09 14:07:52.459 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.1340 ms
+2022-11-09 14:07:52.486 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:07:52.489 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:07:52.494 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:07:52.507 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 13.3877 ms
+2022-11-09 14:07:52.520 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 34.4414 ms
+2022-11-09 14:08:12.887 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:08:12.910 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:08:12.918 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:08:12.923 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 22.4023 ms
+2022-11-09 14:08:12.936 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 49.6265 ms
+2022-11-09 14:08:16.118 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.4421 ms
+2022-11-09 14:08:16.145 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:08:16.148 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:08:16.151 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:08:16.162 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.7774 ms
+2022-11-09 14:08:16.170 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 25.5732 ms
+2022-11-09 14:08:17.163 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.2381 ms
+2022-11-09 14:08:17.195 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:08:17.198 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:08:17.203 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:08:17.222 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.7916 ms
+2022-11-09 14:08:17.232 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 37.5933 ms
+2022-11-09 14:08:17.626 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.4298 ms
+2022-11-09 14:08:17.644 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:08:17.648 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:08:17.651 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:08:17.660 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.5815 ms
+2022-11-09 14:08:17.670 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 27.3077 ms
+2022-11-09 14:08:17.818 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.0276 ms
+2022-11-09 14:08:17.839 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:08:17.843 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:08:17.849 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:08:17.866 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 15.9282 ms
+2022-11-09 14:08:17.875 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 36.5164 ms
+2022-11-09 14:08:17.989 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.4648 ms
+2022-11-09 14:08:18.011 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:08:18.017 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:08:18.022 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:08:18.038 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 19.8508 ms
+2022-11-09 14:08:18.048 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 38.6428 ms
+2022-11-09 14:08:18.748 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.3075 ms
+2022-11-09 14:08:18.769 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:08:18.781 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:08:18.786 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:08:18.796 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.1468 ms
+2022-11-09 14:08:18.806 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 36.7583 ms
+2022-11-09 14:08:26.364 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:08:26.367 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:08:26.369 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:08:26.380 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 15.0877 ms
+2022-11-09 14:08:26.400 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 36.3221 ms
+2022-11-09 14:08:35.033 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:08:35.038 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:08:35.049 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:08:35.054 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 19.4324 ms
+2022-11-09 14:08:35.087 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 54.2520 ms
+2022-11-09 14:09:51.074 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 17.0676 ms
+2022-11-09 14:09:51.122 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:09:51.126 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:09:51.129 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:09:51.156 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 35.1043 ms
+2022-11-09 14:12:27.616 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:12:27.620 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:12:27.623 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:12:27.649 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.4362 ms
+2022-11-09 14:12:27.655 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 40.6638 ms
+2022-11-09 14:12:58.233 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:12:58.240 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:12:58.246 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:12:58.254 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 29.8079 ms
+2022-11-09 14:12:58.280 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 55.7610 ms
+2022-11-09 14:14:25.792 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:14:25.796 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:14:25.834 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:14:25.843 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 51.6309 ms
+2022-11-09 14:14:25.857 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 75.4520 ms
+2022-11-09 14:15:40.218 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:15:40.225 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:15:40.227 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:15:40.234 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.2409 ms
+2022-11-09 14:15:40.262 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 45.0942 ms
+2022-11-09 14:19:46.016 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:19:46.025 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:19:46.062 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:19:46.110 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 98.9240 ms
+2022-11-09 14:19:47.100 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1088.0780 ms
+2022-11-09 14:19:51.184 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:19:51.188 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:19:51.194 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:19:51.214 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 46.4422 ms
+2022-11-09 14:19:51.229 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.9844 ms
+2022-11-09 14:20:31.762 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:20:31.768 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:20:31.773 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:20:31.778 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 22.4883 ms
+2022-11-09 14:20:31.794 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 37.0121 ms
+2022-11-09 14:22:57.671 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:22:57.678 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:22:57.682 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:22:57.683 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 17.6038 ms
+2022-11-09 14:22:57.699 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 40.2791 ms
+2022-11-09 14:25:29.333 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:25:29.340 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:25:29.346 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:25:29.365 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 34.8228 ms
+2022-11-09 14:25:29.379 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 47.0672 ms
+2022-11-09 14:28:53.846 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:28:53.849 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:28:53.853 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:28:53.862 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 20.2346 ms
+2022-11-09 14:28:53.879 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 42.5665 ms
+2022-11-09 14:29:07.186 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:29:07.189 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:29:07.192 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:29:07.218 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 32.6626 ms
+2022-11-09 14:29:07.227 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 23.9725 ms
+2022-11-09 14:29:08.696 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:29:08.704 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:29:08.707 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:29:08.747 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 51.1334 ms
+2022-11-09 14:29:08.752 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 30.2099 ms
+2022-11-09 14:32:02.673 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 23.3695 ms
+2022-11-09 14:32:02.887 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:32:02.906 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:32:02.916 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:32:02.981 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 100.6460 ms
+2022-11-09 14:32:05.336 +01:00 [INF] HTTP GET /api/Empresa/actualizar/undefined responded 405 in 32.2678 ms
+2022-11-09 14:33:30.541 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:33:30.547 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:33:30.551 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:33:30.558 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.5948 ms
+2022-11-09 14:33:30.573 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 45.9761 ms
+2022-11-09 14:33:51.885 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 249.0478 ms
+2022-11-09 14:40:11.980 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 93.0885 ms
+2022-11-09 14:40:12.253 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 366.6426 ms
+2022-11-09 14:40:12.312 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:40:12.317 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:40:12.320 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:40:13.246 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 937.2387 ms
+2022-11-09 14:40:44.622 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:40:44.630 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:40:44.634 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:40:44.644 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 30.7084 ms
+2022-11-09 14:40:44.685 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 66.4010 ms
+2022-11-09 14:40:46.675 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.8832 ms
+2022-11-09 14:41:25.527 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.1479 ms
+2022-11-09 14:41:25.571 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 56.1914 ms
+2022-11-09 14:41:25.611 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:41:25.616 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:41:25.619 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:41:25.636 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 27.3427 ms
+2022-11-09 14:41:27.104 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.2884 ms
+2022-11-09 14:43:48.197 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.0280 ms
+2022-11-09 14:43:48.211 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 15.0516 ms
+2022-11-09 14:43:48.265 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:43:48.269 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:43:48.274 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:43:48.308 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 44.0101 ms
+2022-11-09 14:43:49.465 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.3566 ms
+2022-11-09 14:43:53.888 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.8233 ms
+2022-11-09 14:43:53.960 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 23.1186 ms
+2022-11-09 14:43:54.032 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:43:54.034 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:43:54.049 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:43:54.079 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 48.3630 ms
+2022-11-09 14:43:55.402 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.6727 ms
+2022-11-09 14:44:09.121 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.5253 ms
+2022-11-09 14:44:09.230 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 49.0413 ms
+2022-11-09 14:44:09.525 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:44:09.531 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:44:09.539 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:44:09.598 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 74.2307 ms
+2022-11-09 14:44:10.449 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.9720 ms
+2022-11-09 14:46:24.439 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 9.6700 ms
+2022-11-09 14:46:24.472 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 53.0682 ms
+2022-11-09 14:46:24.509 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:46:24.513 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:46:24.522 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:46:24.545 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 35.9469 ms
+2022-11-09 14:47:58.845 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.1982 ms
+2022-11-09 14:48:18.810 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:48:18.813 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:48:18.816 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:48:18.833 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 23.5432 ms
+2022-11-09 14:48:20.202 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:48:20.206 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:48:20.209 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:48:20.225 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 24.0337 ms
+2022-11-09 14:48:20.272 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.6073 ms
+2022-11-09 14:48:24.214 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.9863 ms
+2022-11-09 14:48:29.130 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:48:29.148 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:48:29.152 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:48:29.176 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 46.7225 ms
+2022-11-09 14:48:30.518 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:48:30.521 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:48:30.525 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:48:30.541 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 23.2083 ms
+2022-11-09 14:48:30.598 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 37.4468 ms
+2022-11-09 14:48:34.183 +01:00 [INF] HTTP GET /api/Empresa/undefined responded 400 in 1.8722 ms
+2022-11-09 14:49:40.805 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 110.6679 ms
+2022-11-09 14:49:40.872 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:49:40.882 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:49:40.884 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:49:40.900 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 14:49:40.903 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 14:49:40.907 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 14:49:40.907 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 36.1012 ms
+2022-11-09 14:49:41.087 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-09 14:49:41.171 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 518.5545 ms
+2022-11-09 14:49:52.424 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:49:52.431 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:49:52.462 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:49:52.482 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 17.5599 ms
+2022-11-09 14:49:52.496 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 73.1034 ms
+2022-11-09 14:49:53.923 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 14:49:53.927 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 14:49:53.932 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 14:49:53.947 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 25.8570 ms
+2022-11-09 14:50:19.029 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:50:19.031 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:50:19.034 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:50:19.049 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 21.4334 ms
+2022-11-09 14:50:21.181 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 14:50:21.280 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 14:50:21.307 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 14:50:21.346 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 30.9036 ms
+2022-11-09 14:50:21.346 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 165.6958 ms
+2022-11-09 14:50:23.375 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 14:50:23.379 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 14:50:23.382 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 14:50:23.400 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 25.8205 ms
+2022-11-09 15:51:19.739 +01:00 [ERR] HTTP POST /api/Usuario/login responded 500 in 977.1391 ms
+System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. El sistema no puede encontrar el archivo especificado.
+File name: 'Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPasswordV3(Byte[] hashedPassword, String password, Int32& iterCount)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at Microsoft.AspNetCore.Identity.UserManager`1.VerifyPasswordAsync(IUserPasswordStore`1 store, TUser user, String password)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CheckPasswordAsync(TUser user, String password)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.CheckPasswordSignInAsync(TUser user, String password, Boolean lockoutOnFailure)
+   at WebApi.Controllers.UsuarioController.Login(LoginDto loginDto)
+   at lambda_method713(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-11-09 15:51:19.930 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. El sistema no puede encontrar el archivo especificado.
+File name: 'Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPasswordV3(Byte[] hashedPassword, String password, Int32& iterCount)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at Microsoft.AspNetCore.Identity.UserManager`1.VerifyPasswordAsync(IUserPasswordStore`1 store, TUser user, String password)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CheckPasswordAsync(TUser user, String password)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.CheckPasswordSignInAsync(TUser user, String password, Boolean lockoutOnFailure)
+   at WebApi.Controllers.UsuarioController.Login(LoginDto loginDto)
+   at lambda_method713(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-09 15:52:12.724 +01:00 [ERR] HTTP POST /api/Usuario/login responded 500 in 59.9357 ms
+System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. El sistema no puede encontrar el archivo especificado.
+File name: 'Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPasswordV3(Byte[] hashedPassword, String password, Int32& iterCount)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at Microsoft.AspNetCore.Identity.UserManager`1.VerifyPasswordAsync(IUserPasswordStore`1 store, TUser user, String password)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CheckPasswordAsync(TUser user, String password)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.CheckPasswordSignInAsync(TUser user, String password, Boolean lockoutOnFailure)
+   at WebApi.Controllers.UsuarioController.Login(LoginDto loginDto)
+   at lambda_method713(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-11-09 15:52:12.758 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. El sistema no puede encontrar el archivo especificado.
+File name: 'Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPasswordV3(Byte[] hashedPassword, String password, Int32& iterCount)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at Microsoft.AspNetCore.Identity.UserManager`1.VerifyPasswordAsync(IUserPasswordStore`1 store, TUser user, String password)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CheckPasswordAsync(TUser user, String password)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.CheckPasswordSignInAsync(TUser user, String password, Boolean lockoutOnFailure)
+   at WebApi.Controllers.UsuarioController.Login(LoginDto loginDto)
+   at lambda_method713(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-09 15:54:06.672 +01:00 [INF] Now listening on: https://localhost:7261
+2022-11-09 15:54:06.706 +01:00 [INF] Now listening on: http://localhost:5261
+2022-11-09 15:54:06.712 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-09 15:54:06.715 +01:00 [INF] Hosting environment: Development
+2022-11-09 15:54:06.718 +01:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\
+2022-11-09 15:55:06.224 +01:00 [INF] HTTP POST /api/Usuario/login responded 200 in 1075.7064 ms
+2022-11-09 15:55:06.537 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 111.2531 ms
+2022-11-09 15:55:06.543 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 15:55:06.548 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 15:55:06.551 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 15:55:06.676 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-09 15:55:06.961 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 567.2733 ms
+2022-11-09 15:55:20.949 +01:00 [INF] HTTP POST /api/Usuario/login responded 200 in 21.2011 ms
+2022-11-09 15:55:33.255 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 15:55:33.258 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 15:55:33.260 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 15:55:33.266 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-09 15:55:33.270 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-09 15:55:33.283 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-09 15:55:33.327 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 74.6427 ms
+2022-11-09 15:55:51.408 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 15:55:51.412 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 15:55:51.417 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 15:55:51.436 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-09 15:55:51.467 +01:00 [INF] HTTP GET /api/Empresa/9 responded 204 in 69.9738 ms
+2022-11-09 15:55:54.592 +01:00 [INF] HTTP GET /api/Empresa/9 responded 401 in 12.6162 ms
+2022-11-09 15:55:58.615 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 15:55:58.620 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 15:55:58.624 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 15:55:58.631 +01:00 [INF] HTTP GET /api/Empresa/9 responded 204 in 15.6831 ms
+2022-11-09 15:56:01.237 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 15:56:01.241 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 15:56:01.244 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 15:56:01.260 +01:00 [INF] HTTP GET /api/Empresa/8 responded 200 in 23.3855 ms
+2022-11-09 16:08:16.514 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:08:16.540 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:08:16.543 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:08:16.730 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 269.9856 ms
+2022-11-09 16:08:17.130 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 670.7813 ms
+2022-11-09 16:09:56.006 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:09:56.045 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:09:56.048 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:09:56.076 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 67.1920 ms
+2022-11-09 16:09:56.112 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 107.8829 ms
+2022-11-09 16:10:34.158 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:10:34.254 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:10:34.276 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:10:34.344 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 187.9829 ms
+2022-11-09 16:10:34.709 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 26.9310 ms
+2022-11-09 16:14:05.927 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:14:05.952 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:14:05.964 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:14:06.071 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 191.1269 ms
+2022-11-09 16:14:07.320 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1420.0326 ms
+2022-11-09 16:14:27.222 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:14:27.229 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:14:27.234 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:14:27.257 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 37.8838 ms
+2022-11-09 16:16:02.443 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:16:02.447 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:16:02.451 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:16:02.465 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 24.1328 ms
+2022-11-09 16:16:02.480 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 39.6278 ms
+2022-11-09 16:16:02.583 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:16:02.587 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:16:02.594 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:16:02.622 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 40.0446 ms
+2022-11-09 16:16:03.748 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:16:03.753 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:16:03.757 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:16:03.771 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 24.0957 ms
+2022-11-09 16:16:10.402 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:16:10.406 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:16:10.409 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:16:10.421 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 20.6911 ms
+2022-11-09 16:16:11.878 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:16:11.880 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:16:11.884 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:16:11.899 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 21.7072 ms
+2022-11-09 16:16:11.940 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 22.8363 ms
+2022-11-09 16:16:15.345 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:16:15.348 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:16:15.351 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:16:15.358 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 14.2267 ms
+2022-11-09 16:21:30.955 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:21:30.959 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:21:30.964 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:21:31.891 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 941.5638 ms
+2022-11-09 16:21:38.616 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:21:38.619 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:21:38.622 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:21:38.656 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 41.4071 ms
+2022-11-09 16:21:38.792 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 157.3926 ms
+2022-11-09 16:21:49.139 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:21:49.143 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:21:49.145 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:21:49.157 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 18.6915 ms
+2022-11-09 16:22:35.940 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:22:35.943 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:22:35.946 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:22:35.954 +01:00 [INF] HTTP GET /api/Empresa/12 responded 204 in 15.8033 ms
+2022-11-09 16:22:45.722 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:22:45.728 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:22:45.733 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:22:45.743 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 21.4298 ms
+2022-11-09 16:32:01.645 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:32:01.662 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:32:01.688 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:32:01.900 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 282.6223 ms
+2022-11-09 16:32:01.996 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:32:01.999 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:32:02.002 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:32:02.853 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 859.4519 ms
+2022-11-09 16:32:02.876 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 1258.6313 ms
+2022-11-09 16:32:28.947 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:32:29.004 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:32:29.015 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 71.0263 ms
+2022-11-09 16:32:29.111 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:32:29.205 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 262.8974 ms
+2022-11-09 16:32:39.985 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:32:39.989 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:32:39.992 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:32:40.001 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 16.8944 ms
+2022-11-09 16:33:03.801 +01:00 [WRN] EmpresaRepository - UpdateUsuarioEmpresa - Warning Level Log
+2022-11-09 16:33:03.805 +01:00 [ERR] EmpresaRepository - UpdateUsuarioEmpresa - Error Level Log
+2022-11-09 16:33:03.807 +01:00 [FTL] EmpresaRepository - UpdateUsuarioEmpresa - Critical Log Level
+2022-11-09 16:33:04.511 +01:00 [INF] HTTP PUT /api/Empresa/actualizar/16 responded 200 in 906.6651 ms
+2022-11-09 16:33:22.932 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:33:22.935 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:33:22.938 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:33:22.952 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 21.7531 ms
+2022-11-09 16:38:12.287 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:38:12.293 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:38:12.296 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:38:12.308 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 49.8191 ms
+2022-11-09 16:39:07.882 +01:00 [WRN] GenericRepository - Add - Warning Level Log
+2022-11-09 16:39:07.887 +01:00 [ERR] GenericRepository - Add - Error Level Log
+2022-11-09 16:39:07.890 +01:00 [FTL] GenericRepository - Add - Critical Log Level
+2022-11-09 16:39:08.101 +01:00 [INF] HTTP POST /api/DireccionEmpresa responded 200 in 289.8222 ms
+2022-11-09 16:39:09.956 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-09 16:39:09.959 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-09 16:39:09.963 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-09 16:39:09.973 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 18.4123 ms
+2022-11-09 16:39:14.540 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:39:14.577 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:39:14.582 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:39:14.642 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 108.7322 ms
+2022-11-09 16:39:14.654 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 77.4955 ms
+2022-11-09 16:47:26.271 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:47:26.298 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:47:26.308 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:47:26.482 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 221.2495 ms
+2022-11-09 16:47:27.374 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1113.1394 ms
+2022-11-09 16:47:34.734 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:47:34.737 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:47:34.740 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:47:34.764 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 31.4661 ms
+2022-11-09 16:47:34.806 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 36.7834 ms
+2022-11-09 16:47:42.360 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:47:42.363 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:47:42.369 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:47:42.388 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.4970 ms
+2022-11-09 16:47:42.397 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 37.8666 ms
+2022-11-09 16:49:31.485 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:49:31.494 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:49:31.496 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:49:31.500 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 17.5235 ms
+2022-11-09 16:49:31.555 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 72.8197 ms
+2022-11-09 16:51:49.318 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:51:49.324 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:51:49.327 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:51:49.346 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 21.9454 ms
+2022-11-09 16:51:50.342 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1025.9199 ms
+2022-11-09 16:52:01.753 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-09 16:52:01.761 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.5071 ms
+2022-11-09 16:52:01.767 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-09 16:52:01.789 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-09 16:52:01.813 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 66.5003 ms
+2022-11-10 15:04:03.665 +01:00 [INF] Now listening on: https://localhost:7261
+2022-11-10 15:04:04.081 +01:00 [INF] Now listening on: http://localhost:5261
+2022-11-10 15:04:04.097 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-10 15:04:04.101 +01:00 [INF] Hosting environment: Development
+2022-11-10 15:04:04.105 +01:00 [INF] Content root path: C:\Users\tonis\Desktop\WEB\OpenBootcamp\NET_Angular\Proyecto_Final_Servinform_API\Api\web-api-net\WebApi\
+2022-11-10 15:04:08.217 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 2800.3295 ms
+2022-11-10 15:04:09.574 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:04:09.634 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:04:09.640 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:04:09.944 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-10 15:04:10.061 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 80.2768 ms
+2022-11-10 15:04:10.462 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 990.2630 ms
+2022-11-10 15:05:10.980 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.3603 ms
+2022-11-10 15:05:11.233 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:05:11.237 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:05:11.256 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:05:11.360 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 144.2903 ms
+2022-11-10 15:05:11.535 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 212.4627 ms
+2022-11-10 15:05:25.028 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.3782 ms
+2022-11-10 15:05:25.200 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:05:25.238 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:05:25.281 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:05:25.322 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 126.5299 ms
+2022-11-10 15:05:28.516 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.1344 ms
+2022-11-10 15:05:28.728 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:05:28.734 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:05:28.738 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:05:28.755 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 27.4931 ms
+2022-11-10 15:05:31.700 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 22.3679 ms
+2022-11-10 15:05:31.921 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:05:31.925 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:05:31.929 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:05:31.950 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 29.6168 ms
+2022-11-10 15:06:19.043 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:06:19.054 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 60.2204 ms
+2022-11-10 15:06:19.057 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:06:19.063 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:06:19.079 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 36.5125 ms
+2022-11-10 15:06:23.716 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.8096 ms
+2022-11-10 15:06:23.821 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:06:23.826 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:06:23.829 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:06:23.843 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 22.6711 ms
+2022-11-10 15:11:58.777 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-10 15:11:58.785 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-10 15:11:58.787 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-10 15:11:58.827 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-10 15:11:59.833 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 1098.5037 ms
+2022-11-10 15:12:03.736 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:12:03.741 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:12:03.744 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:12:03.765 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 30.4143 ms
+2022-11-10 15:15:27.192 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 108.7206 ms
+2022-11-10 15:15:27.303 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:15:27.306 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:15:27.310 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:15:27.360 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 57.6669 ms
+2022-11-10 15:15:27.364 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 22.1789 ms
+2022-11-10 15:15:30.787 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.8591 ms
+2022-11-10 15:15:30.834 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:15:30.839 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:15:30.843 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:15:30.880 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 26.3869 ms
+2022-11-10 15:15:30.880 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 46.6126 ms
+2022-11-10 15:15:49.061 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:15:49.085 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:15:49.096 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:15:49.107 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 32.0912 ms
+2022-11-10 15:15:49.282 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 230.2511 ms
+2022-11-10 15:17:27.695 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-10 15:17:27.698 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-10 15:17:27.701 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-10 15:17:27.709 +01:00 [INF] HTTP GET /api/Empresa/16 responded 200 in 14.3372 ms
+2022-11-10 15:18:01.970 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:18:01.974 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:18:01.977 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:18:01.992 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 21.9677 ms
+2022-11-10 15:18:05.984 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:18:05.989 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:18:05.993 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:18:06.022 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 38.2023 ms
+2022-11-10 15:18:06.022 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.8337 ms
+2022-11-10 15:26:19.354 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:26:19.358 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:26:19.382 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:26:19.436 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 82.4721 ms
+2022-11-10 15:26:20.439 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1092.8667 ms
+2022-11-10 15:34:41.699 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:34:41.743 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:34:41.749 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:34:41.779 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 91.5919 ms
+2022-11-10 15:34:42.122 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 432.7053 ms
+2022-11-10 15:35:56.917 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:35:57.120 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 224.4199 ms
+2022-11-10 15:35:57.149 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:35:57.164 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:35:57.325 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 430.0622 ms
+2022-11-10 15:36:38.133 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 15:36:38.138 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 15:36:38.143 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 15:36:38.168 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 24.3876 ms
+2022-11-10 15:36:38.179 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 47.3245 ms
+2022-11-10 16:04:35.484 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 16:04:35.490 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 16:04:35.497 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 16:04:35.525 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 53.2180 ms
+2022-11-10 16:04:35.625 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 153.4061 ms
+2022-11-10 16:04:50.443 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 16:04:50.522 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 16:04:50.566 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 16:04:50.572 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 69.4679 ms
+2022-11-10 16:04:50.629 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 186.9454 ms
+2022-11-10 16:06:52.935 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 16:06:52.939 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 16:06:52.944 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 16:06:53.062 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 128.4213 ms
+2022-11-10 16:06:53.087 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 157.2560 ms
+2022-11-10 16:12:01.697 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 16:12:01.701 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 16:12:01.706 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 16:12:01.775 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 39.1806 ms
+2022-11-10 16:12:01.868 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 171.9816 ms
+2022-11-10 16:13:01.478 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 16:13:01.499 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 16:13:01.535 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 16:13:01.574 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 253.7413 ms
+2022-11-10 16:13:01.586 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 265.6649 ms
+2022-11-10 16:26:50.650 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 16:26:50.763 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 16:26:50.794 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 16:26:50.800 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 234.7852 ms
+2022-11-10 16:26:51.739 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1173.9990 ms
+2022-11-10 16:36:52.338 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 16:36:52.356 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 16:36:52.372 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 16:36:52.410 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 74.0577 ms
+2022-11-10 16:36:53.498 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1161.3912 ms
+2022-11-10 17:10:27.011 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:10:27.018 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:10:27.023 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:10:27.055 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 43.2597 ms
+2022-11-10 17:10:27.451 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 446.2009 ms
+2022-11-10 17:11:08.823 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:11:08.830 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:11:08.831 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 24.7321 ms
+2022-11-10 17:11:08.835 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:11:08.887 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 79.9059 ms
+2022-11-10 17:11:49.588 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:11:49.594 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:11:49.597 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:11:49.623 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 39.6768 ms
+2022-11-10 17:11:49.635 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 59.3654 ms
+2022-11-10 17:12:07.973 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:12:07.977 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:12:07.981 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:12:07.998 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 25.4555 ms
+2022-11-10 17:12:08.029 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 12.5855 ms
+2022-11-10 17:12:15.418 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:12:15.423 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:12:15.451 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:12:15.472 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 56.0327 ms
+2022-11-10 17:12:15.501 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 21.2594 ms
+2022-11-10 17:12:40.855 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:12:40.859 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:12:40.862 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:12:40.873 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 21.6727 ms
+2022-11-10 17:12:40.887 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 33.1265 ms
+2022-11-10 17:13:00.593 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:13:00.597 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:13:00.601 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:13:00.622 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 21.0742 ms
+2022-11-10 17:13:00.637 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 44.7418 ms
+2022-11-10 17:14:57.595 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:14:57.602 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:14:57.607 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:14:57.631 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 37.1476 ms
+2022-11-10 17:14:57.679 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 12.7245 ms
+2022-11-10 17:17:58.044 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:17:58.051 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:17:58.054 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:17:58.142 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 90.5158 ms
+2022-11-10 17:17:58.335 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 299.5802 ms
+2022-11-10 17:19:50.638 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:19:50.641 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:19:50.644 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:19:50.678 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 21.8096 ms
+2022-11-10 17:19:50.678 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 40.1801 ms
+2022-11-10 17:20:18.905 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:20:18.911 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:20:18.915 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:20:18.919 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.2579 ms
+2022-11-10 17:20:18.935 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 31.8021 ms
+2022-11-10 17:21:13.728 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:21:13.734 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:21:13.737 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:21:13.781 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 54.0846 ms
+2022-11-10 17:21:13.788 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 61.2552 ms
+2022-11-10 17:22:47.691 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:22:47.695 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:22:47.704 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:22:47.712 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 21.9230 ms
+2022-11-10 17:22:47.747 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 57.0249 ms
+2022-11-10 17:23:17.537 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:23:17.540 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:23:17.542 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:23:17.565 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 28.7098 ms
+2022-11-10 17:23:17.641 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.5761 ms
+2022-11-10 17:23:32.053 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:23:32.056 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:23:32.059 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:23:32.071 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 18.5812 ms
+2022-11-10 17:23:32.123 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 6.3072 ms
+2022-11-10 17:27:00.546 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:27:00.549 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:27:00.553 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:27:00.643 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 97.7403 ms
+2022-11-10 17:27:00.694 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 73.4921 ms
+2022-11-10 17:28:43.125 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:28:43.132 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:28:43.144 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:28:43.161 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 25.9486 ms
+2022-11-10 17:28:43.194 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 77.1987 ms
+2022-11-10 17:29:02.247 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:29:02.250 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:29:02.259 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:29:02.277 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 20.6752 ms
+2022-11-10 17:29:02.278 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 31.8386 ms
+2022-11-10 17:29:20.203 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:29:20.208 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:29:20.214 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:29:20.242 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 32.3553 ms
+2022-11-10 17:29:20.257 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 54.8527 ms
+2022-11-10 17:29:40.825 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:29:40.829 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:29:40.835 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:29:40.854 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 31.0282 ms
+2022-11-10 17:29:40.869 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.4193 ms
+2022-11-10 17:30:54.460 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:30:54.468 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:30:54.474 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:30:54.484 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.2941 ms
+2022-11-10 17:30:54.497 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 38.6266 ms
+2022-11-10 17:33:45.908 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:33:45.913 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:33:45.933 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:33:45.941 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 34.0250 ms
+2022-11-10 17:33:45.958 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 50.3448 ms
+2022-11-10 17:34:20.727 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:34:20.730 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:34:20.733 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:34:20.744 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 17.7955 ms
+2022-11-10 17:34:20.826 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 61.1202 ms
+2022-11-10 17:35:27.891 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:35:27.894 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:35:27.897 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:35:27.987 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 70.6489 ms
+2022-11-10 17:35:28.011 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 121.1293 ms
+2022-11-10 17:36:44.528 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:36:44.539 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:36:44.543 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:36:44.561 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 35.5336 ms
+2022-11-10 17:36:44.588 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.3185 ms
+2022-11-10 17:36:50.986 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:36:50.990 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:36:50.993 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:36:51.008 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 26.5054 ms
+2022-11-10 17:36:51.064 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 15.5650 ms
+2022-11-10 17:38:18.761 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:38:18.765 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:38:18.769 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:38:18.772 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 13.9996 ms
+2022-11-10 17:38:18.787 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 32.3422 ms
+2022-11-10 17:38:36.903 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:38:36.912 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:38:36.917 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:38:36.925 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 22.7421 ms
+2022-11-10 17:38:36.959 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 113.5114 ms
+2022-11-10 17:38:56.450 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:38:56.454 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:38:56.458 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:38:56.468 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 17.8831 ms
+2022-11-10 17:38:56.516 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 20.7294 ms
+2022-11-10 17:39:58.124 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:39:58.128 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:39:58.132 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:39:58.166 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 42.4057 ms
+2022-11-10 17:39:58.183 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 36.9486 ms
+2022-11-10 17:40:23.355 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:40:23.365 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:40:23.372 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:40:23.434 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 79.8138 ms
+2022-11-10 17:40:23.444 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 20.4291 ms
+2022-11-10 17:40:33.763 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:40:33.824 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:40:33.824 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 77.6117 ms
+2022-11-10 17:40:33.831 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:40:33.847 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 91.7050 ms
+2022-11-10 17:40:44.753 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:40:44.756 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:40:44.759 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:40:44.773 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 20.8098 ms
+2022-11-10 17:40:44.801 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 11.2432 ms
+2022-11-10 17:41:33.689 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:41:33.692 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:41:33.694 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:41:33.709 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 20.2559 ms
+2022-11-10 17:41:33.776 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 42.1640 ms
+2022-11-10 17:42:05.901 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:42:05.907 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:42:05.910 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:42:05.951 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 50.5366 ms
+2022-11-10 17:42:05.992 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 16.7213 ms
+2022-11-10 17:42:24.144 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 4.9705 ms
+2022-11-10 17:42:24.197 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:42:24.201 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:42:24.204 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:42:24.218 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 22.9157 ms
+2022-11-10 17:42:24.235 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 19.3687 ms
+2022-11-10 17:42:48.286 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:42:48.344 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:42:48.353 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:42:48.358 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 9.1749 ms
+2022-11-10 17:42:48.368 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 82.7433 ms
+2022-11-10 17:57:14.356 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:57:14.360 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:57:14.363 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:57:14.368 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.9626 ms
+2022-11-10 17:57:15.322 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 973.2356 ms
+2022-11-10 17:57:45.566 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:57:45.579 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:57:45.621 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:57:45.670 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 104.9429 ms
+2022-11-10 17:57:45.690 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 124.0786 ms
+2022-11-10 17:58:23.313 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:58:23.317 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:58:23.322 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:58:23.331 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 18.4389 ms
+2022-11-10 17:58:23.378 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 69.2098 ms
+2022-11-10 17:58:32.145 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:58:32.148 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:58:32.150 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:58:32.158 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 13.0814 ms
+2022-11-10 17:58:32.186 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 4.5291 ms
+2022-11-10 17:58:54.842 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 17:58:54.845 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 17:58:54.849 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 17:58:54.858 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 16.7312 ms
+2022-11-10 17:58:54.882 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 7.0737 ms
+2022-11-10 18:07:32.083 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:07:32.090 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:07:32.095 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:07:32.320 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 54.3447 ms
+2022-11-10 18:07:33.391 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 1309.5711 ms
+2022-11-10 18:07:57.706 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:07:57.800 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:07:57.825 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:07:57.851 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 122.1537 ms
+2022-11-10 18:07:57.899 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 194.4874 ms
+2022-11-10 18:08:43.201 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:08:43.248 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:08:43.257 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:08:43.274 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 25.2237 ms
+2022-11-10 18:08:43.301 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 101.9323 ms
+2022-11-10 18:08:51.806 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:08:51.810 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:08:51.816 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:08:51.848 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 23.5608 ms
+2022-11-10 18:08:51.850 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 45.9048 ms
+2022-11-10 18:10:20.492 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:10:20.501 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:10:20.535 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:10:20.542 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 59.4099 ms
+2022-11-10 18:10:20.591 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 102.6787 ms
+2022-11-10 18:13:16.834 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:13:16.848 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:13:16.857 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:13:16.893 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 60.9004 ms
+2022-11-10 18:13:16.913 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 38.0749 ms
+2022-11-10 18:14:05.917 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:14:06.139 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:14:06.223 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:14:06.261 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 100.5201 ms
+2022-11-10 18:14:06.345 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 449.3104 ms
+2022-11-10 18:15:28.198 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:15:28.212 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:15:28.224 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:15:28.305 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 109.5161 ms
+2022-11-10 18:15:28.314 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 71.3127 ms
+2022-11-10 18:16:02.862 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:16:02.888 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:16:02.945 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:16:02.962 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 39.6386 ms
+2022-11-10 18:16:02.984 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 140.1796 ms
+2022-11-10 18:16:42.112 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:16:42.117 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:16:42.125 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:16:42.143 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 36.6380 ms
+2022-11-10 18:16:42.198 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 19.5208 ms
+2022-11-10 18:17:11.149 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:17:11.155 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:17:11.162 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:17:11.165 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 24.1889 ms
+2022-11-10 18:17:11.193 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 46.3529 ms
+2022-11-10 18:19:46.783 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-10 18:19:46.789 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-10 18:19:46.793 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-10 18:19:46.980 +01:00 [INF] HTTP GET /api/Empresa/11 responded 200 in 200.2890 ms
+2022-11-10 18:19:49.920 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:19:49.925 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:19:49.930 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:19:49.953 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 33.8453 ms
+2022-11-10 18:19:53.387 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:19:53.424 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:19:53.428 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:19:53.451 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 66.1212 ms
+2022-11-10 18:19:53.507 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 29.5165 ms
+2022-11-10 18:20:50.686 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:20:50.692 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:20:50.714 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:20:50.745 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 36.1138 ms
+2022-11-10 18:20:50.756 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 73.6161 ms
+2022-11-10 18:22:09.743 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:22:09.749 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:22:09.761 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:22:09.807 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 58.4854 ms
+2022-11-10 18:22:09.811 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 69.4165 ms
+2022-11-10 18:23:20.172 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:23:20.179 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:23:20.193 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:23:20.197 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 26.1589 ms
+2022-11-10 18:23:20.226 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 56.6664 ms
+2022-11-10 18:25:00.093 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:25:00.098 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:25:00.102 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:25:00.119 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 19.7388 ms
+2022-11-10 18:25:00.134 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 42.0455 ms
+2022-11-10 18:25:25.154 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:25:25.156 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:25:25.159 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:25:25.166 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 13.0312 ms
+2022-11-10 18:25:25.203 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 8.6619 ms
+2022-11-10 18:27:14.922 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:27:14.927 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:27:14.931 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:27:14.942 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 14.7843 ms
+2022-11-10 18:27:14.952 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 31.3351 ms
+2022-11-10 18:27:27.522 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 40.8477 ms
+2022-11-10 18:27:27.551 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:27:27.555 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:27:27.560 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:27:27.567 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 10.9590 ms
+2022-11-10 18:27:27.581 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 30.8205 ms
+2022-11-10 18:28:24.148 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:28:24.152 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:28:24.155 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:28:24.164 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 13.9928 ms
+2022-11-10 18:28:24.179 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 32.5346 ms
+2022-11-10 18:34:20.698 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:34:20.701 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:34:20.703 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:34:20.781 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 56.1839 ms
+2022-11-10 18:34:20.863 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 165.7474 ms
+2022-11-10 18:48:49.931 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:48:49.948 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:48:49.953 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:48:51.066 +01:00 [INF] HTTP GET /api/DireccionEmpresa responded 200 in 1329.4022 ms
+2022-11-10 18:49:42.146 +01:00 [INF] HTTP GET /api/Usuario responded 200 in 61.2825 ms
+2022-11-10 18:49:42.297 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 18:49:42.306 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 18:49:42.324 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 18:49:42.408 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 131.7118 ms
+2022-11-10 19:05:14.663 +01:00 [INF] HTTP POST /api/Usuario/login responded 200 in 352.4047 ms
+2022-11-10 19:11:43.822 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-10 19:11:43.833 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-10 19:11:43.842 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-10 19:11:44.859 +01:00 [INF] HTTP GET /api/DireccionEmpresa/13 responded 204 in 1150.6520 ms
+2022-11-10 19:11:51.735 +01:00 [WRN] GenericRepository - GetAllWithSpecAsync - Warning Level Log
+2022-11-10 19:11:51.737 +01:00 [ERR] GenericRepository - GetAllWithSpecAsync - Error Level Log
+2022-11-10 19:11:51.739 +01:00 [FTL] GenericRepository - GetAllWithSpecAsync - Critical Log Level
+2022-11-10 19:11:51.766 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-10 19:11:51.770 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-10 19:11:51.790 +01:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-11-10 19:11:51.900 +01:00 [INF] HTTP GET /api/Empresa responded 200 in 169.7689 ms
+2022-11-10 19:11:58.313 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-10 19:11:58.317 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-10 19:11:58.321 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-10 19:11:58.342 +01:00 [INF] HTTP GET /api/DireccionEmpresa/5 responded 200 in 36.7459 ms
+2022-11-10 19:12:16.131 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-10 19:12:16.135 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-10 19:12:16.141 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-10 19:12:16.152 +01:00 [INF] HTTP GET /api/DireccionEmpresa/7 responded 200 in 22.1030 ms
+2022-11-10 19:22:14.072 +01:00 [WRN] GenericRepository - GetByIdWithSpecAsync - Warning Level Log
+2022-11-10 19:22:14.078 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
+2022-11-10 19:22:14.082 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
+2022-11-10 19:22:15.008 +01:00 [INF] HTTP GET /api/DireccionEmpresa/7 responded 200 in 937.5462 ms

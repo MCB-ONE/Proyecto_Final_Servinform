@@ -58,7 +58,7 @@ namespace WebApi.Controllers
 
             return new UsuarioDto
             {
-                Id = Int32.Parse(usuario.Id),
+                Id = usuario.Id,
                 Email = usuario.Email,
                 UserName = usuario.UserName,
                 Token = _tokenServcie.CreateToken(usuario, roles), // Usar token service para generar el token
@@ -91,7 +91,7 @@ namespace WebApi.Controllers
 
             return new UsuarioDto
             {
-                Id = Int32.Parse(usuario.Id),
+                Id = usuario.Id,
                 Email = usuario.Email,
                 UserName = usuario.UserName,
                 Nombre = usuario.Nombre,
@@ -132,7 +132,7 @@ namespace WebApi.Controllers
 
             return new UsuarioDto
             {
-                Id = Int32.Parse(usuario.Id),
+                Id = usuario.Id,
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
                 Email = usuario.Email,
@@ -252,7 +252,7 @@ namespace WebApi.Controllers
 
             return new UsuarioDto
             {
-                Id = Int32.Parse(usuario.Id),
+                Id = usuario.Id,
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
                 Email = usuario.Email,
@@ -283,7 +283,7 @@ namespace WebApi.Controllers
 
             return new UsuarioDto
             {
-                Id = Int32.Parse(usuario.Id),
+                Id = usuario.Id,
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
                 UserName = usuario.UserName,
