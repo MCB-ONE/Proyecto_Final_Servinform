@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Empresa } from '@app/models/backend';
 
 @Component({
@@ -9,11 +9,17 @@ import { Empresa } from '@app/models/backend';
 export class EmpresaListComponent implements OnInit {
 
   @Input() empresas !: Empresa[];
+  @Output() selectEmpresa: EventEmitter<string>
 
-
-  constructor() { }
+  constructor() {
+    this.selectEmpresa = new EventEmitter();
+   }
 
   ngOnInit(): void {
   }
 
+  onSelected(empresaId: string ){
+    console.log(empresaId);
+    this.selectEmpresa.emit(empresaId);
+  }
 }

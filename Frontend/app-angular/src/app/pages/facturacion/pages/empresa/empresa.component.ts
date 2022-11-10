@@ -2,10 +2,11 @@ import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Pagination } from '@app/store/empresa/empresa.models';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import * as fromRoot from '@app/store/app.state';
 import { getActiveEmpresa, getLoading, getPagination } from '@app/store/empresa/empresa.selectors';
 import { EmpresaActions } from '@app/store/empresa/empresa.actions';
+import { Empresa } from '@app/models/backend';
 
 @Component({
   selector: 'app-empresas',
@@ -16,7 +17,7 @@ export class EmpresaComponent implements OnInit {
   params = new HttpParams();
   isLoading$ !: Observable<boolean | null>;
   pagination$ !: Observable<Pagination>
-  empresa$ !: Observable<void>
+  empresa$ !: Observable<Empresa | null>
 
 
 
@@ -34,12 +35,30 @@ export class EmpresaComponent implements OnInit {
       paramsUrl: this.params.toString()
     }))
     this.pagination$ = this.store.select(getPagination) as Observable<Pagination>
-    this.empresa$ = this.store.select(getActiveEmpresa) as Observable<void>
-  }
 
-  onEmpresaSelect(empresaId: string) {
-    this.store.dispatch(EmpresaActions.readActiveEmpresa({empresaId}))
-    this.empresa$.subscribe(data => console.log(data))
-  }
+    this.empresa$ = this.store.select(getActiveEmpresa) as Observable<Empresa | null>
+
+    // Activar ultima empresa creada
+    this.empresa$.subscribe((data) => {
+      if(data == undefined){
+        console.log(data)
+        this.pagination$.subscribe((data) => {
+          if(data){
+            console.log(data)
+            this.store.dispatch(EmpresaActions.readActiveEmpresa({ empresaId: data.data[0].id }))
+          }
+        })
+      }
+    })
+
+    this.empresa$ = this.store.select(getActiveEmpresa) as Observable<Empresa | null>
+
+
+}
+
+onEmpresaSelect(empresaId: string) {
+  this.store.dispatch(EmpresaActions.readActiveEmpresa({ empresaId }))
+  this.empresa$.subscribe(data => console.log(data))
+}
 
 }

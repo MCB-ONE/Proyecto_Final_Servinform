@@ -11,6 +11,7 @@ export class EmpresaDetailComponent implements OnInit {
 
   @Input() empresa !: Empresa;
   @Output() selectEmpresa: EventEmitter<string>
+
   constructor() {
     this.selectEmpresa = new EventEmitter();
    }

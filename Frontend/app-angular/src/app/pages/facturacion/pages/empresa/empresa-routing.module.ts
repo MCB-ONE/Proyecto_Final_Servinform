@@ -16,6 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/update-empresa/update-empresa.module').then(m=> m.UpdateEmpresaModule)
   },
   {
+    path: 'direccion/nueva',
+    loadChildren: () => import('./pages/new-direccion/new-direccion.module').then(m=> m.NewDireccionModule)
+  },
+  {
+    path: 'direccion/:id',
+    loadChildren: () => import('./pages/update-direccion/update-direccion.module').then(m=> m.UpdateDireccionModule)
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'static/404'

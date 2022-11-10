@@ -17,7 +17,7 @@
     <mat-accordion>
       <div class="mat-accordion__actions">
         <h3>Direcciones guardadas</h3>
-        <a class="app-a"><mat-icon>add_circle</mat-icon>Añadir dirección</a>
+        <a class="app-a"  routerLink="direccion/nueva"><mat-icon>add_circle</mat-icon>Añadir dirección</a>
       </div>
       <ng-container *ngIf="empresa.direcciones.length != 0">
         <div *ngFor="let dir of empresa.direcciones">

@@ -7,11 +7,15 @@
       <div class="app-dashboard__header">
         <h1>Empresas</h1>
       </div>
-      <app-empresa-detail *ngIf="pagination$ | async as pagination" [empresa]=" pagination.data[0]" (selectEmpresa)="onEmpresaSelect($event)"></app-empresa-detail>
+      <app-empresa-detail *ngIf="empresa$ | async as selectedEmpresa" [empresa]=" selectedEmpresa" (selectEmpresa)="onEmpresaSelect($event)"></app-empresa-detail>
     </div>
 
     <div class="app-dashboard__sidebar">
-      <app-empresa-list *ngIf="pagination$ | async as pagination" [empresas]=" pagination.data"></app-empresa-list>
+      <app-empresa-list
+      *ngIf="pagination$ | async as pagination"
+      [empresas]=" pagination.data"
+      (selectEmpresa)="onEmpresaSelect($event)"
+      ></app-empresa-list>
     </div>
   </ng-container>
 

@@ -17,7 +17,7 @@
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #clienteMenu="matMenu">
-          <button mat-menu-item routerLink="facturacion/empresas" routerLinkActive="app-a_active">
+          <button mat-menu-item (click)="onSelected(empresa.id)">
             <mat-icon>cached</mat-icon>
             <span>Seleccionar</span>
           </button>

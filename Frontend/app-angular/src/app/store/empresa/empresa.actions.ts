@@ -6,6 +6,7 @@ import { EmpresaCreateRequest, EmpresaForm, EmpresaResponse, EmpresaUpdateReques
 export const EmpresaActions = createActionGroup({
   source: 'Empresa',
   events: {
+    // Get all
     'Read all start': props<{
       requestPagination: HttpParams;
       paramsUrl: string
@@ -13,10 +14,12 @@ export const EmpresaActions = createActionGroup({
     'Read all success': props<{ pagination: Pagination | any }>(),
     'Read all error':  props<{ error: string }>(),
 
-    // Get by id y seleccion empresa activa
+    // Get by id
     'Read start': props<{ empresaId: string }>(),
     'Read success': props<{ empresa: EmpresaResponse }>(),
     'Read error': props<{ error: string }>(),
+
+    // Seleccion empresa activa
     'Read active empresa':  props<{ empresaId: string }>(),
 
     // Creación

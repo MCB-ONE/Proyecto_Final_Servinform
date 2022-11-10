@@ -18,7 +18,8 @@ export class EmpresaEffects {
       switchMap((request: string) =>
         this.httpClient.get<Pagination>(`${environment.url}/api/Empresa?${request}`)
           .pipe(
-            map((pagination: any) => EmpresaActions.readAllSuccess({ pagination }),
+            map((pagination: any) =>
+            EmpresaActions.readAllSuccess({ pagination }),
             ),
             catchError(error => of(EmpresaActions.readAllError({ error })))
           )
