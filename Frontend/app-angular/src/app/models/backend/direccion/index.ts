@@ -1,6 +1,7 @@
 import { BaseEntity } from "../baseEntity";
 
 export interface Direccion extends BaseEntity{
+  empresaId: string;
   calle: string;
   numero: number;
   codigoPostal: string;

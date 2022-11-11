@@ -9,15 +9,17 @@
     <mat-card-subtitle>{{empresa.nif}}</mat-card-subtitle>
     <div class="actions">
       <button mat-flat-button color="primary" (click)="onSelected(empresa.id)">Seleccionar</button>
-      <button mat-flat-button color="accent"  routerLink="{{empresa.id}}" routerLinkActive="app-a_active">Editar</button>
-      <button mat-button mat-flat-button color="warn">Borrar</button>
+      <button mat-flat-button color="accent" routerLink="{{empresa.id}}" routerLinkActive="app-a_active">Editar</button>
+      <button mat-button mat-flat-button color="warn">Eliminar</button>
     </div>
   </mat-card-header>
   <mat-card-content class="app-card__content">
     <mat-accordion>
       <div class="mat-accordion__actions">
         <h3>Direcciones guardadas</h3>
-        <a class="app-a"  routerLink="direccion/nueva"><mat-icon>add_circle</mat-icon>Añadir dirección</a>
+        <a class="app-a" routerLink="direccion/nueva">
+          <mat-icon>add_circle</mat-icon>Añadir dirección
+        </a>
       </div>
       <ng-container *ngIf="empresa.direcciones.length != 0">
         <div *ngFor="let dir of empresa.direcciones">
@@ -26,14 +28,19 @@
               <mat-panel-title>
                 <img mat-card-sm-image src="../../../../../assets/location-on-map.svg">
                 <div>
-                  <h3>{{dir.calle}}</h3>
+                  <h3>{{dir.calle}}
+                  </h3>
                   <span>{{dir.ciudad}} ({{dir.codigoPostal}})</span>
+                  <div class="mat-expansion-panel-header-title-actions">
+                    <mat-icon color="accent" routerLink="direccion/{{dir.id}}">edit</mat-icon>
+                    <mat-icon color="warn">delete</mat-icon>
+                  </div>
                 </div>
               </mat-panel-title>
             </mat-expansion-panel-header>
             <ul class="list-group">
               <li>
-                <mat-icon> location_on</mat-icon>{{dir.provincia}}  - {{dir.pais}}
+                <mat-icon> location_on</mat-icon>{{dir.provincia}} - {{dir.pais}}
               </li>
               <li>
                 <mat-icon> phone</mat-icon>{{dir.telefono}}
@@ -42,7 +49,10 @@
                 <mat-icon> email</mat-icon>{{dir.email}}
               </li>
               <li>
-                <mat-icon>language</mat-icon>https://empresatest.es/
+                <mat-icon>language</mat-icon>
+                <ng-template *ngIf="dir.web; then thenBlock else elseBlock"></ng-template>
+                <ng-template #thenBlock>{{dir.web}}</ng-template>
+                <ng-template #elseBlock><a href="" class="app-a">Añadir web</a></ng-template>
               </li>
             </ul>
           </mat-expansion-panel>

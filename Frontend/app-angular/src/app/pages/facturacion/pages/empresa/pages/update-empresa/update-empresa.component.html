@@ -1,7 +1,7 @@
 <div class="app-dashboard">
-  <!-- <div class="spinner" *ngIf="isLoading$ | async">
-       <app-spinner></app-spinner>
-      </div> -->
+  <div class="spinner" *ngIf="loading$ | async">
+    <app-spinner></app-spinner>
+  </div>
   <ng-container>
     <div class="app-dashboard__main mat-card">
       <div class="app-dashboard__header">
@@ -20,7 +20,8 @@
           <app-form-field label="Nombre" [required]="true" [control]="form.controls['nombre']">
             <app-input formControlName="nombre"> </app-input>
           </app-form-field>
-          <app-form-field label="Nif" [required]="true" [control]="form.controls['nif']" [patternError]="regexErrors.nif">
+          <app-form-field label="Nif" [required]="true" [control]="form.controls['nif']"
+            [patternError]="regexErrors.nif">
             <app-input formControlName="nif"></app-input>
           </app-form-field>
           <button mat-flat-button color="primary">Actualizar empresa</button>

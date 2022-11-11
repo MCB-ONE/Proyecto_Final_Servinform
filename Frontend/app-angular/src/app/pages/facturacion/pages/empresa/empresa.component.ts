@@ -2,7 +2,7 @@ import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Pagination } from '@app/store/empresa/empresa.models';
 import { Store } from '@ngrx/store';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import * as fromRoot from '@app/store/app.state';
 import { getActiveEmpresa, getLoading, getPagination } from '@app/store/empresa/empresa.selectors';
 import { EmpresaActions } from '@app/store/empresa/empresa.actions';
@@ -41,10 +41,8 @@ export class EmpresaComponent implements OnInit {
     // Activar ultima empresa creada
     this.empresa$.subscribe((data) => {
       if(data == undefined){
-        console.log(data)
         this.pagination$.subscribe((data) => {
           if(data){
-            console.log(data)
             this.store.dispatch(EmpresaActions.readActiveEmpresa({ empresaId: data.data[0].id }))
           }
         })

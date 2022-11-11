@@ -51,6 +51,9 @@ export class EmpresaEffects {
       exhaustMap(action =>
         this.httpClient.put<EmpresaResponse>(`${environment.url}/api/Empresa/actualizar/${action.empresaId}`, action.empresa)
           .pipe(
+            tap((empresa: EmpresaResponse) => {
+              this.router.navigate(['/facturacion/empresa'])
+            }),
             map((empresa: EmpresaResponse) => EmpresaActions.updateSuccess({ empresa }),
             ),
             catchError(error => of(EmpresaActions.updateError({ error })))

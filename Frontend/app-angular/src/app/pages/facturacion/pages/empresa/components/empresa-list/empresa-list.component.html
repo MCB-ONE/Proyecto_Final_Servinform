@@ -1,17 +1,13 @@
 <div class="section">
-  <h2 class="title">Mis empresas</h2>
-  <p>Últimas empresas gestionadas</p>
+  <h2 class="section-title">Mis empresas</h2>
+  <p class="section-subtitle">Últimas empresas gestionadas</p>
   <div class="clientes" *ngFor="let empresa of empresas">
     <div class="clientes-item">
-      <div class="header">
-        <h4 class="title">{{empresa.nombre}}</h4>
-        <span *ngIf="empresa.direcciones?.length != 0">{{empresa.direcciones[0].telefono}}</span>
-        <span *ngIf="empresa.direcciones?.length == 0"> <a class="app-a">
-            <mat-icon>add_circle</mat-icon>Añadir dirección
-          </a>
-        </span>
+      <div class="clientes-item-header">
+        <h4 class="clientes-item-header-title">{{empresa.nombre}}</h4>
+        <span class="clientes-item-header-subtitle">{{empresa.nif}}</span>
       </div>
-      <div class="action">
+      <div class="clientes-item-action">
         <button mat-icon-button aria-label="Example icon button with a vertical three dot icon"
           [matMenuTriggerFor]="clienteMenu">
           <mat-icon>more_vert</mat-icon>
@@ -33,7 +29,7 @@
       </div>
     </div>
   </div>
-  <div class="section__links">
+  <div class="section-links">
     <button mat-flat-button color="primary" routerLink="nueva" routerLinkActive="app-a_active">Crear nueva</button>
     <a class="app-a" href="">Ver todas</a>
   </div>

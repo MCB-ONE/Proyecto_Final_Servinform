@@ -1,1 +1,59 @@
-<p>update-direccion works!</p>
+<div class="app-dashboard">
+  <div class="spinner" *ngIf="loading$ | async">
+    <app-spinner></app-spinner>
+  </div>
+  <ng-container>
+    <div class="app-dashboard__main mat-card">
+      <div class="app-dashboard__header">
+        <h1>Actualizar direccion</h1>
+      </div>
+      <div>
+        <form [formGroup]="form" autocomplete="off" (submit)="onSubmit()">
+          <div class="fields">
+            <app-form-field label="Calle" [required]="true" [control]="form.controls['calle']">
+              <app-input formControlName="calle"> </app-input>
+            </app-form-field>
+
+            <app-form-field label="Número" [required]="true" [control]="form.controls['numero']"
+              [patternError]="regexErrors.number">
+              <app-input formControlName="numero"></app-input>
+            </app-form-field>
+
+            <app-form-field label="Código Postal" [required]="true" [control]="form.controls['codigoPostal']"
+              [patternError]="regexErrors.number">
+              <app-input formControlName="codigoPostal"></app-input>
+            </app-form-field>
+
+            <app-form-field label="Ciudad" [required]="true" [control]="form.controls['ciudad']">
+              <app-input formControlName="ciudad"></app-input>
+            </app-form-field>
+
+            <app-form-field label="Provincia" [required]="true" [control]="form.controls['provincia']">
+              <app-input formControlName="provincia"></app-input>
+            </app-form-field>
+
+            <app-form-field label="Pais" [required]="true" [control]="form.controls['pais']">
+              <app-input formControlName="pais"></app-input>
+            </app-form-field>
+
+            <app-form-field label="Teléfono" [required]="true" [control]="form.controls['telefono']"
+              [patternError]="regexErrors.phone">
+              <app-input formControlName="telefono"></app-input>
+            </app-form-field>
+
+            <app-form-field label="Email" [required]="true" [control]="form.controls['email']"
+              [patternError]="regexErrors.email">
+              <app-input formControlName="email"></app-input>
+            </app-form-field>
+
+            <app-form-field label="Web" [required]="true" [control]="form.controls['web']"
+              [patternError]="regexErrors.web">
+              <app-input formControlName="web"></app-input>
+            </app-form-field>
+          </div>
+          <button mat-flat-button color="primary">Actualizar datos</button>
+        </form>
+      </div>
+    </div>
+  </ng-container>
+</div>
