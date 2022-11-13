@@ -93,7 +93,7 @@ export const direccionReducer = createReducer(
       direccion: null
     }
   }),
-  // Obtener empresa por id
+  // Obtener direccion por id
   on(DireccionActions.readStart, (state) => {
     return {
       ...state,

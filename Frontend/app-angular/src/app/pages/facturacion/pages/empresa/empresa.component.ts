@@ -43,7 +43,7 @@ export class EmpresaComponent implements OnInit {
       if(data == undefined){
         this.pagination$.subscribe((data) => {
           if(data){
-            this.store.dispatch(EmpresaActions.readActiveEmpresa({ empresaId: data.data[0].id }))
+            this.store.dispatch(EmpresaActions.selectActiveEmpresa({ empresaId: data.data[0].id }))
           }
         })
       }
@@ -55,7 +55,7 @@ export class EmpresaComponent implements OnInit {
 }
 
 onEmpresaSelect(empresaId: string) {
-  this.store.dispatch(EmpresaActions.readActiveEmpresa({ empresaId }))
+  this.store.dispatch(EmpresaActions.selectActiveEmpresa({ empresaId }))
   this.empresa$.subscribe(data => console.log(data))
 }
 

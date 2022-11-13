@@ -7,24 +7,26 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { FacturacionHeaderComponent } from '@app/components/facturacion-header/facturacion-header.component';
+import { FacturacionHeaderComponent } from '@app/pages/facturacion/components/facturacion-header/facturacion-header.component';
 import { MenuListComponent } from '@app/components/menu-list/menu-list.component';
 import { MatListModule } from '@angular/material/list';
 import { FormFieldModule, SelectModule } from '@app/shared';
 import { SpinnerModule } from '@app/shared/indicators';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { FacturacionHeaderModule } from './components/facturacion-header/facturacion-header.module';
 
 @NgModule({
   declarations: [
     FacturacionComponent,
-    FacturacionHeaderComponent,
-    MenuListComponent
+    MenuListComponent,
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     FacturacionRoutingModule,
+    FacturacionHeaderModule,
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
@@ -33,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormFieldModule,
     SpinnerModule,
     SelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class FacturacionModule { }

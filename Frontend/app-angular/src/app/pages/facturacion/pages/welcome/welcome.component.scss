@@ -1,0 +1,19 @@
+@import 'styles/colors.scss';
+
+
+.app-dashboard {
+  display: flex;
+  &-main {
+    width: 75%;
+    app-counter-card {
+      display: inline-block;
+      margin: 2rem 1.2rem;
+    }
+  }
+
+  &__sidebar{
+    width: 25%;
+    padding: 16px;
+  }
+
+}

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserPhotoModule } from './user-photo/user-photo.module';
+import { TableModule } from './table/table.module';
 
 
 
@@ -8,10 +9,12 @@ import { UserPhotoModule } from './user-photo/user-photo.module';
   declarations: [],
   imports: [
     CommonModule,
-    UserPhotoModule
+    UserPhotoModule,
+    TableModule
   ],
   exports: [
-    UserPhotoModule
+    UserPhotoModule,
+    TableModule
   ]
 })
 export class LayoutsModule { }

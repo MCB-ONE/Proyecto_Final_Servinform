@@ -22,11 +22,6 @@ const routes: Routes = [
   {
     path: 'direccion/:id',
     loadChildren: () => import('./pages/update-direccion/update-direccion.module').then(m=> m.UpdateDireccionModule)
-  },
-  {
-    path: '**',
-    pathMatch: 'full',
-    redirectTo: 'static/404'
   }
 ];
 

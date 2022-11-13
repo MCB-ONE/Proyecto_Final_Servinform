@@ -1,0 +1,35 @@
+@import 'styles/colors.scss';
+
+
+.header {
+
+  &-subtitle {
+  }
+
+  &-title {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &-logo {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #ececec;
+      background-color: #4253d5;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-text {
+      h2 {
+        margin: 0;
+      }
+    }
+  }
+
+}

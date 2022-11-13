@@ -20,6 +20,11 @@ export const getPaginatioRequest = createSelector(
   (state: EmpresaState) => state.requestPagination
 );
 
+export const getEmpresa = createSelector(
+  selectEmpresaFeature,
+  (state: EmpresaState) => state.empresa
+)
+
 export const getLoading = createSelector(
   selectEmpresaFeature,
   (state: EmpresaState) => state.loading
@@ -30,25 +35,30 @@ export const getError = createSelector(
   (state: EmpresaState) => state.error
 )
 
+export const getFormState = createSelector(
+  selectEmpresaFeature,
+  (state: EmpresaState) => state.form
+)
+
 export const getActiveEmpresaId = createSelector(
   selectEmpresaFeature,
   (state: EmpresaState) => state.activeEmpresaId
 )
-
-export const getEmpresa = createSelector(
-  selectEmpresaFeature,
-  (state: EmpresaState) => state.empresa
-)
-
-
 export const getActiveEmpresa = createSelector(
   getEmpresas,
   getActiveEmpresaId,
   (empresas, selectedId) => empresas?.find(e => e.id == selectedId)
 )
 
-export const getFormState = createSelector(
+export const getActiveClienteId = createSelector(
   selectEmpresaFeature,
-  (state: EmpresaState) => state.form
+  (state: EmpresaState) => state.activeClienteId
 )
 
+export const getActiveCliente = createSelector(
+  getActiveEmpresa,
+  getActiveClienteId,
+  (empresa, selectedId) => {
+    empresa?.clientes?.find(c => c.id == selectedId)
+  }
+)

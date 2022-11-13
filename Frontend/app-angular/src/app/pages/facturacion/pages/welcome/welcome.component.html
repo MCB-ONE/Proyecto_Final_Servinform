@@ -1,1 +1,27 @@
-<p>welcome works!</p>
+<div class="app-dashboard">
+  <div class="spinner" *ngIf="isLoading$ | async">
+    <app-spinner></app-spinner>
+  </div>
+  <ng-container *ngIf="!(isLoading$ | async)">
+    <div class="app-dashboard-main">
+      <app-empresa-info-display></app-empresa-info-display>
+      <div>
+        <app-counter-card *ngIf="empresa$ | async as selectedEmpresa" title="Clientes de {{selectedEmpresa.nombre}}"
+          icon="group" count={{selectedEmpresa.clientes.length}} countSubtitle="Clientes totales"
+          link="/facturacion/clientes" linkText="Ver todos" buttonText="Añadir cliente"></app-counter-card>
+
+        <app-counter-card *ngIf="empresa$ | async as selectedEmpresa" title="Facturas de {{selectedEmpresa.nombre}}"
+          icon="list_alt" count="0" countSubtitle="Facturas totales" link="/facturacion/facturas" linkText="Ver todas"
+          buttonText="Generar factura"></app-counter-card>
+
+        <app-counter-card *ngIf="empresa$ | async as selectedEmpresa" title="Direcciones de {{selectedEmpresa.nombre}}"
+          icon="location_on" count={{selectedEmpresa.direcciones.length}} countSubtitle="Direcciones vinculadas" link="/facturacion/direcciones" linkText="Ver todas"
+          buttonText="Añadir dirección"></app-counter-card>
+      </div>
+    </div>
+    <div class="app-dashboard__sidebar">
+      <app-empresa-list *ngIf="pagination$ | async as pagination" [empresas]=" pagination.data"
+        (selectEmpresa)="onEmpresaSelect($event)"></app-empresa-list>
+    </div>
+  </ng-container>
+</div>

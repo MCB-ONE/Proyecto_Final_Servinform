@@ -12,16 +12,12 @@ export const EmpresaActions = createActionGroup({
       paramsUrl: string
     }>(),
     'Read all success': props<{ pagination: Pagination | any }>(),
-    'Read all error':  props<{ error: string }>(),
+    'Read all error': props<{ error: string }>(),
 
     // Get by id
     'Read start': props<{ empresaId: string }>(),
     'Read success': props<{ empresa: EmpresaResponse }>(),
     'Read error': props<{ error: string }>(),
-
-    // Seleccion empresa activa
-    'Read active empresa':  props<{ empresaId: string }>(),
-
     // Creación
     'Create start': props<{ empresa: EmpresaCreateRequest }>(),
     'Create success': props<{ empresa: EmpresaResponse }>(),
@@ -33,8 +29,13 @@ export const EmpresaActions = createActionGroup({
     'Update error': props<{ error: string }>(),
 
     //Formulario
-    'Form set': props<{ form: EmpresaForm}>(),
+    'Form set': props<{ form: EmpresaForm }>(),
     'Form update': props<{ changes: Partial<EmpresaForm> }>(),
     'Form clear': emptyProps(),
+
+    // Seleccion empresa activa
+    'Select active empresa': props<{ empresaId: string }>(),
+    // Seleccion cliente activo
+    'Select active cliente': props<{ clienteId: string }>(),
   },
 });

@@ -1,0 +1,87 @@
+@import 'styles/colors.scss';
+
+.app-card {
+  background-color: $base-light;
+  max-width: 70%;
+  margin-left: 1.2rem;
+  padding: 26px 32px 32px 32px;
+  border-radius: 26px;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 5%), 0px 1px 1px 0px rgb(0 0 0 / 4%), 0px 1px 3px 0px rgb(0 0 0 / 8%);
+
+  .app-a{
+    margin-top: 1rem;
+    display: inline-block;
+    margin-left: auto;
+    &:hover{
+      color: $primary-light;
+    }
+  }
+
+  .app-a__icon{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    &:hover{
+      color: $primary-light;
+    }
+  }
+}
+
+.mat-accordion {
+  &-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.mat-expansion-panel {
+  height: auto;
+  font-size: 1rem;
+  box-shadow: none;
+  border: 1px solid #d3d3d370;
+  &-header {
+    height: auto;
+    padding: 10px 24px 10px 24px;
+    h3 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    span {
+      font-size: 14px;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 1rem;
+    }
+  }
+
+  &-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &-list {
+      list-style: none;
+      li{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        gap: 4px;
+      }
+      .mat-icon{
+        color: #8c9dff;
+      }
+    }
+    &-actions{
+      display: flex;
+      align-items: flex-end;
+      gap: 0.5rem
+    }
+  }
+
+}
+

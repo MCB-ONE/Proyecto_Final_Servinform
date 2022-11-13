@@ -16,13 +16,17 @@ const routes: Routes = [
         loadChildren: () => import('./pages/empresa/empresa.module').then(m => m.EmpresaModule)
       },
       {
+        path: 'cliente',
+        loadChildren: () => import('./pages/cliente/cliente.module').then(m => m.ClienteModule)
+      },
+      {
         path: 'profile',
         loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule)
       },
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'empresa'
+        redirectTo: 'welcome'
       },
       {
         path: '**',

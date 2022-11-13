@@ -20,6 +20,7 @@ export interface EmpresaState {
   requestPagination: HttpParams | null;
   activeEmpresaId: string | null;
   empresa: Empresa | null;
+  activeClienteId: string | null;
   form: FormState;
   loading: boolean | null;
   error: string | null;
@@ -30,6 +31,7 @@ const initialState: EmpresaState = {
   requestPagination: null,
   activeEmpresaId: null,
   empresa: null,
+  activeClienteId: null,
   form: initialFormSatate,
   loading: null,
   error: null
@@ -58,12 +60,6 @@ export const empresaReducer = createReducer(
       ...state,
       loading: false,
       error: error
-    }
-  }),
-  on(EmpresaActions.readActiveEmpresa, (state, { empresaId }) => {
-    return {
-      ...state,
-      activeEmpresaId: empresaId
     }
   }),
   // Creacion
@@ -154,6 +150,19 @@ export const empresaReducer = createReducer(
   on(EmpresaActions.formClear, (state) => {
     return {
       ...state
+    }
+  }),
+  // Activar entidades
+  on(EmpresaActions.selectActiveEmpresa, (state, { empresaId }) => {
+    return {
+      ...state,
+      activeEmpresaId: empresaId
+    }
+  }),
+  on(EmpresaActions.selectActiveCliente, (state, { clienteId }) => {
+    return {
+      ...state,
+      activeClienteId: clienteId
     }
   }),
 )

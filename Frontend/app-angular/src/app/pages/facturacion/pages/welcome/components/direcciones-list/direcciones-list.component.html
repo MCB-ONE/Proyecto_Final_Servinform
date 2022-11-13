@@ -1,0 +1,51 @@
+<div class="app-card">
+  <mat-accordion>
+    <div class="mat-accordion-header">
+      <h3>Últimas direcciones utilizadas</h3>
+      <a class="app-a__icon" routerLink="direccion/nueva">
+        <mat-icon>add_circle</mat-icon>Añadir dirección
+      </a>
+    </div>
+    <ng-container *ngIf="direcciones.length != 0">
+      <div *ngFor="let dir of direcciones">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+              <img class="mat-expansion-panel-header-image" src="../../../../../assets/location-on-map.svg">
+              <div class="mat-panel-header-text">
+                <h3>{{dir.calle}}
+                </h3>
+                <span>{{dir.ciudad}} ({{dir.codigoPostal}})</span>
+              </div>
+          </mat-expansion-panel-header>
+          <div class="mat-expansion-panel-content">
+            <ul class="mat-expansion-panel-content-list">
+              <li>
+                <mat-icon> location_on</mat-icon>{{dir.provincia}} - {{dir.pais}}
+              </li>
+              <li>
+                <mat-icon> phone</mat-icon>{{dir.telefono}}
+              </li>
+              <li>
+                <mat-icon> email</mat-icon>{{dir.email}}
+              </li>
+              <li>
+                <mat-icon>language</mat-icon>
+                <ng-template *ngIf="dir.web; then thenBlock else elseBlock"></ng-template>
+                <ng-template #thenBlock>{{dir.web}}</ng-template>
+                <ng-template #elseBlock><a href="" class="app-a">Añadir web</a></ng-template>
+              </li>
+            </ul>
+            <div class="mat-expansion-panel-content-actions">
+              <mat-icon color="accent" routerLink="direccion/{{dir.id}}">edit</mat-icon>
+              <mat-icon color="warn">delete</mat-icon>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+    </ng-container>
+    <div class="not-content" *ngIf="direcciones.length == 0">
+      <h2>Esta enmpresa no tiene direcciones asociadas</h2>
+    </div>
+  </mat-accordion>
+  <a *ngIf="direcciones" class="app-a" routerLink="/facturacion/direcciones" routerLinkActive="router-link-active" >Ver todas</a>
+</div>

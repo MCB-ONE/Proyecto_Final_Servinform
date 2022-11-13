@@ -1,0 +1,24 @@
+<div class="app-dashboard">
+  <div class="spinner" *ngIf="isLoading$ | async">
+    <app-spinner></app-spinner>
+  </div>
+  <ng-container  *ngIf="!(isLoading$ | async)">
+    <div class="app-dashboard__main">
+      <div class="app-dashboard__header">
+        <h1>Direcciones</h1>
+      </div>
+      <app-table
+        *ngIf="empresa$ | async as selectedEmpresa"
+        [tableData]="selectedEmpresa.direcciones"
+        [tableColumns]="direccionesTableColumns"
+
+        [isPageable]="true"
+        [paginationSizes]="[2,4,6]"
+        [defaultPageSize]="4"
+      ></app-table>
+    </div>
+
+
+  </ng-container>
+
+</div>
