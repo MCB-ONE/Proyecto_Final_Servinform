@@ -4,7 +4,9 @@
   </div>
   <ng-container *ngIf="!(isLoading$ | async)">
     <div class="app-dashboard-main">
-      <app-empresa-info-display></app-empresa-info-display>
+      <app-empresa-info-display
+      title="Administrando"
+      ></app-empresa-info-display>
       <div>
         <app-counter-card *ngIf="empresa$ | async as selectedEmpresa" title="Clientes de {{selectedEmpresa.nombre}}"
           icon="group" count={{selectedEmpresa.clientes.length}} countSubtitle="Clientes totales"

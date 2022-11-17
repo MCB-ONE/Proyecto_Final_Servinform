@@ -1,5 +1,11 @@
 <div class="header">
-  <span class="header-subtitle">Administrando</span>
+  <span class="header-subtitle">
+    <ng-template *ngIf="icon">
+      <mat-icon>{{icon}}</mat-icon>
+    </ng-template>
+
+    {{title}}
+  </span>
   <div class="header-title">
     <div class="header-title-logo">
       <span>MS</span>
