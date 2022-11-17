@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ClienteRoutingModule } from './cliente-routing.module';
 import { ClienteComponent } from './cliente.component';
-import { SpinnerModule, TableModule } from '@app/shared';
+import { SpinnerModule} from '@app/shared';
+import { EmpresaInfoDisplayModule } from '../../components/empresa-info-display/empresa-info-display.module';
+import { ClientesTableModule } from './components/clientes-table/clientes-table.module';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
   declarations: [
-    ClienteComponent
+    ClienteComponent,
   ],
   imports: [
     CommonModule,
     ClienteRoutingModule,
     SpinnerModule,
-    TableModule
+    ClientesTableModule,
+    EmpresaInfoDisplayModule,
+    MatButtonModule
   ]
 })
 export class ClienteModule { }

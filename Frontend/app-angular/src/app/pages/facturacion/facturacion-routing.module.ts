@@ -12,11 +12,11 @@ const routes: Routes = [
         loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule)
       },
       {
-        path: 'empresa',
+        path: 'empresas',
         loadChildren: () => import('./pages/empresa/empresa.module').then(m => m.EmpresaModule)
       },
       {
-        path: 'cliente',
+        path: 'clientes',
         loadChildren: () => import('./pages/cliente/cliente.module').then(m => m.ClienteModule)
       },
       {

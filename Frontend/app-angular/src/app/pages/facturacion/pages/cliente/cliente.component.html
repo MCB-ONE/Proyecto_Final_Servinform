@@ -1,25 +1,26 @@
-<!-- <div class="app-dashboard">
-  <h1>Clientes</h1>
+<div class="app-dashboard">
   <div class="spinner" *ngIf="isLoading$ | async">
     <app-spinner></app-spinner>
   </div>
   <ng-container  *ngIf="!(isLoading$ | async)">
     <div class="app-dashboard__main">
-      <div class="app-dashboard__header">
-        <h1>Direcciones</h1>
-      </div>
-      <app-table
-        *ngIf="empresa$ | async as selectedEmpresa"
-        [tableData]="selectedEmpresa.direcciones"
+      <app-empresa-info-display
+      title="Clientes de"
+      ></app-empresa-info-display>
+      <app-clientes-table
+         class="app-table"
+        *ngIf="clientesPagination as clientes"
+        [tableData]="clientes.data"
         [tableColumns]="direccionesTableColumns"
-
         [isPageable]="true"
+        [isSortable]="true"
         [paginationSizes]="[2,4,6]"
-        [defaultPageSize]="4"
-      ></app-table>
+        [defaultPageSize]="clientes.pageSize"
+        [rowActionIcon]="'edit'"
+        (rowAction)="removeCliente($event)">
+      ></app-clientes-table>
+    <button mat-flat-button color="primary" routerLink="nuevo">Añadir cliente</button>
     </div>
-
-
   </ng-container>
 
-</div> -->
+</div>

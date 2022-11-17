@@ -8,11 +8,11 @@ const routes: Routes = [
     component: ClienteComponent
   },
   {
-    path: 'cliente/nueva',
+    path: 'nuevo',
     loadChildren: () => import('./pages/new-cliente/new-cliente.module').then(m=> m.NewClienteModule)
   },
   {
-    path: 'cliente/:id',
+    path: ':id',
     loadChildren: () => import('./pages/update-cliente/update-cliente.module').then(m=> m.UpdateClienteModule)
   },
   {

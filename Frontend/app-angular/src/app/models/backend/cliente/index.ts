@@ -5,6 +5,6 @@ export interface Cliente extends BaseEntity{
   nombre: string;
   nif: string;
   logo: string;
-  empresaId: number;
+  empresaId: string;
   direcciones: Direccion[];
 }

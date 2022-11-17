@@ -4,6 +4,7 @@ import { CounterCardComponent } from './counter-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    MatButtonModule,
     MatCardModule,
     MatIconModule,
     RouterModule

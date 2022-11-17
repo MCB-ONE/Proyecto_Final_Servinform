@@ -53,51 +53,11 @@ export class WelcomeComponent implements OnInit {
     })
 
     this.empresa$ = this.store.select(getActiveEmpresa) as Observable<Empresa | null>
-
-    this.initColumns();
 }
 
 onEmpresaSelect(empresaId: string) {
   this.store.dispatch(EmpresaActions.selectActiveEmpresa({ empresaId }))
   this.empresa$.subscribe(data => console.log(data))
-}
-
-initColumns(): void {
-  this.direccionesTableColumns = [
-    {
-      name: 'Calle',
-      dataKey: 'calle'
-    },
-    {
-      name: 'Numero',
-      dataKey: 'numero'
-    },
-    {
-      name: 'CodigoPostal',
-      dataKey: 'codigoPostal'
-    },
-    {
-      name: 'Provincia',
-      dataKey: 'provincia'
-    },
-    {
-      name: 'Pais',
-      dataKey: 'pais'
-    },
-    {
-      name: 'Telefono',
-      dataKey: 'telefono'
-    },
-    {
-      name: 'Email',
-      dataKey: 'email'
-    },
-    {
-      name: 'Web',
-      dataKey: 'web'
-    }
-
-  ];
 }
 
 }

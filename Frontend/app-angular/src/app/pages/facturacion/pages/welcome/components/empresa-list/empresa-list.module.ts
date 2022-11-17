@@ -4,6 +4,7 @@ import { EmpresaListComponent } from './empresa-list.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    MatButtonModule,
     MatIconModule,
     MatMenuModule,
     RouterModule

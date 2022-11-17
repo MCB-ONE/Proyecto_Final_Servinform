@@ -5,32 +5,30 @@ import {MatPaginator} from '@angular/material/paginator';
 import { TableColumn } from '@app/models/frontend';
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  selector: 'app-clientes-table',
+  templateUrl: './clientes-table.component.html',
+  styleUrls: ['./clientes-table.component.scss']
 })
-export class TableComponent implements OnInit {
+export class ClientesTableComponent implements OnInit, AfterViewInit {
   public tableDataSource = new MatTableDataSource<any>([]);
   public displayedColumns !: string[];
+
   @ViewChild(MatPaginator, {static: false}) matPaginator!: MatPaginator | null;
-  @ViewChild(MatSort, {static: true}) matSort !: MatSort;
+  @ViewChild(MatSort, {static: true}) matSort!: MatSort;
+
   constructor() { }
 
   @Input() isPageable = false;
   @Input() isSortable = false;
   @Input() isFilterable = false;
-  @Input() tableColumns!: TableColumn[];
-  @Input() rowActionIcon!: string;
+  @Input() tableColumns: TableColumn[] = [];
+  @Input() rowActionIcon: string ='';
   @Input() paginationSizes: number[] = [5, 10, 15];
   @Input() defaultPageSize = this.paginationSizes[1];
-
-  @Output() sort: EventEmitter<Sort> = new EventEmitter();
   @Output() rowAction: EventEmitter<any> = new EventEmitter<any>();
 
   // this property needs to have a setter, to dynamically get changes from parent component
-  @Input() set tableData(data: any[]) {
-    this.setTableDataSource(data);
-  }
+  @Input() tableData!: any[]
 
   ngOnInit(): void {
     const columnNames = this.tableColumns.map((tableColumn: TableColumn) => tableColumn.name);
@@ -40,15 +38,12 @@ export class TableComponent implements OnInit {
     } else {
       this.displayedColumns = columnNames;
     }
+
+    this.tableDataSource.data = this.tableData;
   }
 
   // we need this, in order to make pagination work with *ngIf
   ngAfterViewInit(): void {
-    this.tableDataSource.paginator = this.matPaginator;
-  }
-
-  setTableDataSource(data: any) {
-    this.tableDataSource = new MatTableDataSource<any>(data);
     this.tableDataSource.paginator = this.matPaginator;
     this.tableDataSource.sort = this.matSort;
   }
@@ -56,6 +51,14 @@ export class TableComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.tableDataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  sortTable(sortParameters: Sort) {
+    sortParameters.active = this.tableColumns.find(c => c.name == sortParameters.active)?.dataKey!
+  }
+
+  emitRowAction(row: any) {
+    this.rowAction.emit(row);
   }
 
 }
