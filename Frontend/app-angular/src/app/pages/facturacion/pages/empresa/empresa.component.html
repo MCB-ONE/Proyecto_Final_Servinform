@@ -6,6 +6,7 @@
     <div class="app-dashboard__main">
       <div class="app-dashboard__header">
         <h1>Empresas</h1>
+        <h2>Listado de empresas del USUARIO</h2>
       </div>
       <app-empresas-table
       class="app-table"
@@ -17,7 +18,8 @@
       [paginationSizes]="[2,4,6]"
       [defaultPageSize]="pagination.pageSize"
       [rowActionIcon]="'edit'"
-      (rowAction)="removeEmpresa($event)"
+      (selectEmpresa)="onEmpresaSelect($event)"
+      (removeEmpresa)="onRemoveEmpresa($event)"
       ></app-empresas-table>
       <button mat-flat-button color="primary" routerLink="nueva">Nueva empresa</button>
     </div>

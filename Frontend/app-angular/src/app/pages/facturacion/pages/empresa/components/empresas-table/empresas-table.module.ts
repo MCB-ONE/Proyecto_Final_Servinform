@@ -10,6 +10,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 
@@ -27,7 +28,8 @@ import { RouterModule } from '@angular/router';
     MatPaginatorModule,
     MatSortModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   ],
   exports: [
     EmpresasTableComponent

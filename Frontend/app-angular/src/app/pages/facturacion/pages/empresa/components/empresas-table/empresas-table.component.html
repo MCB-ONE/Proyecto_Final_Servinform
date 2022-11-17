@@ -13,11 +13,27 @@
 
     <!-- action column -->
     <ng-container *ngIf="rowActionIcon?.length" [matColumnDef]="rowActionIcon">
-      <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let element" [id]="rowActionIcon" routerLink="{{element.id}}"  (click)="emitRowAction(element)">
-        <button mat-button>
-          <mat-icon>{{rowActionIcon}}</mat-icon>
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let element" [id]="rowActionIcon">
+        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon"
+          [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
         </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="onSelected(element.id)">
+            <mat-icon>cached</mat-icon>
+            <span>Seleccionar</span>
+          </button>
+          <button mat-menu-item routerLink="{{element.id}}">
+            <mat-icon>edit</mat-icon>
+            <span>Editar</span>
+          </button>
+          <!-- TODO Delete action emmit-->
+          <button mat-menu-item  (click)="onSelected(element.id)">
+            <mat-icon>delete</mat-icon>
+            <span>Eliminar</span>
+          </button>
+        </mat-menu>
       </td>
     </ng-container>
 

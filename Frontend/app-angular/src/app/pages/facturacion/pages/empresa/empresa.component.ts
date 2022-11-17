@@ -1,12 +1,12 @@
 import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router"
 import { Pagination } from '@app/store/empresa/empresa.models';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as fromRoot from '@app/store/app.state';
-import { getActiveEmpresa, getLoading, getPagination } from '@app/store/empresa/empresa.selectors';
+import { getLoading, getPagination } from '@app/store/empresa/empresa.selectors';
 import { EmpresaActions } from '@app/store/empresa/empresa.actions';
-import { Empresa } from '@app/models/backend';
 import { TableColumn } from '@app/models/frontend';
 
 @Component({
@@ -18,13 +18,13 @@ export class EmpresaComponent implements OnInit {
   params = new HttpParams();
   isLoading$ !: Observable<boolean | null>;
   pagination$ !: Observable<Pagination>
-  empresa$ !: Observable<Empresa | null>
   pagination !: Pagination;
   empresasTableColumns !: TableColumn[];
 
 
   constructor(
     private store: Store<fromRoot.AppState>,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -38,21 +38,6 @@ export class EmpresaComponent implements OnInit {
     }))
     this.pagination$ = this.store.select(getPagination) as Observable<Pagination>
 
-    this.empresa$ = this.store.select(getActiveEmpresa) as Observable<Empresa | null>
-
-    // Activar ultima empresa creada
-    this.empresa$.subscribe((data) => {
-      if (data == undefined) {
-        this.pagination$.subscribe((data) => {
-          if (data) {
-            this.store.dispatch(EmpresaActions.selectActiveEmpresa({ empresaId: data.data[0].id }))
-          }
-        })
-      }
-    })
-
-    this.empresa$ = this.store.select(getActiveEmpresa) as Observable<Empresa | null>
-
     this.store.pipe(select(getPagination))
       .subscribe((data: any) => {
         this.pagination = data;
@@ -60,11 +45,6 @@ export class EmpresaComponent implements OnInit {
 
     this.initColumns();
 
-  }
-
-  onEmpresaSelect(empresaId: string) {
-    this.store.dispatch(EmpresaActions.selectActiveEmpresa({ empresaId }))
-    this.empresa$.subscribe(data => console.log(data))
   }
 
   initColumns(): void {
@@ -82,7 +62,13 @@ export class EmpresaComponent implements OnInit {
     ];
   }
 
-  removeEmpresa(empresaId: string) {
+  onEmpresaSelect(empresaId: string) {
+    this.store.dispatch(EmpresaActions.selectActiveEmpresa({ empresaId }))
+    this.router.navigate(['/facturacion/welcome'])
+  }
+
+  //TODO Método eliminar empresa
+  onRemoveEmpresa(empresaId: string) {
     console.log(empresaId);
   }
 

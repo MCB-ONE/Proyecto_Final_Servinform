@@ -17,20 +17,25 @@ export class EmpresasTableComponent implements OnInit {
   @ViewChild(MatPaginator, {static: false}) matPaginator!: MatPaginator | null;
   @ViewChild(MatSort, {static: true}) matSort!: MatSort;
 
-  constructor() { }
 
   @Input() isPageable = false;
   @Input() isSortable = false;
   @Input() isFilterable = false;
-  @Input() tableColumns: TableColumn[] = [];
+  @Input() tableColumns: TableColumn[] = []
   @Input() rowActionIcon: string ='';
   @Input() paginationSizes: number[] = [5, 10, 15];
   @Input() defaultPageSize = this.paginationSizes[1];
-  @Output() rowAction: EventEmitter<any> = new EventEmitter<any>();
 
+  @Output() selectEmpresa: EventEmitter<string>
+  @Output() removeEmpresa: EventEmitter<string>
 
   // this property needs to have a setter, to dynamically get changes from parent component
   @Input() tableData!: any[]
+
+  constructor() {
+    this.selectEmpresa = new EventEmitter();
+    this.removeEmpresa = new EventEmitter();
+   }
 
   ngOnInit(): void {
     const columnNames = this.tableColumns.map((tableColumn: TableColumn) => tableColumn.name);
@@ -42,6 +47,8 @@ export class EmpresasTableComponent implements OnInit {
     }
 
     this.tableDataSource.data = this.tableData;
+
+
   }
 
   // we need this, in order to make pagination work with *ngIf
@@ -59,8 +66,14 @@ export class EmpresasTableComponent implements OnInit {
     sortParameters.active = this.tableColumns.find(c => c.name == sortParameters.active)?.dataKey!
   }
 
-  emitRowAction(row: any) {
-    this.rowAction.emit(row);
+  onSelected(empresaId: string ){
+    console.log(empresaId);
+    this.selectEmpresa.emit(empresaId);
+  }
+
+  onRemove(empresaId: string ){
+    console.log(empresaId);
+    this.removeEmpresa.emit(empresaId);
   }
 
 }

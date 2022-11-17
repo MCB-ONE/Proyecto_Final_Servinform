@@ -19,7 +19,6 @@ export class EmpresaListComponent implements OnInit {
   }
 
   onSelected(empresaId: string ){
-    console.log(empresaId);
     this.selectEmpresa.emit(empresaId);
   }
 }
