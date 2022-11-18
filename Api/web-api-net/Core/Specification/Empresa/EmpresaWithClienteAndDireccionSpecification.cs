@@ -122,5 +122,11 @@ namespace Core.Specification.Empresa
             AddInclude(empresa => empresa.Clientes);
             AddInclude(empresa => empresa.Direcciones);
         }
+
+        public EmpresaWithClienteAndDireccionSpecification(bool isActive, string usuarioEmail) : base(x => x.isActive == true && x.EmailUsuario == usuarioEmail)
+        {
+            AddInclude(empresa => empresa.Clientes);
+            AddInclude(empresa => empresa.Direcciones);
+        }
     }
 }

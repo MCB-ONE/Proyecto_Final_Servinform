@@ -63,6 +63,19 @@ namespace WebApi.Controllers
             return Ok(_mapper.Map<EmpresaDto>(empresa));
         }
 
+        [HttpGet("active")]
+        [Authorize]
+        public async Task<ActionResult<List<EmpresaDto>>> GetUsuarioActiveEmpresa()
+        {
+            var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+
+            var spec = new EmpresaWithClienteAndDireccionSpecification(true, emailUsuario);
+
+            var empresa = await _repository.GetByIdWithSpecAsync(spec);
+
+            return Ok(_mapper.Map<EmpresaDto>(empresa));
+        }
+
         [HttpPost]
         [Authorize]
         public async Task<ActionResult<EmpresaDto>> CreateEmpresa(CreateEmpresaDto dto)
@@ -83,7 +96,7 @@ namespace WebApi.Controllers
 
         [HttpPut("actualizar/{id}")]
         [Authorize]
-        public async Task<ActionResult<List<EmpresaDto>>> UpdateEmpresa(int id, UpdateEmpresaDto empresaUpdated)
+        public async Task<ActionResult<EmpresaDto>> UpdateEmpresa(int id, UpdateEmpresaDto empresaUpdated)
         {
 
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
@@ -103,6 +116,27 @@ namespace WebApi.Controllers
             }
 
             return Ok(empresaUpdated);
+
+        }
+
+
+        [HttpPut("activate/{id}")]
+        [Authorize]
+        public async Task<ActionResult<EmpresaDto>> ActivarEmpresa(int id)
+        {
+
+            var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+
+
+            var result = await _repository.ActivateUsuarioEmpresa(id, emailUsuario);
+
+
+            if (result is null)
+            {
+                throw new Exception("No se ha podido activar la empresa");
+            }
+
+            return Ok(_mapper.Map<EmpresaDto>(result));
 
         }
 

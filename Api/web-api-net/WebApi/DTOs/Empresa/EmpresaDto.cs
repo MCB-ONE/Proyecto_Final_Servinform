@@ -12,6 +12,8 @@ namespace WebApi.DTOs.Empresa
         public string NIF { get; set; }
         public string Logo { get; set; }
 
+        public bool isActive { get; set; }
+
         public List<EmpresaCliente> Clientes { get; set; }
 
         public List<DireccionEmpresaDto> Direcciones { get; set; }

@@ -30,6 +30,13 @@ namespace BussinesLogic.Logic
             }
 
 
+            var total = await _context.Set<Empresa>().CountAsync();
+
+            if(total == 0)
+            {
+               empresa.isActive = true;
+            }
+
             empresa.EmailUsuario = emailUsuario;
 
             _context.Set<Empresa>().Add(empresa);
@@ -72,6 +79,55 @@ namespace BussinesLogic.Logic
 
             return await _context.SaveChangesAsync();
         }
+
+
+
+        public async Task<Empresa> ActivateUsuarioEmpresa(int empresaId, string usuarioEmail)
+        {
+            _logger.LogWarning($"{nameof(EmpresaRepository)} - {nameof(ActivateUsuarioEmpresa)} - Warning Level Log");
+            _logger.LogError($"{nameof(EmpresaRepository)} - {nameof(ActivateUsuarioEmpresa)} - Error Level Log");
+            _logger.LogCritical($"{nameof(EmpresaRepository)} - {nameof(ActivateUsuarioEmpresa)} - Critical Log Level");
+
+
+            //var empresa = await _context.Set<Empresa>().FindAsync(empresaId);
+
+            var empresa = await _context.Set<Empresa>()
+                .Include(e => e.Clientes)
+                .Include(e => e.Direcciones)
+                .FirstOrDefaultAsync(e => e.Id == empresaId);
+
+            var oldActiveEmpresa = await _context.Set<Empresa>()
+                .Where(e => e.isActive == true)           
+                .FirstOrDefaultAsync();
+
+
+            if ( empresa.EmailUsuario != usuarioEmail)
+            {
+                throw new ArgumentNullException("No se ha podido actualizar la empresa. Email de usuario logeado y email empresa a actualizarno coinciden");
+            }
+
+
+            empresa.isActive = true;
+            empresa.UpdatedAt = DateTime.Now;
+            empresa.IsDeleted = false;
+
+            if(oldActiveEmpresa is not null)
+            {
+                oldActiveEmpresa.isActive = false;
+            }
+
+            //_context.Set<Empresa>().Attach(empresa);
+            //_context.Entry(empresa).State = EntityState.Modified;
+            var result = await _context.SaveChangesAsync();
+
+            if(result == 0)
+            {
+                return null;
+            }
+
+            return empresa;
+        }
+
 
         public async Task<int> DeleteEmpresaUsuario(int id, string usuarioEmail)
         {
