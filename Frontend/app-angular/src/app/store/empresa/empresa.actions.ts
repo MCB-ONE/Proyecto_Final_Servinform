@@ -19,7 +19,7 @@ export const EmpresaActions = createActionGroup({
     'Read success': props<{ empresa: EmpresaResponse }>(),
     'Read error': props<{ error: string }>(),
 
-    // Get active emprea
+    // Get active empresa
     'Read active start': emptyProps(),
     'Read active success': props<{ empresa: EmpresaResponse }>(),
     'Read active error': props<{ error: string }>(),

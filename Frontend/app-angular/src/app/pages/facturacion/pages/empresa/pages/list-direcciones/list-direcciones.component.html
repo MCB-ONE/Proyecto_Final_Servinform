@@ -1,0 +1,25 @@
+<div class="app-dashboard">
+  <div class="spinner" *ngIf="!(empresa)">
+    <app-spinner></app-spinner>
+  </div>
+  <ng-container  *ngIf="empresa">
+    <div class="app-dashboard__main">
+      <div class="app-dashboard__header">
+        <h1 class="title">Direcciones</h1>
+        <h2 class="subtitle">Listado de {{empresa.nombre}}</h2>
+      </div>
+      <app-direcciones-table
+      class="app-table"
+      [tableData]="empresa.direcciones"
+      [tableColumns]="direccionesTableColumns"
+      [isPageable]="true"
+      [isSortable]="true"
+      [paginationSizes]="[2,4,6]"
+      [defaultPageSize]="5"
+      [rowActionIcon]="'edit'"
+      ></app-direcciones-table>
+      <button mat-flat-button color="primary" routerLink="/facturacion/empresas/direccion/nueva">Nueva direccion</button>
+    </div>
+  </ng-container>
+
+</div>

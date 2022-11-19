@@ -1,3 +1,4 @@
+
 <div class="app-dashboard">
   <div class="spinner" *ngIf="!(empresa$ | async)">
     <app-spinner></app-spinner>
@@ -11,18 +12,26 @@
       <div *ngIf="empresa">
         <app-counter-card
           title="Clientes de {{empresa.nombre}}"
-          icon="group" count={{empresa.clientes.length}} countSubtitle="Clientes totales"
-          link="/facturacion/clientes" linkText="Ver todos" buttonText="Añadir cliente"
+          icon="group" count={{empresa.clientes.length}}
+          countSubtitle="Clientes totales"
+          link="/facturacion/clientes"
+          linkText="Ver todos"
+          buttonText="Añadir cliente"
           buttonLink="/facturacion/clientes/nuevo"></app-counter-card>
 
-        <app-counter-card  title="Facturas de
-          {{empresa.nombre}}"
-          icon="list_alt" count="0" countSubtitle="Facturas totales" link="/facturacion/facturas" linkText="Ver todas"
-          buttonText="Generar factura"></app-counter-card>
+        <app-counter-card
+          title="Facturas de {{empresa.nombre}}"
+          icon="list_alt" count="0"
+          countSubtitle="Facturas totales"
+          link="/facturacion/facturas" linkText="Ver todas"
+          buttonText="Generar factura">
+        </app-counter-card>
 
         <app-counter-card
           title="Direcciones de {{empresa.nombre}}"
-          icon="location_on" count={{empresa.direcciones.length}} countSubtitle="Direcciones vinculadas" link=""
+          icon="location_on" count={{empresa.direcciones.length}}
+          countSubtitle="Direcciones vinculadas"
+          link="/facturacion/empresas/direcciones"
           linkText="Ver todas"
           buttonLink="/facturacion/empresas/direccion/nueva"
           buttonText="Añadir dirección"></app-counter-card>

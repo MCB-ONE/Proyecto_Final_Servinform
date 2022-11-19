@@ -62,6 +62,30 @@ export const empresaReducer = createReducer(
       error: error
     }
   }),
+   // Obtener empresa por id
+   on(EmpresaActions.readStart, (state) => {
+    return {
+      ...state,
+      loading: true,
+      error: null,
+    }
+  }),
+  on(EmpresaActions.readSuccess, (state, { empresa }) => {
+    return {
+      ...state,
+      loading: false,
+      error: null,
+      empresa: empresa
+    }
+  }),
+  on(EmpresaActions.readError, (state, { error }) => {
+    return {
+      ...state,
+      loading: false,
+      error: error,
+      empresa: null
+    }
+  }),
   // Creacion
   on(EmpresaActions.createStart, (state) => {
     return {
@@ -173,6 +197,8 @@ export const empresaReducer = createReducer(
       ...state
     }
   }),
+
+  // Select active cliente
   on(EmpresaActions.selectActiveCliente, (state, { clienteId }) => {
     return {
       ...state,

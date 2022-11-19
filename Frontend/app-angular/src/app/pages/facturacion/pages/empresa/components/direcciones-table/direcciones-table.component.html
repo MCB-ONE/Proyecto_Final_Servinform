@@ -20,7 +20,7 @@
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="onSelected(element.id)">
+          <button mat-menu-item >
             <mat-icon>cached</mat-icon>
             <span>Seleccionar</span>
           </button>
@@ -29,7 +29,7 @@
             <span>Editar</span>
           </button>
           <!-- TODO Delete action emmit-->
-          <button mat-menu-item  (click)="onRemove(element.id)">
+          <button mat-menu-item >
             <mat-icon>delete</mat-icon>
             <span>Eliminar</span>
           </button>

@@ -5,7 +5,7 @@ import { Pagination } from '@app/store/empresa/empresa.models';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as fromRoot from '@app/store/app.state';
-import { getLoading, getPagination } from '@app/store/empresa/empresa.selectors';
+import { getPagination } from '@app/store/empresa/empresa.selectors';
 import { EmpresaActions } from '@app/store/empresa/empresa.actions';
 import { TableColumn } from '@app/models/frontend';
 
@@ -28,14 +28,6 @@ export class EmpresaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.params = this.params.set('pageIndex', 1);
-    // this.params = this.params.set('pageSize', 3);
-    // this.params = this.params.set('sort', 'idDesc');
-    // this.isLoading$ = this.store.select(getLoading);
-    // this.store.dispatch(EmpresaActions.readAllStart({
-    //   requestPagination: this.params,
-    //   paramsUrl: this.params.toString()
-    // }))
     this.pagination$ = this.store.select(getPagination) as Observable<Pagination>
 
     this.store.pipe(select(getPagination))

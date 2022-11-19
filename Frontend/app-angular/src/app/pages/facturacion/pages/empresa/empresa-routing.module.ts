@@ -12,8 +12,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/new-empresa/new-empresa.module').then(m=> m.NewEmpresaModule)
   },
   {
-    path: ':id',
-    loadChildren: () => import('./pages/update-empresa/update-empresa.module').then(m=> m.UpdateEmpresaModule)
+    path: 'direcciones',
+    loadChildren: () => import('./pages/list-direcciones/list-direcciones.module').then(m=> m.ListDireccionesModule)
   },
   {
     path: 'direccion/nueva',
@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'direccion/:id',
     loadChildren: () => import('./pages/update-direccion/update-direccion.module').then(m=> m.UpdateDireccionModule)
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./pages/update-empresa/update-empresa.module').then(m=> m.UpdateEmpresaModule)
   }
 ];
 

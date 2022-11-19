@@ -75,6 +75,7 @@ export class UpdateEmpresaComponent implements OnInit {
       .subscribe(empresa => {
         if (empresa) {
           const form = this.mapperService.empresaToForm(empresa);
+          console.log(empresa);
           this.store.dispatch(EmpresaActions.formSet({ form: form }));
         }
       })

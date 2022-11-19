@@ -18,7 +18,7 @@ import { EmpresasTableModule } from './components/empresas-table/empresas-table.
   declarations: [
     EmpresaComponent,
     EmpresaListComponent,
-    EmpresaDetailComponent
+    EmpresaDetailComponent,
   ],
   imports: [
     CommonModule,
