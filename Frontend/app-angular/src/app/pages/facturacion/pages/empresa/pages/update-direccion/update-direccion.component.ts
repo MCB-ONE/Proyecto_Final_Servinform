@@ -7,9 +7,10 @@ import * as fromRoot from '@app/store/app.state';
 import { getDireccion, getFormState, getLoading } from '@app/store/direccion/direccion.selectors';
 import { DireccionCreateRequest, DireccionUpdateRequest } from '@app/store/direccion/direccion.models';
 import { DireccionActions } from '@app/store/direccion/direccion.actions';
-import { getActiveEmpresaId } from '@app/store/empresa/empresa.selectors';
+import { getActiveEmpresa } from '@app/store/empresa/empresa.selectors';
 import { ActivatedRoute, Params } from '@angular/router';
 import { MapperService } from '../../service';
+import { EmpresaResponse } from '@app/store/empresa/empresa.models';
 
 export interface DireccionForm {
   id: string | null;
@@ -36,7 +37,7 @@ export class UpdateDireccionComponent implements OnInit {
   loading$ !: Observable<boolean | null>
   form !: FormGroup;
   regexErrors = regexErrors;
-  empresaId$ !: Observable<string | null>
+  activeEmpresa$!: Observable<EmpresaResponse | null>
 
 
 
@@ -49,8 +50,7 @@ export class UpdateDireccionComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
-    this.empresaId$ = this.store.select(getActiveEmpresaId) as Observable<string | null>
+    this.activeEmpresa$ = this.store.select(getActiveEmpresa) as Observable<EmpresaResponse | null>
 
     this.form = this.fb.group({
       calle: [null, {
@@ -141,9 +141,9 @@ export class UpdateDireccionComponent implements OnInit {
 
     let empresaId!: string;
 
-    this.empresaId$.subscribe((data) => {
+    this.activeEmpresa$.subscribe((data) => {
       if(data){
-        return empresaId = data;
+        return empresaId = data.id;
       }
       return empresaId = '';
     })

@@ -18,6 +18,11 @@ export const EmpresaActions = createActionGroup({
     'Read start': props<{ empresaId: string }>(),
     'Read success': props<{ empresa: EmpresaResponse }>(),
     'Read error': props<{ error: string }>(),
+
+    // Get active emprea
+    'Read active start': emptyProps(),
+    'Read active success': props<{ empresa: EmpresaResponse }>(),
+    'Read active error': props<{ error: string }>(),
     // Creación
     'Create start': props<{ empresa: EmpresaCreateRequest }>(),
     'Create success': props<{ empresa: EmpresaResponse }>(),
@@ -34,7 +39,9 @@ export const EmpresaActions = createActionGroup({
     'Form clear': emptyProps(),
 
     // Seleccion empresa activa
-    'Select active empresa': props<{ empresaId: string }>(),
+    'Change active empresa start': props<{ empresaId: string }>(),
+    'Change active empresa success': props<{ empresa: EmpresaResponse }>(),
+    'Change active empresa error':  props<{ error: string }>(),
     // Seleccion cliente activo
     'Select active cliente': props<{ clienteId: string }>(),
   },

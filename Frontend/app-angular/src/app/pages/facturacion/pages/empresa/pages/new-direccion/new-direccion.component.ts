@@ -7,7 +7,8 @@ import * as fromRoot from '@app/store/app.state';
 import { getLoading } from '@app/store/direccion/direccion.selectors';
 import { DireccionCreateRequest } from '@app/store/direccion/direccion.models';
 import { DireccionActions } from '@app/store/direccion/direccion.actions';
-import { getActiveEmpresaId } from '@app/store/empresa/empresa.selectors';
+import { getActiveEmpresa } from '@app/store/empresa/empresa.selectors';
+import { EmpresaResponse } from '@app/store/empresa/empresa.models';
 
 @Component({
   selector: 'app-new-direccion',
@@ -19,7 +20,7 @@ export class NewDireccionComponent implements OnInit {
   loading$ !: Observable<boolean | null>
   form !: FormGroup;
   regexErrors = regexErrors;
-  empresaId$ !: Observable<string | null>
+  activeEmpresa$!: Observable<EmpresaResponse | null>
 
 
   constructor(
@@ -28,8 +29,7 @@ export class NewDireccionComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
-    this.empresaId$ = this.store.select(getActiveEmpresaId) as Observable<string | null>
+    this.activeEmpresa$ = this.store.select(getActiveEmpresa) as Observable<EmpresaResponse | null>
 
     this.form = this.fb.group({
       calle: [null, {
@@ -97,9 +97,9 @@ export class NewDireccionComponent implements OnInit {
 
     let empresaId!: string;
 
-    this.empresaId$.subscribe((data) => {
+    this.activeEmpresa$.subscribe((data) => {
       if(data){
-        return empresaId = data;
+        return empresaId = data.id;
       }
       return empresaId = '';
     })

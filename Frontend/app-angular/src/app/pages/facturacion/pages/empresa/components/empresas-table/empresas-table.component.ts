@@ -67,12 +67,10 @@ export class EmpresasTableComponent implements OnInit {
   }
 
   onSelected(empresaId: string ){
-    console.log(empresaId);
     this.selectEmpresa.emit(empresaId);
   }
 
   onRemove(empresaId: string ){
-    console.log(empresaId);
     this.removeEmpresa.emit(empresaId);
   }
 

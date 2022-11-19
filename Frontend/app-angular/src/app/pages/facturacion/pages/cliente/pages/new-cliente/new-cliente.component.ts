@@ -6,8 +6,9 @@ import { Observable } from 'rxjs';
 import { markFormGroupTouched, regex, regexErrors } from '@app/shared/utils';
 import { getLoading } from '@app/store/cliente/cliente.selectors';
 import { ClienteRequest } from '@app/store/cliente/cliente.models';
-import { getActiveEmpresaId } from '@app/store/empresa/empresa.selectors';
 import { ClienteActions } from '@app/store/cliente/cliente.actions';
+import { getActiveEmpresa } from '@app/store/empresa/empresa.selectors';
+import { EmpresaResponse } from '@app/store/empresa/empresa.models';
 
 @Component({
   selector: 'app-new-cliente',
@@ -16,7 +17,7 @@ import { ClienteActions } from '@app/store/cliente/cliente.actions';
 })
 export class NewClienteComponent implements OnInit {
   loading$ !: Observable<boolean | null>
-  empresaId$!: Observable<string | null>
+  activeEmpresa$!: Observable<EmpresaResponse | null>
   form !: FormGroup;
   regexErrors = regexErrors;
 
@@ -27,7 +28,7 @@ export class NewClienteComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.empresaId$ = this.store.select(getActiveEmpresaId) as Observable<string | null>
+    this.activeEmpresa$ = this.store.select(getActiveEmpresa) as Observable<EmpresaResponse | null>
 
     this.form = this.fb.group({
       nombre: [null, {
@@ -53,9 +54,9 @@ export class NewClienteComponent implements OnInit {
 
     let empresaId!: string;
 
-    this.empresaId$.subscribe((data) => {
+    this.activeEmpresa$.subscribe((data) => {
       if(data){
-        return empresaId = data;
+        return empresaId = data.id;
       }
       return empresaId = '';
     })

@@ -19,7 +19,7 @@ export class EmpresaEffects {
         this.httpClient.get<Pagination>(`${environment.url}/api/Empresa?${request}`)
           .pipe(
             map((pagination: any) =>
-            EmpresaActions.readAllSuccess({ pagination }),
+              EmpresaActions.readAllSuccess({ pagination }),
             ),
             catchError(error => of(EmpresaActions.readAllError({ error })))
           )
@@ -72,6 +72,38 @@ export class EmpresaEffects {
             map((empresa: EmpresaResponse) => EmpresaActions.readSuccess({ empresa })
             ),
             catchError(error => of(EmpresaActions.readError({ error })))
+          )
+      )
+    )
+  );
+
+  readActive$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(EmpresaActions.readActiveStart),
+      switchMap(() =>
+        this.httpClient.get<EmpresaResponse>(`${environment.url}/api/Empresa/active`)
+          .pipe(
+            map((empresa: EmpresaResponse) => EmpresaActions.readActiveSuccess({ empresa }),
+            ),
+            catchError(error => of(EmpresaActions.readActiveError({ error })))
+          )
+      )
+    )
+  );
+
+  changeActive$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(EmpresaActions.changeActiveEmpresaStart),
+      map((action) => action.empresaId),
+      switchMap((id: string) =>
+        this.httpClient.put<EmpresaResponse>(`${environment.url}/api/Empresa/activate/${id}`, null)
+          .pipe(
+            tap(() => {
+              this.router.navigate(['/facturacion/welcome'])
+            }),
+            map((empresa: EmpresaResponse) => EmpresaActions.changeActiveEmpresaSuccess({ empresa })
+            ),
+            catchError(error => of(EmpresaActions.changeActiveEmpresaError({ error })))
           )
       )
     )

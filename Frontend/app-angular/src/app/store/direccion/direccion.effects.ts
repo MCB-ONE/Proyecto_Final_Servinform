@@ -20,7 +20,7 @@ export class DireccionEffects {
           .pipe(
             tap((direccion: DireccionResponse) => {
               console.log(direccion)
-              this.router.navigate(['/facturacion/empresa'])
+              this.router.navigate(['/facturacion/welcome'])
             }),
             map((direccion: DireccionResponse) => DireccionActions.createSuccess({ direccion }),
             ),
@@ -39,7 +39,7 @@ export class DireccionEffects {
         this.httpClient.put<DireccionResponse>(`${environment.url}/api/DireccionEmpresa/actualizar/${action.direccionId}`, action.direccion)
           .pipe(
             tap((direccion: DireccionResponse) => {
-              this.router.navigate(['/facturacion/empresa'])
+              this.router.navigate(['/facturacion/welcome'])
             }),
             map((direccion: DireccionResponse) => DireccionActions.updateSuccess({ direccion }),
             ),

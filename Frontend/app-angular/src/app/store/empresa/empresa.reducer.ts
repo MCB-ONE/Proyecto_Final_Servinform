@@ -18,7 +18,7 @@ const initialFormSatate: FormState = {
 export interface EmpresaState {
   pagination: Pagination | null;
   requestPagination: HttpParams | null;
-  activeEmpresaId: string | null;
+  activeEmpresa: Empresa | null;
   empresa: Empresa | null;
   activeClienteId: string | null;
   form: FormState;
@@ -29,12 +29,12 @@ export interface EmpresaState {
 const initialState: EmpresaState = {
   pagination: null,
   requestPagination: null,
-  activeEmpresaId: null,
+  activeEmpresa: null,
   empresa: null,
   activeClienteId: null,
   form: initialFormSatate,
   loading: null,
-  error: null
+  error: null,
 };
 
 export const empresaReducer = createReducer(
@@ -110,28 +110,49 @@ export const empresaReducer = createReducer(
       empresa: null
     }
   }),
-  // Obtener empresa por id
-  on(EmpresaActions.readStart, (state) => {
+  // Obtener empresa activa
+  on(EmpresaActions.readActiveStart, (state) => {
     return {
       ...state,
       loading: true,
       error: null,
     }
   }),
-  on(EmpresaActions.readSuccess, (state, { empresa }) => {
+  on(EmpresaActions.readActiveSuccess, (state, { empresa }) => {
     return {
       ...state,
       loading: false,
       error: null,
-      empresa: empresa
+      activeEmpresa: empresa
     }
   }),
-  on(EmpresaActions.readError, (state, { error }) => {
+  on(EmpresaActions.readActiveError, (state, { error }) => {
     return {
       ...state,
       loading: false,
       error: error,
-      empresa: null
+      activeEmpresa: null
+    }
+  }),
+  on(EmpresaActions.changeActiveEmpresaStart, (state) => {
+    return {
+      ...state,
+      loading: true
+    }
+  }),
+  on(EmpresaActions.changeActiveEmpresaSuccess, (state, { empresa }) => {
+    return {
+      ...state,
+      loading: false,
+      activeEmpresa: empresa
+    }
+  }),
+  on(EmpresaActions.changeActiveEmpresaError, (state, { error }) => {
+    return {
+      ...state,
+      loading: false,
+      activeEmpresa: null,
+      error: error
     }
   }),
   // Formulario
@@ -150,13 +171,6 @@ export const empresaReducer = createReducer(
   on(EmpresaActions.formClear, (state) => {
     return {
       ...state
-    }
-  }),
-  // Activar entidades
-  on(EmpresaActions.selectActiveEmpresa, (state, { empresaId }) => {
-    return {
-      ...state,
-      activeEmpresaId: empresaId
     }
   }),
   on(EmpresaActions.selectActiveCliente, (state, { clienteId }) => {

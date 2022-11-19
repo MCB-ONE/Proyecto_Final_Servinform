@@ -40,14 +40,19 @@ export const getFormState = createSelector(
   (state: EmpresaState) => state.form
 )
 
-export const getActiveEmpresaId = createSelector(
-  selectEmpresaFeature,
-  (state: EmpresaState) => state.activeEmpresaId
-)
-export const getActiveEmpresa = createSelector(
+export const empresaExist = (id: string)  => createSelector(
   getEmpresas,
-  getActiveEmpresaId,
-  (empresas, selectedId) => empresas?.find(e => e.id == selectedId)
+  (empresas): boolean => {
+    if(empresas != undefined){
+      return empresas.some(empresa => empresa.id == id);
+    }
+    return false;
+  }
+)
+
+export const getActiveEmpresa = createSelector(
+  selectEmpresaFeature,
+  (state: EmpresaState) => state.activeEmpresa
 )
 
 export const getActiveClienteId = createSelector(

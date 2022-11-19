@@ -5,7 +5,7 @@ import * as fromRoot from '@app/store/app.state';
 import { Observable } from 'rxjs';
 import { markFormGroupTouched, regex, regexErrors } from '@app/shared/utils';
 import { getEmpresa, getFormState, getLoading } from '@app/store/empresa/empresa.selectors';
-import { EmpresaCreateRequest, EmpresaUpdateRequest } from '@app/store/empresa/empresa.models';
+import { EmpresaUpdateRequest } from '@app/store/empresa/empresa.models';
 import { EmpresaActions } from '@app/store/empresa/empresa.actions';
 import { ActivatedRoute, Params } from '@angular/router';
 import { MapperService } from '../../service';

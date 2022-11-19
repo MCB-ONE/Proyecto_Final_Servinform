@@ -13,6 +13,7 @@ export class CounterCardComponent implements OnInit {
   @Input() countSubtitle !: string;
   @Input() link !: string;
   @Input() linkText !: string;
+  @Input() buttonLink !: string;
   @Input() buttonText !: string;
 
   constructor() { }

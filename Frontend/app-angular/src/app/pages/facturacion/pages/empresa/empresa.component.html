@@ -1,8 +1,8 @@
 <div class="app-dashboard">
-  <div class="spinner" *ngIf="isLoading$ | async">
+  <div class="spinner" *ngIf="!(pagination$ | async)">
     <app-spinner></app-spinner>
   </div>
-  <ng-container  *ngIf="!(isLoading$ | async)">
+  <ng-container  *ngIf="pagination$ | async">
     <div class="app-dashboard__main">
       <div class="app-dashboard__header">
         <h1>Empresas</h1>
@@ -10,8 +10,7 @@
       </div>
       <app-empresas-table
       class="app-table"
-      *ngIf="pagination as pagintation"
-      [tableData]="pagintation.data"
+      [tableData]="pagination.data"
       [tableColumns]="empresasTableColumns"
       [isPageable]="true"
       [isSortable]="true"

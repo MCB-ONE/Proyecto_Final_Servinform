@@ -21,7 +21,7 @@
             <mat-icon>edit</mat-icon>
             <span>Editar</span>
           </button>
-          <button mat-menu-item routerLink="facturacion/profile" routerLinkActive="app-a_active">
+          <button mat-menu-item (click)="onSelected(empresa.id)">
             <mat-icon>delete</mat-icon>
             <span>Eliminar</span>
           </button>

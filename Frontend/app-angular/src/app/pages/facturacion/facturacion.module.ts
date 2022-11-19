@@ -7,7 +7,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { FacturacionHeaderComponent } from '@app/pages/facturacion/components/facturacion-header/facturacion-header.component';
 import { MenuListComponent } from '@app/components/menu-list/menu-list.component';
 import { MatListModule } from '@angular/material/list';
 import { FormFieldModule, SelectModule } from '@app/shared';

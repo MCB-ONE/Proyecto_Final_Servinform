@@ -10,9 +10,12 @@ export class EmpresaListComponent implements OnInit {
 
   @Input() empresas !: Empresa[];
   @Output() selectEmpresa: EventEmitter<string>
+  @Output() removeEmpresa: EventEmitter<string>
+
 
   constructor() {
     this.selectEmpresa = new EventEmitter();
+    this.removeEmpresa = new EventEmitter();
    }
 
   ngOnInit(): void {
@@ -20,5 +23,9 @@ export class EmpresaListComponent implements OnInit {
 
   onSelected(empresaId: string ){
     this.selectEmpresa.emit(empresaId);
+  }
+
+  onRemove(empresaId: string ){
+    this.removeEmpresa.emit(empresaId);
   }
 }

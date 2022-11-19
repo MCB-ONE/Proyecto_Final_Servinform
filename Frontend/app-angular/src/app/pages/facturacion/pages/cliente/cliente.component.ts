@@ -34,7 +34,7 @@ export class ClienteComponent implements OnInit {
 
     this.params = this.params.set('pageIndex', 1);
     this.params = this.params.set('pageSize', 5);
-    this.isLoading$ = this.store.select(getLoading);
+    this.isLoading$ = this.store.pipe(select(getLoading));
     this.empresa$ = this.store.select(getActiveEmpresa) as Observable<Empresa | null>
     this.empresa$.subscribe((data) => {
       if (data != null) {

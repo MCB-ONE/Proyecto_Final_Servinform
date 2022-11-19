@@ -54,7 +54,7 @@ export class ClienteEffects {
         this.httpClient.put<ClienteRequestResponse>(`${environment.url}/api/Cliente/actualizar/${action.clienteId}`, action.cliente)
           .pipe(
             tap((cliente: ClienteRequestResponse) => {
-              this.router.navigate(['/facturacion/empresa'])
+              this.router.navigate(['/facturacion/welcome'])
             }),
             map((cliente: ClienteRequestResponse) => ClienteActions.updateSuccess({ cliente }),
             ),

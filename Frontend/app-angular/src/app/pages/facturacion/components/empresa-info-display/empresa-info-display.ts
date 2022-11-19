@@ -13,7 +13,7 @@ export class EmpresaInfoDisplayComponent implements OnInit {
 
   @Input() title!: string;
   @Input() icon: string | null = null;
-  empresa !: Empresa;
+  @Input() empresa !: Empresa;
 
   constructor(private store: Store<fromRoot.AppState>,) { }
 
