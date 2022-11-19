@@ -7956,6 +7956,7 @@ File name: 'Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=6.0.0.0, Cu
 2022-11-10 19:22:14.078 +01:00 [ERR] GenericRepository - GetByIdWithSpecAsync - Error Level Log
 2022-11-10 19:22:14.082 +01:00 [FTL] GenericRepository - GetByIdWithSpecAsync - Critical Log Level
 2022-11-10 19:22:15.008 +01:00 [INF] HTTP GET /api/DireccionEmpresa/7 responded 200 in 937.5462 ms
+<<<<<<< HEAD
 2022-11-10 19:26:57.413 +01:00 [INF] Now listening on: https://localhost:7261
 2022-11-10 19:26:57.447 +01:00 [INF] Now listening on: http://localhost:5261
 2022-11-10 19:26:57.452 +01:00 [INF] Application started. Press Ctrl+C to shut down.
@@ -20242,3 +20243,5 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2022-11-19 21:22:19.035 +01:00 [ERR] EmpresaRepository - ActivateUsuarioEmpresa - Error Level Log
 2022-11-19 21:22:19.041 +01:00 [FTL] EmpresaRepository - ActivateUsuarioEmpresa - Critical Log Level
 2022-11-19 21:22:19.139 +01:00 [INF] HTTP PUT /api/Empresa/activate/11 responded 200 in 111.4610 ms
+=======
+>>>>>>> DevApi-CRUDFacturas
