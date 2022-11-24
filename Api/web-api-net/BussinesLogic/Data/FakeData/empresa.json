@@ -4,7 +4,8 @@
     "Nombre": "Empresa Test",
     "NIF": "43007288E",
     "Logo": null,
-    "IsDeleted": false
+    "IsDeleted": false,
+    "isActive":  true
   },
   {
     "EmailUsuario": "usuario.test@gmail.com",

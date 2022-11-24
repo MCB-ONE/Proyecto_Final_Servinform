@@ -1,20 +1,20 @@
 ﻿[
   {
-    "Nombre": "Cliente test",
+    "Nombre": "Cliente 1 empresa test 1",
     "NIF": "41799911R",
     "Logo": null,
     "EmpresaId": 1,
     "IsDeleted": false
   },
   {
-    "Nombre": "Cliente Test 2",
+    "Nombre": "Cliente 2 empresa test 1",
     "NIF": "89037657Y",
     "Logo": null,
     "EmpresaId": 1,
     "IsDeleted": false
   },
   {
-    "Nombre": "Cliente Test 3",
+    "Nombre": "Cliente 3 empresa test 1",
     "NIF": "00564289U",
     "Logo": null,
     "EmpresaId": 1,

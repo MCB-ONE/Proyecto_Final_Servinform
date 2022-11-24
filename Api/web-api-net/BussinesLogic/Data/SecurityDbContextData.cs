@@ -12,14 +12,14 @@ namespace BussinesLogic.Data
             if (!userManager.Users.Any())
             {
                 var usuario = new Usuario{
-                    Nombre = "Admin",
+                    Nombre = "Usuario",
                     Apellido = "Test",
-                    UserName = "AdminTest",
-                    Email = "admin.test@gmail.com",
+                    UserName = "UsuarioTest",
+                    Email = "usuario.test@gmail.com",
                     
                 };
 
-                await userManager.CreateAsync(usuario, "Admin1234$");
+                await userManager.CreateAsync(usuario, "UsuarioTest1234$");
             }
 
             if (!roleManager.Roles.Any())

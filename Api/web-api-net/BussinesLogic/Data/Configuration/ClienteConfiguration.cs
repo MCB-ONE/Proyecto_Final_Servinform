@@ -22,6 +22,11 @@ namespace BussinesLogic.Data.Configuration
                 .HasForeignKey(a => a.ClienteId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            builder.HasMany(c => c.Facturas)
+                .WithOne(a => a.Cliente)
+                .HasForeignKey(a => a.ClienteId)
+                .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

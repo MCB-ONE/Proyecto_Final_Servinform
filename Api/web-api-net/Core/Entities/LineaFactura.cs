@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class LineaFactura
+    public class LineaFactura: BaseEntity
     {
-        public string Producto { get; set; }
-        public string Descripcion { get; set; }
+        public string Concepto { get; set; }
         public decimal PrecioUnitario { get; set; }
         public int Cantidad { get; set; }
         public decimal Total { get; set; }
+        public int FacturaId { get; set; }
+        public Factura Factura { get; set; }
 
     }
 }

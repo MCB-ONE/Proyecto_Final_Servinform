@@ -9,6 +9,7 @@ namespace Core.Entities
     public class DireccionCliente: BaseDireccion
     {
         public int ClienteId { get; set; }
-        public Cliente Cliente { get; set; }    
+        public Cliente Cliente { get; set; }
+        public HashSet<Factura> Facturas { get; set; }
     }
 }

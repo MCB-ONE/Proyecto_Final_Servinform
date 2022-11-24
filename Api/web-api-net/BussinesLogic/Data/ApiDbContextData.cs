@@ -11,7 +11,7 @@ namespace BussinesLogic.Data
 {
     public class ApiDbContextData
     {
-        public static async Task CargarDataAsync(ApiDbContext context, ILoggerFactory loggerFactory)
+        public static async Task SeedDataAsync(ApiDbContext context, ILoggerFactory loggerFactory)
         {
             try
             {

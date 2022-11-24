@@ -7,15 +7,28 @@ using System.Threading.Tasks;
 namespace Core.Entities
 
 {
-    public class Factura
+    public class Factura: BaseEntity
     {
         public int Numero { get; set; }
-        public int FechaExpedicion { get; set; }
-
-        public decimal BaseImponible { get; set; }
-        public Iva IVA { get; set; }
-        public Irpf IRPF { get; set; }
+        public DateTime FechaExpedicion { get; set; }    
+        public decimal Subtotal { get; set; }
+        public int Iva { get; set; }
         public decimal Total { get; set; }
+
+        // Navigation properties
+        public int EmpresaId { get; set; }
+        public Empresa Empresa { get; set; }
+
+        public int ClienteId { get; set; }
+        public Cliente Cliente { get; set; }
+
+        public int DireccionEmpresaId { get; set; }
+        public DireccionEmpresa DireccionEmpresa { get;set; }
+
+        public int DireccionClienteId { get; set; }
+        public DireccionCliente DireccionCliente { get;set; }
+
+        public HashSet<LineaFactura> LineasFactura { get; set; }
 
     }
 }

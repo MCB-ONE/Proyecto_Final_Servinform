@@ -29,6 +29,10 @@ namespace BussinesLogic.Data.Configuration
             builder.Property(p => p.Pais)
                 .HasMaxLength(50)
                 .IsRequired();
+            builder.HasMany(c => c.Facturas)
+                .WithOne(a => a.DireccionCliente)
+                .HasForeignKey(a => a.DireccionClienteId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

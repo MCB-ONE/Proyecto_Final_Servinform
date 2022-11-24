@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BussinesLogic.Data.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20221118194208_alterar_tabla_empresas_isActive")]
-    partial class alterar_tabla_empresas_isActive
+    [Migration("20221124223250_create_tables_and_relations")]
+    partial class create_tables_and_relations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -83,16 +83,21 @@ namespace BussinesLogic.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Calle")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Ciudad")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
                     b.Property<string>("CodigoPostal")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("date");
@@ -113,10 +118,14 @@ namespace BussinesLogic.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Pais")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Provincia")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Telefono")
                         .HasColumnType("int");
@@ -228,7 +237,8 @@ namespace BussinesLogic.Data.Migrations
 
                     b.Property<string>("EmailUsuario")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -254,11 +264,131 @@ namespace BussinesLogic.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isActive")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.HasKey("Id");
 
                     b.ToTable("Empresa");
+                });
+
+            modelBuilder.Entity("Core.Entities.Factura", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("date");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("date");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DireccionClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DireccionEmpresaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmpresaId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaExpedicion")
+                        .HasColumnType("date");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Iva")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Numero")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Subtotal")
+                        .HasColumnType("decimal(18,4)");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18,4)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("date");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
+
+                    b.HasIndex("DireccionClienteId");
+
+                    b.HasIndex("DireccionEmpresaId");
+
+                    b.HasIndex("EmpresaId");
+
+                    b.ToTable("Factura");
+                });
+
+            modelBuilder.Entity("Core.Entities.LineaFactura", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Cantidad")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<string>("Concepto")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("date");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("date");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FacturaId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("PrecioUnitario")
+                        .HasColumnType("decimal(18,4)");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18,4)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("date");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FacturaId");
+
+                    b.ToTable("LineaFactura");
                 });
 
             modelBuilder.Entity("Core.Entities.Cliente", b =>
@@ -294,9 +424,67 @@ namespace BussinesLogic.Data.Migrations
                     b.Navigation("Empresa");
                 });
 
+            modelBuilder.Entity("Core.Entities.Factura", b =>
+                {
+                    b.HasOne("Core.Entities.Cliente", "Cliente")
+                        .WithMany("Facturas")
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Core.Entities.DireccionCliente", "DireccionCliente")
+                        .WithMany("Facturas")
+                        .HasForeignKey("DireccionClienteId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Core.Entities.DireccionEmpresa", "DireccionEmpresa")
+                        .WithMany("Facturas")
+                        .HasForeignKey("DireccionEmpresaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Core.Entities.Empresa", "Empresa")
+                        .WithMany("Facturas")
+                        .HasForeignKey("EmpresaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
+
+                    b.Navigation("DireccionCliente");
+
+                    b.Navigation("DireccionEmpresa");
+
+                    b.Navigation("Empresa");
+                });
+
+            modelBuilder.Entity("Core.Entities.LineaFactura", b =>
+                {
+                    b.HasOne("Core.Entities.Factura", "Factura")
+                        .WithMany("LineasFactura")
+                        .HasForeignKey("FacturaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Factura");
+                });
+
             modelBuilder.Entity("Core.Entities.Cliente", b =>
                 {
                     b.Navigation("Direcciones");
+
+                    b.Navigation("Facturas");
+                });
+
+            modelBuilder.Entity("Core.Entities.DireccionCliente", b =>
+                {
+                    b.Navigation("Facturas");
+                });
+
+            modelBuilder.Entity("Core.Entities.DireccionEmpresa", b =>
+                {
+                    b.Navigation("Facturas");
                 });
 
             modelBuilder.Entity("Core.Entities.Empresa", b =>
@@ -304,6 +492,13 @@ namespace BussinesLogic.Data.Migrations
                     b.Navigation("Clientes");
 
                     b.Navigation("Direcciones");
+
+                    b.Navigation("Facturas");
+                });
+
+            modelBuilder.Entity("Core.Entities.Factura", b =>
+                {
+                    b.Navigation("LineasFactura");
                 });
 #pragma warning restore 612, 618
         }

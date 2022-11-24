@@ -14,6 +14,7 @@ namespace Core.Entities
         public HashSet<DireccionCliente> Direcciones { get; set; }
         public int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
+        public HashSet<Factura> Facturas { get; set; }
 
     }
 }

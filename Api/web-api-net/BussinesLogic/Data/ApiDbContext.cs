@@ -23,13 +23,18 @@ namespace BussinesLogic.Data
             modelBuilder.ApplyConfiguration(new EmpresaConfiguration());
             modelBuilder.ApplyConfiguration(new ClienteConfiguration());
             modelBuilder.ApplyConfiguration(new DireccionEmpresaConfiguration());
-
+            modelBuilder.ApplyConfiguration(new DireccionClienteConfiguration());
+            modelBuilder.ApplyConfiguration(new FacturaConfiguration());
+            modelBuilder.ApplyConfiguration(new LineaFacturaConfiguration());
         }
 
         public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<DireccionEmpresa> DireccionEmpresa { get; set; }
         public DbSet<DireccionCliente> DireccionCliente { get; set; }
+
+        public DbSet<Factura> Factura { get; set; }
+        public DbSet<LineaFactura> LineaFactura { get; set; }
 
     }
 }

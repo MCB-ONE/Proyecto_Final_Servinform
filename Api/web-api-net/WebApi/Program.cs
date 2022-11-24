@@ -169,7 +169,7 @@ async void  RunMigration()
         // Seeding data inicial de las tablas de entidades no relacionadas con la seguridad
         var apiContext = serviceScope.ServiceProvider.GetRequiredService<ApiDbContext>();
         await apiContext.Database.MigrateAsync();
-        await ApiDbContextData.CargarDataAsync(apiContext, loggerFactory);
+        await ApiDbContextData.SeedDataAsync(apiContext, loggerFactory);
 
 
     }
