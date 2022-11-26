@@ -3,7 +3,7 @@ namespace Core.Specification.DireccionEmpresa
 {
     public class DireccionEmpresaForCountingSpecification : BaseSpecification<Core.Entities.DireccionEmpresa>
     {
-        public DireccionEmpresaForCountingSpecification(DireccionSpecificationParams direccionParams)
+        public DireccionEmpresaForCountingSpecification(SpecificationParams direccionParams)
             : base(x =>
                 (
                     string.IsNullOrEmpty(direccionParams.Search)

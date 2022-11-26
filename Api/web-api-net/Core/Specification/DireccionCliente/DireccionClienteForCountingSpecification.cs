@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Core.Specification.Direccion
 {
     public class DireccionClienteForCountingSpecification : BaseSpecification<Core.Entities.DireccionCliente>
     {
-        public DireccionClienteForCountingSpecification(DireccionSpecificationParams direccionParams)
+        public DireccionClienteForCountingSpecification(SpecificationParams direccionParams)
             : base(x =>
                 (
                     string.IsNullOrEmpty(direccionParams.Search)

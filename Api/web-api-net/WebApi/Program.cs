@@ -17,6 +17,7 @@ using WebApi.DTOs.Usuario;
 using Serilog;
 using WebApi.DTOs.Direccion.DireccionEmpresa;
 using WebApi.DTOs.Direccion.DireccionCliente;
+using WebApi.DTOs.Factura;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -99,6 +100,7 @@ builder.Services.AddAutoMapper(typeof(EmpresaMappingProfile));
 builder.Services.AddAutoMapper(typeof(ClienteMappingProfile));
 builder.Services.AddAutoMapper(typeof(DireccionEmpresaMappingProfile));
 builder.Services.AddAutoMapper(typeof(DireccionClienteMappingProfile));
+builder.Services.AddAutoMapper(typeof(FacturaMappingProfile));
 // Configuramos los controladores para que ignoren los posibles ciclos de entidades anidadas/ relacionadas
 builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
@@ -108,6 +110,7 @@ builder.Services.AddScoped(typeof(IGenericSecurityRepository<>), typeof(GenericS
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>)); 
 builder.Services.AddScoped(typeof(IEmpresaRepository), typeof(EmpresaRepository));
 builder.Services.AddScoped(typeof(IClienteRepository), typeof(ClienteRepository));
+builder.Services.AddScoped(typeof(IFacturaRepository), typeof(FacturaRepository));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -8,7 +8,7 @@ namespace Core.Specification.Empresa
 {
     public class EmpresaForCountingSpecification : BaseSpecification<Core.Entities.Empresa>
     {
-        public EmpresaForCountingSpecification(EmpresaSpecificationParams empresaParams)
+        public EmpresaForCountingSpecification(SpecificationParams empresaParams)
             : base(x =>  
                 (
                     string.IsNullOrEmpty(empresaParams.Search) 
@@ -19,7 +19,7 @@ namespace Core.Specification.Empresa
 
         }
 
-        public EmpresaForCountingSpecification(EmpresaSpecificationParams empresaParams, string emailUsuario)
+        public EmpresaForCountingSpecification(SpecificationParams empresaParams, string emailUsuario)
     : base(x =>
            x.EmailUsuario == emailUsuario &&
         (

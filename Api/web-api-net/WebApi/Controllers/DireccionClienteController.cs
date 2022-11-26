@@ -3,7 +3,6 @@ using Core.Entities;
 using Core.Interfaces;
 using Core.Specification;
 using Core.Specification.Direccion;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.DTOs;
 using WebApi.DTOs.Direccion.DireccionCliente;
@@ -22,7 +21,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Pagination<DireccionClienteDto>>> GetAllDireccion([FromQuery] DireccionSpecificationParams direccionParams)
+        public async Task<ActionResult<Pagination<DireccionClienteDto>>> GetAllDireccion([FromQuery] SpecificationParams direccionParams)
         {
 
             var spec = new DireccionClienteWithClienteSpecification(direccionParams);

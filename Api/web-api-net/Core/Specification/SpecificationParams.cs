@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Specification
 {
-    public class DireccionSpecificationParams
+    public class SpecificationParams
     {
         public string Sort { get; set; }
 

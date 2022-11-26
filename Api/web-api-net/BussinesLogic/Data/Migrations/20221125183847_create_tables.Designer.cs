@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BussinesLogic.Data.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20221124223250_create_tables_and_relations")]
-    partial class create_tables_and_relations
+    [Migration("20221125183847_create_tables")]
+    partial class create_tables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -302,8 +302,8 @@ namespace BussinesLogic.Data.Migrations
                     b.Property<int>("EmpresaId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaExpedicion")
-                        .HasColumnType("date");
+                    b.Property<DateTimeOffset>("FechaExpedicion")
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -337,58 +337,6 @@ namespace BussinesLogic.Data.Migrations
                     b.HasIndex("EmpresaId");
 
                     b.ToTable("Factura");
-                });
-
-            modelBuilder.Entity("Core.Entities.LineaFactura", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Cantidad")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(1);
-
-                    b.Property<string>("Concepto")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("date");
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("date");
-
-                    b.Property<string>("DeletedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("FacturaId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<decimal>("PrecioUnitario")
-                        .HasColumnType("decimal(18,4)");
-
-                    b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,4)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("date");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FacturaId");
-
-                    b.ToTable("LineaFactura");
                 });
 
             modelBuilder.Entity("Core.Entities.Cliente", b =>
@@ -450,6 +398,37 @@ namespace BussinesLogic.Data.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.OwnsMany("Core.Entities.LineaFactura", "LineasFactura", b1 =>
+                        {
+                            b1.Property<int>("FacturaId")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int");
+
+                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"), 1L, 1);
+
+                            b1.Property<int>("Cantidad")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Concepto")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<decimal>("PrecioUnitario")
+                                .HasColumnType("decimal(18,2)");
+
+                            b1.Property<decimal>("Total")
+                                .HasColumnType("decimal(18,2)");
+
+                            b1.HasKey("FacturaId", "Id");
+
+                            b1.ToTable("LineaFactura");
+
+                            b1.WithOwner()
+                                .HasForeignKey("FacturaId");
+                        });
+
                     b.Navigation("Cliente");
 
                     b.Navigation("DireccionCliente");
@@ -457,17 +436,8 @@ namespace BussinesLogic.Data.Migrations
                     b.Navigation("DireccionEmpresa");
 
                     b.Navigation("Empresa");
-                });
 
-            modelBuilder.Entity("Core.Entities.LineaFactura", b =>
-                {
-                    b.HasOne("Core.Entities.Factura", "Factura")
-                        .WithMany("LineasFactura")
-                        .HasForeignKey("FacturaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Factura");
+                    b.Navigation("LineasFactura");
                 });
 
             modelBuilder.Entity("Core.Entities.Cliente", b =>
@@ -494,11 +464,6 @@ namespace BussinesLogic.Data.Migrations
                     b.Navigation("Direcciones");
 
                     b.Navigation("Facturas");
-                });
-
-            modelBuilder.Entity("Core.Entities.Factura", b =>
-                {
-                    b.Navigation("LineasFactura");
                 });
 #pragma warning restore 612, 618
         }

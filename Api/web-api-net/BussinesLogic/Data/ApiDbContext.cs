@@ -25,7 +25,7 @@ namespace BussinesLogic.Data
             modelBuilder.ApplyConfiguration(new DireccionEmpresaConfiguration());
             modelBuilder.ApplyConfiguration(new DireccionClienteConfiguration());
             modelBuilder.ApplyConfiguration(new FacturaConfiguration());
-            modelBuilder.ApplyConfiguration(new LineaFacturaConfiguration());
+            //modelBuilder.ApplyConfiguration(new LineaFacturaConfiguration());
         }
 
         public DbSet<Empresa> Empresa { get; set; }

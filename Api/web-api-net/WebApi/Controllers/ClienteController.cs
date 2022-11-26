@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specification;
 using Core.Specification.Cliente;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -27,7 +28,7 @@ namespace WebApi.Controllers
         // Método que retorna todos los registros de clientes (admin)
         [HttpGet]
         [Authorize(Roles = "ADMIN")]
-        public async Task<ActionResult<Pagination<ClienteDto>>> GetAllClientes(int empresaId,  [FromQuery] ClienteSpecificationParams clienteParams)
+        public async Task<ActionResult<Pagination<ClienteDto>>> GetAllClientes(int empresaId,  [FromQuery] SpecificationParams clienteParams)
         {
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 
@@ -61,7 +62,7 @@ namespace WebApi.Controllers
 
         [HttpGet("empresa/{id}")]
         [Authorize]
-        public async Task<ActionResult<Pagination<ClienteDto>>> GetAllClientesByEmpresaId(int id, [FromQuery] ClienteSpecificationParams clienteParams)
+        public async Task<ActionResult<Pagination<ClienteDto>>> GetAllClientesByEmpresaId(int id, [FromQuery] SpecificationParams clienteParams)
         {
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 

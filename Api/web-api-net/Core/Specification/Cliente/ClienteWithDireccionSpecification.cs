@@ -9,7 +9,7 @@ namespace Core.Specification.Cliente
 {
     public class ClienteWithDireccionSpecification : BaseSpecification<Core.Entities.Cliente>
     {
-        public ClienteWithDireccionSpecification(ClienteSpecificationParams clienteParams)
+        public ClienteWithDireccionSpecification(SpecificationParams clienteParams)
             : base(x =>
                 (
                     string.IsNullOrEmpty(clienteParams.Search)
@@ -49,7 +49,7 @@ namespace Core.Specification.Cliente
             }
         }
 
-        public ClienteWithDireccionSpecification(ClienteSpecificationParams clienteParams, int empresaId)
+        public ClienteWithDireccionSpecification(SpecificationParams clienteParams, int empresaId)
             : base(x =>
                   x.EmpresaId == empresaId &&
                 (

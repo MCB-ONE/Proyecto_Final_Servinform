@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specification;
 using Core.Specification.Empresa;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +24,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<Pagination<EmpresaDto>>> GetAllEmpresasByUsuarioEmail([FromQuery]EmpresaSpecificationParams empresaParams)
+        public async Task<ActionResult<Pagination<EmpresaDto>>> GetAllEmpresasByUsuarioEmail([FromQuery] SpecificationParams empresaParams)
         {
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 
@@ -52,7 +53,7 @@ namespace WebApi.Controllers
 
         [HttpGet("{id}")]
         [Authorize]
-        public async Task<ActionResult<List<EmpresaDto>>> GetEmpresaByIdAndUsuarioEmail(int id)
+        public async Task<ActionResult<EmpresaDto>> GetEmpresaByIdAndUsuarioEmail(int id)
         {
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 
@@ -65,7 +66,7 @@ namespace WebApi.Controllers
 
         [HttpGet("active")]
         [Authorize]
-        public async Task<ActionResult<List<EmpresaDto>>> GetUsuarioActiveEmpresa()
+        public async Task<ActionResult<EmpresaDto>> GetUsuarioActiveEmpresa()
         {
             var emailUsuario = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
 

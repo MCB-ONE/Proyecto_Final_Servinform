@@ -9,7 +9,7 @@ namespace Core.Specification.Direccion
 {
     public class DireccionClienteWithClienteSpecification : BaseSpecification<Core.Entities.DireccionCliente>
     {
-        public DireccionClienteWithClienteSpecification(DireccionSpecificationParams direccionParams)
+        public DireccionClienteWithClienteSpecification(SpecificationParams direccionParams)
             : base(x =>
                 (
                     string.IsNullOrEmpty(direccionParams.Search)

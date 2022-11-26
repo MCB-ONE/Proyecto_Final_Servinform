@@ -19,10 +19,10 @@ namespace BussinesLogic.Data.Configuration
                 .HasColumnType("decimal(18,4)")
                 .IsRequired();
 
-            builder.HasMany(c => c.LineasFactura)
-                .WithOne(a => a.Factura)
-                .HasForeignKey(a => a.FacturaId)
-                .OnDelete(DeleteBehavior.Cascade);
+            builder.OwnsMany(c => c.LineasFactura, x =>
+            {
+                x.WithOwner();
+            });
 
         }
     }

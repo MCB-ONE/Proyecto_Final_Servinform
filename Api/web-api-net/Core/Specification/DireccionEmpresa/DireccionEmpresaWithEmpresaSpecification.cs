@@ -9,7 +9,7 @@ namespace Core.Specification.DireccionEmpresa
 {
     public class DireccionEmpresaWithEmpresaSpecification : BaseSpecification<Core.Entities.DireccionEmpresa>
     {
-        public DireccionEmpresaWithEmpresaSpecification(DireccionSpecificationParams direccionParams)
+        public DireccionEmpresaWithEmpresaSpecification(SpecificationParams direccionParams)
             : base(x =>
                 (
                     string.IsNullOrEmpty(direccionParams.Search)

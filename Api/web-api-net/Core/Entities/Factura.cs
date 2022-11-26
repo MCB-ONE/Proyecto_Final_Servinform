@@ -10,7 +10,7 @@ namespace Core.Entities
     public class Factura: BaseEntity
     {
         public int Numero { get; set; }
-        public DateTime FechaExpedicion { get; set; }    
+        public DateTimeOffset FechaExpedicion { get; set; }
         public decimal Subtotal { get; set; }
         public int Iva { get; set; }
         public decimal Total { get; set; }

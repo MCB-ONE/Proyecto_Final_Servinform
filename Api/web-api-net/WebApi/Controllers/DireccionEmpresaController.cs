@@ -23,7 +23,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<Pagination<DireccionEmpresaDto>>> GetAllDireccion([FromQuery] DireccionSpecificationParams direccionParams)
+        public async Task<ActionResult<Pagination<DireccionEmpresaDto>>> GetAllDireccion([FromQuery] SpecificationParams direccionParams)
         {
 
             var spec = new DireccionEmpresaWithEmpresaSpecification(direccionParams);

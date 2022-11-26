@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BussinesLogic.Data.Migrations
 {
-    public partial class create_tables_and_relations : Migration
+    public partial class create_tables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -135,7 +135,7 @@ namespace BussinesLogic.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Numero = table.Column<int>(type: "int", nullable: false),
-                    FechaExpedicion = table.Column<DateTime>(type: "date", nullable: false),
+                    FechaExpedicion = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
                     Subtotal = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
                     Iva = table.Column<int>(type: "int", nullable: false),
                     Total = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
@@ -183,23 +183,17 @@ namespace BussinesLogic.Data.Migrations
                 name: "LineaFactura",
                 columns: table => new
                 {
+                    FacturaId = table.Column<int>(type: "int", nullable: false),
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Concepto = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    PrecioUnitario = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
-                    Cantidad = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    Total = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
-                    FacturaId = table.Column<int>(type: "int", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "date", nullable: false),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedAt = table.Column<DateTime>(type: "date", nullable: true),
-                    DeletedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DeletedAt = table.Column<DateTime>(type: "date", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Concepto = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PrecioUnitario = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Cantidad = table.Column<int>(type: "int", nullable: false),
+                    Total = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LineaFactura", x => x.Id);
+                    table.PrimaryKey("PK_LineaFactura", x => new { x.FacturaId, x.Id });
                     table.ForeignKey(
                         name: "FK_LineaFactura_Factura_FacturaId",
                         column: x => x.FacturaId,
@@ -242,11 +236,6 @@ namespace BussinesLogic.Data.Migrations
                 name: "IX_Factura_EmpresaId",
                 table: "Factura",
                 column: "EmpresaId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_LineaFactura_FacturaId",
-                table: "LineaFactura",
-                column: "FacturaId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

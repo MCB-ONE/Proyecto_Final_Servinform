@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Core.Specification.Cliente
 {
     public class ClienteForCountingSpecification: BaseSpecification<Core.Entities.Cliente>
     {
-        public ClienteForCountingSpecification(ClienteSpecificationParams clienteParams)
+        public ClienteForCountingSpecification(SpecificationParams clienteParams)
             : base(x =>
                (
                    string.IsNullOrEmpty(clienteParams.Search)
@@ -16,7 +11,7 @@ namespace Core.Specification.Cliente
                    || x.NIF.Contains(clienteParams.Search)
                ))
         {}
-        public ClienteForCountingSpecification( ClienteSpecificationParams clienteParams, int empresaId)
+        public ClienteForCountingSpecification(SpecificationParams clienteParams, int empresaId)
             : base(x =>
                 x.EmpresaId == empresaId &&
                (

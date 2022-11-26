@@ -10,7 +10,7 @@ namespace Core.Specification.Empresa
 {
     public class EmpresaWithClienteAndDireccionSpecification : BaseSpecification<Core.Entities.Empresa>
     {
-        public EmpresaWithClienteAndDireccionSpecification(EmpresaSpecificationParams empresaParams)
+        public EmpresaWithClienteAndDireccionSpecification(SpecificationParams empresaParams)
             : base(x =>
                 (
                     string.IsNullOrEmpty(empresaParams.Search)
@@ -60,7 +60,7 @@ namespace Core.Specification.Empresa
 
         }
 
-        public EmpresaWithClienteAndDireccionSpecification(EmpresaSpecificationParams empresaParams, string emailUsuario)
+        public EmpresaWithClienteAndDireccionSpecification(SpecificationParams empresaParams, string emailUsuario)
     : base(x =>
            x.EmailUsuario == emailUsuario &&
         (
