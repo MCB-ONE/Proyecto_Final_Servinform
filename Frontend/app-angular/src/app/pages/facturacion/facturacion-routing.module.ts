@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/cliente/cliente.module').then(m => m.ClienteModule)
       },
       {
+        path: 'facturas',
+        loadChildren: () => import('./pages/factura/factura.module').then(m => m.FacturaModule)
+      },
+      {
         path: 'profile',
         loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule)
       },

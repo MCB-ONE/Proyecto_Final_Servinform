@@ -23,7 +23,7 @@ export class ClienteComponent implements OnInit {
   empresa$ !: Observable<Empresa | null>
   empresaId !: string;
   clientesPagination !: Pagination;
-  direccionesTableColumns !: TableColumn[];
+  clientesTableColumns !: TableColumn[];
 
   constructor(
     private store: Store<fromRoot.AppState>,
@@ -57,7 +57,7 @@ export class ClienteComponent implements OnInit {
   }
 
   initColumns(): void {
-    this.direccionesTableColumns = [
+    this.clientesTableColumns = [
       {
         name: 'Nombre',
         dataKey: 'nombre',

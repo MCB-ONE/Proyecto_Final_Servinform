@@ -3,9 +3,8 @@
 
 .header {
   margin-bottom: 3rem;
-
   &-title {
-    margin-top: 1rem;
+    margin-top: 0.4rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -21,6 +20,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      img {
+        height: 60%;
+        width: 60%;
+      }
     }
 
     &-text {
@@ -29,5 +33,27 @@
       }
     }
   }
+}
 
+.header__new {
+  background-color: #4253d51c;
+  padding: 1rem;
+  border: 1px dashed $primary;
+
+  &-title {
+    &-logo {
+      .app-a {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+  }
+
+
+  .app-a {
+    margin: 0;
+  }
 }

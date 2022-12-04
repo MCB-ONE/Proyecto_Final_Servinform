@@ -1,9 +1,8 @@
-<div class="header">
+<div class="header mat-card app-card" *ngIf="empresa">
   <span class="header-subtitle">
     <ng-template *ngIf="icon">
       <mat-icon>{{icon}}</mat-icon>
     </ng-template>
-
     {{title}}
   </span>
   <div class="header-title">
@@ -13,6 +12,21 @@
     <div class="header-title-text">
       <h2>{{empresa.nombre}}</h2>
       <span>{{empresa.nif}}</span>
+    </div>
+  </div>
+</div>
+
+<div class="header header__new" *ngIf="!empresa">
+  <div class="header-title">
+    <div class="header-title-logo">
+      <a class="app-a" routerLink="/facturacion/empresas/nueva">
+        <!-- <img src="/assets/add-company-icon.svg" alt="Icono"> -->
+        <mat-icon>add-company</mat-icon>
+      </a>
+    </div>
+    <div class="header-title-text">
+      <h2>Crea tu primera empresa</h2>
+      <span>Para poder generar facturas ha de crear una empresa. Para comenzar pulse en este <a class="app-a" routerLink="/facturacion/empresas/nueva">enlace</a> o en el icono grande de la izquierda.</span>
     </div>
   </div>
 </div>

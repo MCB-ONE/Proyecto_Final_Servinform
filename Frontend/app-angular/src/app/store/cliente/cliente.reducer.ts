@@ -98,7 +98,7 @@ export const clienteReducer = createReducer(
     }),
 
   // Select cliente activo
-  on(ClienteActions.readActiveCliente, (state, { clienteId }) => {
+  on(ClienteActions.selectActiveCliente, (state, { clienteId }) => {
     return {
       ...state,
       activeClienteId: clienteId

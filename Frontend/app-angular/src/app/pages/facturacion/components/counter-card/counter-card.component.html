@@ -6,6 +6,7 @@
   </mat-card-content>
   <mat-card-actions class="app-card-actions">
     <a class="app-a" routerLink="{{link}}">{{linkText}}</a>
-    <button mat-button mat-button mat-flat-button color="primary" routerLink="{{buttonLink}}">{{buttonText}}</button>
+    <button *ngIf="buttonLink" mat-button mat-button mat-flat-button color="primary" routerLink="{{buttonLink}}">{{buttonText}}</button>
+    <button *ngIf="haveButtonAction" mat-button mat-button mat-flat-button color="primary" (click)="onButtonAction()">{{buttonText}}</button>
   </mat-card-actions>
 </mat-card>

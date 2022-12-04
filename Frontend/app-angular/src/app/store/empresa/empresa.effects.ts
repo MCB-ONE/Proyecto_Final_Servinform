@@ -52,7 +52,7 @@ export class EmpresaEffects {
         this.httpClient.put<EmpresaResponse>(`${environment.url}/api/Empresa/actualizar/${action.empresaId}`, action.empresa)
           .pipe(
             tap((empresa: EmpresaResponse) => {
-              this.router.navigate(['/facturacion/empresa'])
+              this.router.navigate(['/facturacion/welcome'])
             }),
             map((empresa: EmpresaResponse) => EmpresaActions.updateSuccess({ empresa }),
             ),

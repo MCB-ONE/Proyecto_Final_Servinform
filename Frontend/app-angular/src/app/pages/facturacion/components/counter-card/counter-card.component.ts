@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-counter-card',
@@ -14,11 +14,19 @@ export class CounterCardComponent implements OnInit {
   @Input() link !: string;
   @Input() linkText !: string;
   @Input() buttonLink !: string;
+  @Input() haveButtonAction !: boolean;
   @Input() buttonText !: string;
 
+  @Output() buttonAction: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  onButtonAction(){
+    this.buttonAction.emit();
+  }
+
+
 
 }

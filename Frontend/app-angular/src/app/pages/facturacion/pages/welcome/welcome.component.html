@@ -1,45 +1,38 @@
-
 <div class="app-dashboard">
-  <div class="spinner" *ngIf="!(empresa$ | async)">
+  <div class="spinner" *ngIf="!(empresa$ | async) && (isLoading$ | async)">
     <app-spinner></app-spinner>
   </div>
   <ng-container *ngIf="empresa$ | async as empresa">
     <div class="app-dashboard-main">
-      <app-empresa-info-display
-      [empresa] = "empresa"
-      title="Administrando"
-      ></app-empresa-info-display>
+      <app-empresa-info-display [empresa]="empresa" title="Administrando"></app-empresa-info-display>
       <div *ngIf="empresa">
-        <app-counter-card
-          title="Clientes de {{empresa.nombre}}"
-          icon="group" count={{empresa.clientes.length}}
-          countSubtitle="Clientes totales"
-          link="/facturacion/clientes"
-          linkText="Ver todos"
-          buttonText="Añadir cliente"
+        <app-counter-card title="Clientes de {{empresa.nombre}}" icon="group" count={{empresa.clientes.length}}
+          countSubtitle="Clientes totales" link="/facturacion/clientes" linkText="Ver todos" buttonText="Añadir cliente"
+          [haveButtonAction]="false"
           buttonLink="/facturacion/clientes/nuevo"></app-counter-card>
 
-        <app-counter-card
-          title="Facturas de {{empresa.nombre}}"
-          icon="list_alt" count="0"
-          countSubtitle="Facturas totales"
-          link="/facturacion/facturas" linkText="Ver todas"
-          buttonText="Generar factura">
+        <app-counter-card title="Facturas de {{empresa.nombre}}" icon="list_alt" count="0"
+          countSubtitle="Facturas totales" link="/facturacion/facturas" linkText="Ver todas"
+          buttonText="Generar factura"
+          [haveButtonAction]="true"
+          (buttonAction)="openDialog()">
         </app-counter-card>
 
-        <app-counter-card
-          title="Direcciones de {{empresa.nombre}}"
-          icon="location_on" count={{empresa.direcciones.length}}
-          countSubtitle="Direcciones vinculadas"
-          link="/facturacion/empresas/direcciones"
-          linkText="Ver todas"
-          buttonLink="/facturacion/empresas/direccion/nueva"
-          buttonText="Añadir dirección"></app-counter-card>
+        <app-counter-card title="Direcciones de {{empresa.nombre}}" icon="location_on"
+          count={{empresa.direcciones.length}} countSubtitle="Direcciones vinculadas"
+          link="/facturacion/empresas/direcciones" linkText="Ver todas"
+          [haveButtonAction]="false"
+          buttonLink="/facturacion/empresas/direccion/nueva" buttonText="Añadir dirección"></app-counter-card>
       </div>
     </div>
     <div class="app-dashboard__sidebar">
       <app-empresa-list *ngIf="pagination$ | async as pagination" [empresas]="pagination.data"
         (selectEmpresa)="onEmpresaSelect($event)"></app-empresa-list>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!(empresa$ | async) && !(isLoading$ | async)">
+    <div class="app-dashboard-main">
+      <app-empresa-info-display></app-empresa-info-display>
     </div>
   </ng-container>
 </div>

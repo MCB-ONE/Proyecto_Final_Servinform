@@ -1,0 +1,56 @@
+<div class="app-dashboard">
+  <div class="spinner" *ngIf="loading$ | async">
+    <app-spinner></app-spinner>
+  </div>
+  <ng-container *ngIf="!(loading$ | async)">
+    <div class="app-dashboard__main mat-card">
+      <div class="app-dashboard__header">
+        <h1>Crear nueva factura</h1>
+      </div>
+      <div class="factura">
+        <div class="cliente">
+          <div>
+            <h3>Datos del cliente</h3>
+            <p><span>Nombre social:</span> Taller honda</p>
+            <p><span>NIF:</span> 99910200E</p>
+            <div class="direccion-data">
+              <span>Direccion:</span>
+              <ul class="app-list">
+                <li>Calle Rocaford nº98, Barcelona (08050)</li>
+                <li>España - Barcelona</li>
+                <li>https://www.honda.com/</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <form [formGroup]="form" autocomplete="off" (submit)="onSubmit()">
+          <div class="fields">
+            <h3>Datos de factura</h3>
+            <app-form-field label="Fecha de expedición" [required]="true" [control]="form.controls['fechaExpedicion']">
+              <app-date formControlName="fechaExpedicion" placeholder="Expedición"></app-date>
+            </app-form-field>
+            <app-form-field label="Tipo de IVA" [required]="true" [control]="form.controls['iva']">
+              <app-select formControlName="iva" [items]="ivaOptions"></app-select>
+            </app-form-field>
+            <app-form-field label="Dirección de facturación" [required]="true" [control]="form.controls['direccionEmpresaId']">
+              <app-select formControlName="direccionEmpresaId" [items]="empresaDirecciones"></app-select>
+            </app-form-field>
+            <div class="empresa">
+              <div>
+                <h3>Detalles dirección:</h3>
+                <div class="direccion-data">
+                  <ul class="app-list">
+                    <li>Calle Rocaford nº98, Barcelona (08050)</li>
+                    <li>España - Barcelona</li>
+                    <li>https://www.honda.com/</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button mat-flat-button color="primary">Generar  factura</button>
+        </form>
+      </div>
+    </div>
+  </ng-container>
+</div>

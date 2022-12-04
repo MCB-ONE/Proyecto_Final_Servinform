@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Elige un cliente</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+    <app-form-field label="Búsca en la lista" [required]="true" [control]="form.controls['cliente']">
+      <app-autocomplete formControlName="cliente" [items]="items"></app-autocomplete>
+    </app-form-field>
+    <button  mat-flat-button color="primary">Seleccionar</button>
+  </form>
+  <div mat-dialog-actions>
+    <a class="app-a" routerLink="/facturacion/clientes/nuevo" >Nuevo cliente</a>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
+</div>

@@ -26,7 +26,7 @@ export const ClienteActions = createActionGroup({
     'Read error': props<{ error: string }>(),
 
     // Seleccion cliente activo
-    'Read active cliente':  props<{ clienteId: string }>(),
+    ' Select active cliente':  props<{ clienteId: string }>(),
 
     // Creación
     'Create start': props<{ cliente: ClienteRequest }>(),

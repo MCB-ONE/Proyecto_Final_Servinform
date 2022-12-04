@@ -25,8 +25,6 @@ export class SharedComponent implements OnInit {
       { label: 'Cuatro', value: 4},
       { label: 'Cinco', value: 5},
     ]
-
-
 }
 
   ngOnInit(): void {
